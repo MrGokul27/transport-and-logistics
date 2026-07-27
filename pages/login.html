@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sign in to your Stackly Logistics portal to track cargo shipments and manage customs clearance."
+    />
+    <title>Sign In - Stackly Logistics</title>
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- Custom Auth CSS -->
+    <link rel="stylesheet" href="../assets/css/auth.css" />
+  </head>
+  <body class="auth-body">
+    <div class="">
+      <a href="../index.html">
+        <img
+          src="../assets/images/logoStackly.webp"
+          alt="Stackly Logo"
+          class="auth-logo"
+        />
+      </a>
+    </div>
+    <div class="auth-container">
+      <!-- Login Card -->
+      <div class="auth-card">
+        <!-- Back to Home Button -->
+        <div class="mb-4">
+          <a href="../index.html" class="back-home-btn">
+            <i class="fas fa-arrow-left"></i> Back to Home
+          </a>
+        </div>
+        <div class="auth-header">
+          <h2 class="auth-title">Welcome Back</h2>
+          <p class="auth-subtitle">Sign in to coordinate your cargo transits</p>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <!-- Role Selector -->
+          <div class="form-group">
+            <label for="loginRole" class="form-label">Your Role</label>
+            <div class="input-icon-wrapper">
+              <i class="fas fa-user-tag"></i>
+              <select
+                class="form-control-auth"
+                id="loginRole"
+                name="role"
+                required
+              >
+                <option value="" disabled selected>
+                  Select your portal role
+                </option>
+                <option value="shipper">Client / Shipper</option>
+                <option value="driver">Fleet Cargo Driver</option>
+                <option value="broker">Customs Clearance Broker</option>
+                <option value="operations">Operations Coordinator</option>
+              </select>
+            </div>
+            <span class="error-msg" id="roleError"></span>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="loginEmail" class="form-label">Email Address</label>
+            <div class="input-icon-wrapper">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                class="form-control-auth"
+                id="loginEmail"
+                name="email"
+                placeholder="name@company.com"
+                required
+              />
+            </div>
+            <span class="error-msg" id="emailError"></span>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label for="loginPassword" class="form-label">Password</label>
+            <div class="input-icon-wrapper">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                class="form-control-auth"
+                id="loginPassword"
+                name="password"
+                placeholder="••••••••"
+                required
+              />
+            </div>
+            <!-- Live Password Strength Meter -->
+            <div class="strength-container">
+              <div class="strength-bar-wrapper">
+                <div class="strength-bar" id="strengthBar"></div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="strength-text" id="strengthText"
+                  >Strength: Too Short</span
+                >
+              </div>
+            </div>
+            <span class="error-msg" id="passwordError"></span>
+          </div>
+
+          <!-- Remember Me & Forgot Password -->
+          <div class="checkbox-group">
+            <label class="checkbox-label" for="loginRemember">
+              <input type="checkbox" id="loginRemember" name="remember" />
+              Remember Me
+            </label>
+            <a href="#" class="forgot-link">Forgot Password?</a>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-auth" id="loginBtn" disabled>
+            Sign In
+          </button>
+        </form>
+
+        <div class="auth-switch">
+          Don't have an account? <a href="register.html">Register</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script Block for Login Validation and Strength check -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const loginForm = document.getElementById("loginForm");
+        const roleSelect = document.getElementById("loginRole");
+        const emailInput = document.getElementById("loginEmail");
+        const passwordInput = document.getElementById("loginPassword");
+        const submitBtn = document.getElementById("loginBtn");
+
+        const roleError = document.getElementById("roleError");
+        const emailError = document.getElementById("emailError");
+        const passwordError = document.getElementById("passwordError");
+
+        const strengthBar = document.getElementById("strengthBar");
+        const strengthText = document.getElementById("strengthText");
+
+        let isPasswordValid = false;
+
+        // Password strength checker function
+        function evaluatePassword(password) {
+          if (!password) {
+            strengthBar.style.width = "0%";
+            strengthBar.style.backgroundColor = "transparent";
+            strengthText.textContent = "Strength: Empty";
+            isPasswordValid = false;
+            return;
+          }
+
+          let score = 0;
+          if (password.length >= 8) score++;
+          if (/[a-zA-Z]/.test(password)) score++;
+          if (/[0-9]/.test(password)) score++;
+          if (/[^a-zA-Z0-9]/.test(password)) score++;
+
+          // Minimum requirements for acceptance: >= 8 chars and contains letters + numbers
+          const meetsMinRequirement =
+            password.length >= 8 &&
+            /[a-zA-Z]/.test(password) &&
+            /[0-9]/.test(password);
+
+          if (password.length < 8) {
+            strengthBar.style.width = "25%";
+            strengthBar.style.backgroundColor = "#ff4a4a";
+            strengthText.textContent = "Strength: Weak (Too Short)";
+            isPasswordValid = false;
+          } else if (!meetsMinRequirement) {
+            strengthBar.style.width = "40%";
+            strengthBar.style.backgroundColor = "#ff9f43";
+            strengthText.textContent =
+              "Strength: Weak (Needs Letters & Numbers)";
+            isPasswordValid = false;
+          } else {
+            isPasswordValid = true;
+            if (score === 3) {
+              strengthBar.style.width = "75%";
+              strengthBar.style.backgroundColor = "#2ecc71";
+              strengthText.textContent = "Strength: Medium";
+            } else if (score === 4) {
+              strengthBar.style.width = "100%";
+              strengthBar.style.backgroundColor = "#2ecc71";
+              strengthText.textContent = "Strength: Strong";
+            }
+          }
+
+          validateForm();
+        }
+
+        // Realtime check on password input
+        passwordInput.addEventListener("input", (e) => {
+          evaluatePassword(e.target.value);
+        });
+
+        // Form Validation helper
+        function validateForm() {
+          let isValid = true;
+
+          // Check if Role is selected
+          if (!roleSelect.value) isValid = false;
+
+          // Check if Email is valid
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailInput.value || !emailPattern.test(emailInput.value))
+            isValid = false;
+
+          // Check if Password is valid and not weak
+          if (!passwordInput.value || !isPasswordValid) isValid = false;
+
+          // Enable/Disable submit button
+          submitBtn.disabled = !isValid;
+        }
+
+        // Live input listeners to refresh submit button status
+        roleSelect.addEventListener("change", validateForm);
+        emailInput.addEventListener("input", validateForm);
+
+        // Submit action
+        loginForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          // Reset errors
+          roleError.textContent = "";
+          emailError.textContent = "";
+          passwordError.textContent = "";
+
+          let hasError = false;
+
+          if (!roleSelect.value) {
+            roleError.textContent = "Please select a portal role.";
+            hasError = true;
+          }
+
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailInput.value) {
+            emailError.textContent = "Email address is required.";
+            hasError = true;
+          } else if (!emailPattern.test(emailInput.value)) {
+            emailError.textContent = "Please enter a valid email address.";
+            hasError = true;
+          }
+
+          if (!passwordInput.value) {
+            passwordError.textContent = "Password is required.";
+            hasError = true;
+          } else if (!isPasswordValid) {
+            passwordError.textContent =
+              "Password must be at least 8 characters and contain both letters and numbers.";
+            hasError = true;
+          }
+
+          if (hasError) return;
+
+          // Success - Simulation
+          alert(
+            `Successfully signed in as ${roleSelect.options[roleSelect.selectedIndex].text}!`,
+          );
+          window.location.href = "../index.html";
+        });
+      });
+    </script>
+  </body>
+</html>

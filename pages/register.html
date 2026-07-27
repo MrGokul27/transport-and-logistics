@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Create a new Stackly Logistics portal account to book container space and manage cargo transit routes."
+    />
+    <title>Register - Stackly Logistics</title>
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- Custom Auth CSS -->
+    <link rel="stylesheet" href="../assets/css/auth.css" />
+  </head>
+  <body class="auth-body">
+    <div class="">
+      <a href="../index.html">
+        <img
+          src="../assets/images/logoStackly.webp"
+          alt="Stackly Logo"
+          class="auth-logo"
+        />
+      </a>
+    </div>
+    <div class="auth-container">
+      <!-- Register Card -->
+      <div class="auth-card position-relative">
+        <!-- Success Overlay (Shown after successful registration) -->
+        <div class="success-overlay" id="successOverlay">
+          <i class="fas fa-check-circle success-icon"></i>
+          <h3 class="fw-bold mb-1">Registration Complete!</h3>
+          <p class="text-white-50 fs-8 text-center px-4">
+            Your logistics portal profile has been created. Redirecting to sign
+            in...
+          </p>
+        </div>
+
+        <!-- Back to Home Button -->
+        <a href="../index.html" class="back-home-btn">
+          <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+
+        <div class="auth-header">
+          <h2 class="auth-title">Create Account</h2>
+          <p class="auth-subtitle">
+            Register to coordinate logistics shipments
+          </p>
+        </div>
+
+        <form id="registerForm" novalidate>
+          <!-- Username (prevents digits & special characters) -->
+          <div class="form-group">
+            <label for="regUsername" class="form-label">Username</label>
+            <div class="input-icon-wrapper">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                class="form-control-auth"
+                id="regUsername"
+                name="username"
+                placeholder="John Doe"
+                required
+              />
+            </div>
+            <span class="error-msg" id="usernameError"></span>
+          </div>
+
+          <!-- Role Selector -->
+          <div class="form-group">
+            <label for="regRole" class="form-label">Your Role</label>
+            <div class="input-icon-wrapper">
+              <i class="fas fa-user-tag"></i>
+              <select
+                class="form-control-auth"
+                id="regRole"
+                name="role"
+                required
+              >
+                <option value="" disabled selected>
+                  Select your portal role
+                </option>
+                <option value="shipper">Client / Shipper</option>
+                <option value="driver">Fleet Cargo Driver</option>
+                <option value="broker">Customs Clearance Broker</option>
+                <option value="operations">Operations Coordinator</option>
+              </select>
+            </div>
+            <span class="error-msg" id="roleError"></span>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="regEmail" class="form-label">Email Address</label>
+            <div class="input-icon-wrapper">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                class="form-control-auth"
+                id="regEmail"
+                name="email"
+                placeholder="name@company.com"
+                required
+              />
+            </div>
+            <span class="error-msg" id="emailError"></span>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label for="regPassword" class="form-label">Password</label>
+            <div class="input-icon-wrapper">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                class="form-control-auth"
+                id="regPassword"
+                name="password"
+                placeholder="••••••••"
+                required
+              />
+            </div>
+            <!-- Live Password Strength Meter -->
+            <div class="strength-container">
+              <div class="strength-bar-wrapper">
+                <div class="strength-bar" id="strengthBar"></div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="strength-text" id="strengthText"
+                  >Strength: Too Short</span
+                >
+              </div>
+            </div>
+            <span class="error-msg" id="passwordError"></span>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="form-group">
+            <label for="regConfirmPassword" class="form-label"
+              >Confirm Password</label
+            >
+            <div class="input-icon-wrapper">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                class="form-control-auth"
+                id="regConfirmPassword"
+                name="confirmPassword"
+                placeholder="••••••••"
+                required
+              />
+            </div>
+            <span class="error-msg" id="confirmPasswordError"></span>
+          </div>
+
+          <!-- Terms & Conditions (Required Checkbox) -->
+          <div class="checkbox-group">
+            <label class="checkbox-label" for="regTerms">
+              <input type="checkbox" id="regTerms" name="terms" required />
+              <span
+                >I agree to the
+                <a href="#" class="forgot-link">Terms & Conditions</a></span
+              >
+            </label>
+          </div>
+          <span class="error-msg mb-3 d-block" id="termsError"></span>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-auth" id="registerBtn" disabled>
+            Create Account
+          </button>
+        </form>
+
+        <div class="auth-switch">
+          Already have an account? <a href="login.html">Sign In</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script Block for Register Validations -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const registerForm = document.getElementById("registerForm");
+        const usernameInput = document.getElementById("regUsername");
+        const roleSelect = document.getElementById("regRole");
+        const emailInput = document.getElementById("regEmail");
+        const passwordInput = document.getElementById("regPassword");
+        const confirmPasswordInput =
+          document.getElementById("regConfirmPassword");
+        const termsCheckbox = document.getElementById("regTerms");
+        const submitBtn = document.getElementById("registerBtn");
+        const successOverlay = document.getElementById("successOverlay");
+
+        // Error message spans
+        const usernameError = document.getElementById("usernameError");
+        const roleError = document.getElementById("roleError");
+        const emailError = document.getElementById("emailError");
+        const passwordError = document.getElementById("passwordError");
+        const confirmPasswordError = document.getElementById(
+          "confirmPasswordError",
+        );
+        const termsError = document.getElementById("termsError");
+
+        const strengthBar = document.getElementById("strengthBar");
+        const strengthText = document.getElementById("strengthText");
+
+        let isPasswordValid = false;
+
+        // 1. FILTER USERNAME: Prevent user from typing numbers or special characters in the field itself
+        usernameInput.addEventListener("input", (e) => {
+          // Remove any character that is not a letter or space
+          e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+          validateForm();
+        });
+
+        // 2. PASSWORD STRENGTH CHECKER (Weak password validation)
+        function evaluatePassword(password) {
+          if (!password) {
+            strengthBar.style.width = "0%";
+            strengthBar.style.backgroundColor = "transparent";
+            strengthText.textContent = "Strength: Empty";
+            isPasswordValid = false;
+            return;
+          }
+
+          let score = 0;
+          if (password.length >= 8) score++;
+          if (/[a-zA-Z]/.test(password)) score++;
+          if (/[0-9]/.test(password)) score++;
+          if (/[^a-zA-Z0-9]/.test(password)) score++;
+
+          // Minimum requirements for acceptance: >= 8 characters and contains letters + numbers
+          const meetsMinRequirement =
+            password.length >= 8 &&
+            /[a-zA-Z]/.test(password) &&
+            /[0-9]/.test(password);
+
+          if (password.length < 8) {
+            strengthBar.style.width = "25%";
+            strengthBar.style.backgroundColor = "#ff4a4a";
+            strengthText.textContent = "Strength: Weak (Too Short)";
+            isPasswordValid = false;
+          } else if (!meetsMinRequirement) {
+            strengthBar.style.width = "40%";
+            strengthBar.style.backgroundColor = "#ff9f43";
+            strengthText.textContent =
+              "Strength: Weak (Needs Letters & Numbers)";
+            isPasswordValid = false;
+          } else {
+            isPasswordValid = true;
+            if (score === 3) {
+              strengthBar.style.width = "75%";
+              strengthBar.style.backgroundColor = "#2ecc71";
+              strengthText.textContent = "Strength: Medium";
+            } else if (score === 4) {
+              strengthBar.style.width = "100%";
+              strengthBar.style.backgroundColor = "#2ecc71";
+              strengthText.textContent = "Strength: Strong";
+            }
+          }
+
+          checkPasswordMatch();
+          validateForm();
+        }
+
+        passwordInput.addEventListener("input", (e) => {
+          evaluatePassword(e.target.value);
+        });
+
+        // 3. CHECK PASSWORD MATCH
+        function checkPasswordMatch() {
+          if (confirmPasswordInput.value === "") {
+            confirmPasswordError.textContent = "";
+            return false;
+          }
+
+          if (passwordInput.value !== confirmPasswordInput.value) {
+            confirmPasswordError.textContent = "Passwords do not match.";
+            return false;
+          } else {
+            confirmPasswordError.textContent = "";
+            return true;
+          }
+        }
+
+        confirmPasswordInput.addEventListener("input", () => {
+          checkPasswordMatch();
+          validateForm();
+        });
+
+        // 4. FORM VALIDATION
+        function validateForm() {
+          let isValid = true;
+
+          // Username not empty
+          if (!usernameInput.value.trim()) isValid = false;
+
+          // Role selected
+          if (!roleSelect.value) isValid = false;
+
+          // Email matches pattern
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailInput.value || !emailPattern.test(emailInput.value))
+            isValid = false;
+
+          // Password not weak
+          if (!passwordInput.value || !isPasswordValid) isValid = false;
+
+          // Passwords match
+          if (passwordInput.value !== confirmPasswordInput.value)
+            isValid = false;
+
+          // Terms checked
+          if (!termsCheckbox.checked) isValid = false;
+
+          submitBtn.disabled = !isValid;
+        }
+
+        // Live input listeners for validation update
+        roleSelect.addEventListener("change", validateForm);
+        emailInput.addEventListener("input", validateForm);
+        termsCheckbox.addEventListener("change", validateForm);
+
+        // Submit form
+        registerForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          // Reset error displays
+          usernameError.textContent = "";
+          roleError.textContent = "";
+          emailError.textContent = "";
+          passwordError.textContent = "";
+          confirmPasswordError.textContent = "";
+          termsError.textContent = "";
+
+          let hasError = false;
+
+          if (!usernameInput.value.trim()) {
+            usernameError.textContent = "Username is required.";
+            hasError = true;
+          }
+
+          if (!roleSelect.value) {
+            roleError.textContent = "Please select a portal role.";
+            hasError = true;
+          }
+
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailInput.value) {
+            emailError.textContent = "Email address is required.";
+            hasError = true;
+          } else if (!emailPattern.test(emailInput.value)) {
+            emailError.textContent = "Please enter a valid email address.";
+            hasError = true;
+          }
+
+          if (!passwordInput.value) {
+            passwordError.textContent = "Password is required.";
+            hasError = true;
+          } else if (!isPasswordValid) {
+            passwordError.textContent =
+              "Password must be at least 8 characters and contain both letters and numbers.";
+            hasError = true;
+          }
+
+          if (passwordInput.value !== confirmPasswordInput.value) {
+            confirmPasswordError.textContent = "Passwords do not match.";
+            hasError = true;
+          }
+
+          if (!termsCheckbox.checked) {
+            termsError.textContent =
+              "You must agree to the Terms & Conditions.";
+            hasError = true;
+          }
+
+          if (hasError) return;
+
+          // Success State - Show Overlay, then redirect
+          successOverlay.classList.add("show");
+          setTimeout(() => {
+            window.location.href = "login.html";
+          }, 1800);
+        });
+      });
+    </script>
+  </body>
+</html>

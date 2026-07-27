@@ -1,0 +1,354 @@
+/* Google Fonts - Import Outfit & Inter */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #0b132b; /* Deep Midnight Navy */
+  --secondary-color: #ff6b00; /* Premium Amber Orange */
+  --secondary-hover: #e05300;
+  --bg-dark: #0f172a;
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.auth-body {
+  font-family: var(--font-body);
+  background-image:
+    linear-gradient(rgba(11, 19, 43, 0.82), rgba(15, 23, 42, 0.9)),
+    url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Back to Home Button */
+.back-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: var(--transition-smooth);
+}
+
+.back-home-btn:hover {
+  color: #ffffff;
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateX(-5px);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+}
+
+/* Glassmorphic Card */
+.auth-card {
+  background: rgba(11, 19, 43, 0.65);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 1rem 2.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  animation: authFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes authFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 48px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.auth-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.auth-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.input-icon-wrapper {
+  position: relative;
+}
+
+.input-icon-wrapper i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.95rem;
+}
+
+.form-control-auth {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.8rem;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+}
+
+.form-control-auth:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 12px rgba(255, 107, 0, 0.35);
+}
+
+.form-control-auth::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* Select element styling */
+select.form-control-auth {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+}
+
+select.form-control-auth option {
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+/* Checkbox style */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  font-size: 0.85rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+
+.checkbox-label input {
+  accent-color: var(--secondary-color);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.forgot-link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.forgot-link:hover {
+  color: var(--secondary-color);
+}
+
+/* Buttons */
+.btn-auth {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.2);
+}
+
+.btn-auth:hover {
+  background: var(--secondary-hover);
+  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-auth:active {
+  transform: translateY(0);
+}
+
+.btn-auth:disabled {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: rgba(255, 255, 255, 0.3) !important;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Password Strength Meter */
+.strength-container {
+  margin-top: 0.5rem;
+}
+
+.strength-bar-wrapper {
+  height: 4px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.25rem;
+}
+
+.strength-bar {
+  height: 100%;
+  width: 0;
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+}
+
+.strength-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Switch links */
+.auth-switch {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.auth-switch a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.auth-switch a:hover {
+  color: var(--secondary-hover);
+  text-decoration: underline;
+}
+
+/* Custom error message */
+.error-msg {
+  color: #ff4a4a;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.success-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 20px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.success-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.success-icon {
+  font-size: 4rem;
+  color: #2ecc71;
+  margin-bottom: 1rem;
+  animation: scaleBounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes scaleBounce {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
