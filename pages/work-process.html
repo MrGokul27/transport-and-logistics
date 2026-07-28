@@ -39,19 +39,46 @@
           background-image: url(&quot;https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80&quot;);
         "
       >
-        <div class="container py-5">
+        <div class="container position-relative z-3">
+          <span
+            class="text-uppercase tracking-widest text-accent fw-bold fs-8 mb-2 d-inline-block animate__animated animate__fadeIn"
+            >HOW WE DO IT</span
+          >
           <h1
-            class="display-4 fw-extrabold mb-2 animate__animated animate__fadeInDown"
+            class="display-3 fw-extrabold mb-3 text-white animate__animated animate__fadeInDown"
+            style="letter-spacing: -0.5px; font-family: var(--font-heading)"
           >
             Our Logistics Process
           </h1>
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-center mb-0">
+          <div
+            class="mx-auto bg-accent animate__animated animate__zoomIn"
+            style="
+              width: 60px;
+              height: 3px;
+              border-radius: 2px;
+              margin-bottom: 1.5rem;
+            "
+          ></div>
+          <nav
+            aria-label="breadcrumb"
+            class="animate__animated animate__fadeInUp"
+          >
+            <ol
+              class="breadcrumb justify-content-center mb-0"
+              style="
+                background: rgba(255, 255, 255, 0.03);
+                backdrop-filter: blur(5px);
+                display: inline-flex;
+                padding: 0.6rem 1.5rem;
+                border-radius: 30px;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+              "
+            >
               <li class="breadcrumb-item">
                 <a
                   href="../index.html"
-                  class="text-white-50 text-decoration-none"
-                  >Home</a
+                  class="text-white-50 text-decoration-none hover-text-white transition"
+                  ><i class="fas fa-home me-1"></i> Home</a
                 >
               </li>
               <li class="breadcrumb-item text-white active" aria-current="page">
@@ -64,16 +91,17 @@
 
       <!-- Pipeline Timeline Section -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >Pipeline</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-stream me-2"></i> Pipeline Flow
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Seamless Cargo Flow
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               How cargo moves from origin bookings to destination customs
               checkpoints, warehouses, and final deliveries.
             </p>
@@ -86,19 +114,33 @@
                 <!-- Step 1 -->
                 <div class="col-md-6 mb-4">
                   <div
-                    class="card p-4 bg-light rounded-3 h-100 border border-light position-relative hover-grow"
+                    class="card p-4 bg-white rounded-4 shadow-sm border border-light position-relative transition hover-grow"
+                    style="
+                      border-top: 3px solid var(--primary-color) !important;
+                      margin-top: 15px;
+                      overflow: visible !important;
+                    "
                   >
                     <div
-                      class="position-absolute bg-accent text-white fw-bold d-flex align-items-center justify-content-center rounded-circle shadow-sm"
-                      style="width: 36px; height: 36px; top: -15px; left: 20px"
+                      class="position-absolute bg-accent text-white fw-bold d-flex align-items-center justify-content-center rounded-circle shadow"
+                      style="
+                        width: 44px;
+                        height: 44px;
+                        top: -22px;
+                        left: 24px;
+                        box-shadow: 0 4px 10px rgba(255, 107, 0, 0.35) !important;
+                      "
                     >
                       1
                     </div>
-                    <h5 class="fw-bold text-primary mb-3 mt-1">
+                    <h5 class="fw-bold text-primary mb-3 mt-2">
                       <i class="fas fa-file-contract me-2 text-accent"></i
                       >Request & Booking
                     </h5>
-                    <p class="text-secondary fs-7 mb-0">
+                    <p
+                      class="text-secondary fs-7 mb-0"
+                      style="line-height: 1.6"
+                    >
                       Clients input cargo weights, size profiles, and preferred
                       timelines via our portal. Our routing desk issues spot
                       quotes and registers the booking manifest.
@@ -108,19 +150,33 @@
                 <!-- Step 2 -->
                 <div class="col-md-6 mb-4">
                   <div
-                    class="card p-4 bg-light rounded-3 h-100 border border-light position-relative hover-grow"
+                    class="card p-4 bg-white rounded-4 shadow-sm border border-light position-relative transition hover-grow"
+                    style="
+                      border-top: 3px solid var(--secondary-color) !important;
+                      margin-top: 15px;
+                      overflow: visible !important;
+                    "
                   >
                     <div
-                      class="position-absolute bg-accent text-white fw-bold d-flex align-items-center justify-content-center rounded-circle shadow-sm"
-                      style="width: 36px; height: 36px; top: -15px; left: 20px"
+                      class="position-absolute bg-accent text-white fw-bold d-flex align-items-center justify-content-center rounded-circle shadow"
+                      style="
+                        width: 44px;
+                        height: 44px;
+                        top: -22px;
+                        left: 24px;
+                        box-shadow: 0 4px 10px rgba(255, 107, 0, 0.35) !important;
+                      "
                     >
                       2
                     </div>
-                    <h5 class="fw-bold text-primary mb-3 mt-1">
+                    <h5 class="fw-bold text-primary mb-3 mt-2">
                       <i class="fas fa-boxes me-2 text-accent"></i>Consolidation
                       & Sorting
                     </h5>
-                    <p class="text-secondary fs-7 mb-0">
+                    <p
+                      class="text-secondary fs-7 mb-0"
+                      style="line-height: 1.6"
+                    >
                       Local trucking agents pick up cargo, shipping it to
                       regional consolidation hubs. Here, materials are sorted,
                       packaged, weighed, and registered with telemetry tags.
@@ -130,19 +186,33 @@
                 <!-- Step 3 -->
                 <div class="col-md-6 mb-4">
                   <div
-                    class="card p-4 bg-light rounded-3 h-100 border border-light position-relative hover-grow"
+                    class="card p-4 bg-white rounded-4 shadow-sm border border-light position-relative transition hover-grow"
+                    style="
+                      border-top: 3px solid var(--secondary-color) !important;
+                      margin-top: 15px;
+                      overflow: visible !important;
+                    "
                   >
                     <div
-                      class="position-absolute bg-accent text-white fw-bold d-flex align-items-center justify-content-center rounded-circle shadow-sm"
-                      style="width: 36px; height: 36px; top: -15px; left: 20px"
+                      class="position-absolute bg-accent text-white fw-bold d-flex align-items-center justify-content-center rounded-circle shadow"
+                      style="
+                        width: 44px;
+                        height: 44px;
+                        top: -22px;
+                        left: 24px;
+                        box-shadow: 0 4px 10px rgba(255, 107, 0, 0.35) !important;
+                      "
                     >
                       3
                     </div>
-                    <h5 class="fw-bold text-primary mb-3 mt-1">
+                    <h5 class="fw-bold text-primary mb-3 mt-2">
                       <i class="fas fa-passport me-2 text-accent"></i>Customs
                       Filing
                     </h5>
-                    <p class="text-secondary fs-7 mb-0">
+                    <p
+                      class="text-secondary fs-7 mb-0"
+                      style="line-height: 1.6"
+                    >
                       Our compliance officers prepare shipping documents, verify
                       cargo weights, submit entries to customs portals, and
                       settle port/duties assessments prior to loading.
@@ -152,19 +222,33 @@
                 <!-- Step 4 -->
                 <div class="col-md-6 mb-4">
                   <div
-                    class="card p-4 bg-light rounded-3 h-100 border border-light position-relative hover-grow"
+                    class="card p-4 bg-white rounded-4 shadow-sm border border-light position-relative transition hover-grow"
+                    style="
+                      border-top: 3px solid var(--primary-color) !important;
+                      margin-top: 15px;
+                      overflow: visible !important;
+                    "
                   >
                     <div
-                      class="position-absolute bg-accent text-white fw-bold d-flex align-items-center justify-content-center rounded-circle shadow-sm"
-                      style="width: 36px; height: 36px; top: -15px; left: 20px"
+                      class="position-absolute bg-accent text-white fw-bold d-flex align-items-center justify-content-center rounded-circle shadow"
+                      style="
+                        width: 44px;
+                        height: 44px;
+                        top: -22px;
+                        left: 24px;
+                        box-shadow: 0 4px 10px rgba(255, 107, 0, 0.35) !important;
+                      "
                     >
                       4
                     </div>
-                    <h5 class="fw-bold text-primary mb-3 mt-1">
+                    <h5 class="fw-bold text-primary mb-3 mt-2">
                       <i class="fas fa-ship me-2 text-accent"></i>Sea or Air
                       Transit
                     </h5>
-                    <p class="text-secondary fs-7 mb-0">
+                    <p
+                      class="text-secondary fs-7 mb-0"
+                      style="line-height: 1.6"
+                    >
                       Cargo is secured inside containers and loaded onto
                       airplanes or container ships. Real-time satellite
                       positioning tracks vessel progress and estimates port
@@ -175,25 +259,34 @@
                 <!-- Step 5 -->
                 <div class="col-md-6 offset-md-3">
                   <div
-                    class="card p-4 bg-light rounded-3 h-100 border border-light position-relative text-center hover-grow"
+                    class="card p-4 bg-white rounded-4 shadow-sm border border-light position-relative text-center transition hover-grow"
+                    style="
+                      border-top: 3px solid var(--primary-color) !important;
+                      margin-top: 15px;
+                      overflow: visible !important;
+                    "
                   >
                     <div
-                      class="position-absolute bg-accent text-white fw-bold d-flex align-items-center justify-content-center rounded-circle shadow-sm"
+                      class="position-absolute bg-accent text-white fw-bold d-flex align-items-center justify-content-center rounded-circle shadow"
                       style="
-                        width: 36px;
-                        height: 36px;
-                        top: -15px;
+                        width: 44px;
+                        height: 44px;
+                        top: -22px;
                         left: 50%;
                         transform: translateX(-50%);
+                        box-shadow: 0 4px 10px rgba(255, 107, 0, 0.35) !important;
                       "
                     >
                       5
                     </div>
-                    <h5 class="fw-bold text-primary mb-3 mt-1">
+                    <h5 class="fw-bold text-primary mb-3 mt-2">
                       <i class="fas fa-home me-2 text-accent"></i>Final-Mile
                       Delivery
                     </h5>
-                    <p class="text-secondary fs-7 mb-0">
+                    <p
+                      class="text-secondary fs-7 mb-0"
+                      style="line-height: 1.6"
+                    >
                       Upon reaching destination terminals, local dispatch teams
                       transfer containers to land vehicles. Drivers transport
                       shipments to final warehouses, completing signatures.
@@ -208,16 +301,17 @@
 
       <!-- Section 1: Warehouse Intake Flow -->
       <section class="section py-5 bg-light border-top border-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >Intake System</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-white border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-sign-in-alt me-2"></i> Intake System
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Warehouse Ingestion Workflow
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               How incoming freight is vetted, measured, and stored within
               minutes of docking at our terminals.
             </p>
@@ -226,15 +320,20 @@
             <!-- Step 1 -->
             <div class="col-md-4">
               <div
-                class="p-4 bg-white rounded shadow-sm border border-light h-100 text-center"
+                class="p-4 bg-white rounded-4 shadow-sm border border-light h-100 text-center transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-3 mb-3 d-inline-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-3 mb-3"
+                  style="width: 56px; height: 56px"
                   ><i class="fas fa-clipboard-check"></i
                 ></span>
                 <h6 class="fw-bold text-primary mb-2">
                   1. Inspection & Weighing
                 </h6>
-                <p class="text-secondary fs-8 mb-0">
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Security sweeps, cargo mass checks, and physical integrity
                   auditing to verify item declarations.
                 </p>
@@ -243,15 +342,20 @@
             <!-- Step 2 -->
             <div class="col-md-4">
               <div
-                class="p-4 bg-white rounded shadow-sm border border-light h-100 text-center"
+                class="p-4 bg-white rounded-4 shadow-sm border border-light h-100 text-center transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-3 mb-3 d-inline-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-3 mb-3"
+                  style="width: 56px; height: 56px"
                   ><i class="fas fa-expand-arrows-alt"></i
                 ></span>
                 <h6 class="fw-bold text-primary mb-2">
                   2. Volumetric Scanning
                 </h6>
-                <p class="text-secondary fs-8 mb-0">
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   3D laser sizing arrays capture cargo dimension profiles,
                   calculating exact volumetric weight matrices.
                 </p>
@@ -260,15 +364,20 @@
             <!-- Step 3 -->
             <div class="col-md-4">
               <div
-                class="p-4 bg-white rounded shadow-sm border border-light h-100 text-center"
+                class="p-4 bg-white rounded-4 shadow-sm border border-light h-100 text-center transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-3 mb-3 d-inline-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-3 mb-3"
+                  style="width: 56px; height: 56px"
                   ><i class="fas fa-tags"></i
                 ></span>
                 <h6 class="fw-bold text-primary mb-2">
                   3. Telematics & Tagging
                 </h6>
-                <p class="text-secondary fs-8 mb-0">
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   High-frequency RFID and GPS tags are secured to cargo, syncing
                   storage coordinates to customer dashboards.
                 </p>
@@ -280,24 +389,30 @@
 
       <!-- Section 2: Quality & Safety Audits -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="row align-items-center g-5">
             <div class="col-lg-6">
-              <span
-                class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-                >Safety Standards</span
+              <div
+                class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
               >
-              <h2 class="text-primary fw-extrabold display-6 mb-4">
+                <i class="fas fa-shield-alt me-2"></i> Safety Standards
+              </div>
+              <h2
+                class="text-primary fw-extrabold display-5 mb-4"
+                style="line-height: 1.25"
+              >
                 Zero-Damage Loading Protocols
               </h2>
-              <p class="text-secondary mb-4">
+              <p class="text-secondary mb-4 fs-6" style="line-height: 1.8">
                 Before containers leave our terminals, cargo engineers execute
                 extensive security audits, verifying weight centers and strap
                 tension levels.
               </p>
               <div class="d-flex flex-column gap-3">
                 <div class="d-inline-flex gap-3 align-items-start">
-                  <span class="bg-light p-2 rounded text-accent fs-5"
+                  <span
+                    class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-3 fs-5"
+                    style="width: 44px; height: 44px"
                     ><i class="fas fa-arrows-alt-v"></i
                   ></span>
                   <div>
@@ -311,7 +426,9 @@
                   </div>
                 </div>
                 <div class="d-inline-flex gap-3 align-items-start">
-                  <span class="bg-light p-2 rounded text-accent fs-5"
+                  <span
+                    class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-3 fs-5"
+                    style="width: 44px; height: 44px"
                     ><i class="fas fa-door-closed"></i
                   ></span>
                   <div>
@@ -327,11 +444,24 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <img
-                src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80"
-                alt="Container Cargo Inspection"
-                class="img-fluid rounded shadow-lg"
-              />
+              <div class="position-relative p-3">
+                <div
+                  class="position-absolute bg-primary rounded-4 opacity-10 end-0 bottom-0"
+                  style="width: 90%; height: 90%; z-index: 1"
+                ></div>
+                <img
+                  src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80"
+                  alt="Container Cargo Inspection"
+                  class="img-fluid rounded-4 shadow-lg position-relative"
+                  style="
+                    z-index: 2;
+                    transition: var(--transition-smooth);
+                    transform-origin: center;
+                  "
+                  onmouseover="this.style.transform = 'scale(1.02)'"
+                  onmouseout="this.style.transform = 'none'"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -339,63 +469,79 @@
 
       <!-- Section 3: Customs Clearance Steps -->
       <section class="section py-5 bg-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >Trade Gateways</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-white border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-passport me-2"></i> Trade Gateways
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Customs Clearing Protocol
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               Our customs brokerage navigates entry requirements, completing
               duty calculations and documentation releases.
             </p>
           </div>
           <div class="row g-4 justify-content-center">
             <!-- step 1 -->
-            <div class="col-lg-4 text-center">
+            <div class="col-lg-4">
               <div
-                class="p-4 bg-white rounded shadow-sm border border-light h-100"
+                class="p-4 bg-white rounded-4 shadow-sm border border-light text-center h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-2 mb-3 d-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-2 mb-3"
+                  style="width: 64px; height: 64px"
                   ><i class="fas fa-barcode"></i
                 ></span>
                 <h6 class="fw-bold text-primary mb-2">HS Code Verification</h6>
-                <p class="text-secondary fs-8 mb-0">
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Assigning proper tariff classification codes to avoid
                   documentation fines and hold-ups.
                 </p>
               </div>
             </div>
             <!-- step 2 -->
-            <div class="col-lg-4 text-center">
+            <div class="col-lg-4">
               <div
-                class="p-4 bg-white rounded shadow-sm border border-light h-100"
+                class="p-4 bg-white rounded-4 shadow-sm border border-light text-center h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-2 mb-3 d-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-2 mb-3"
+                  style="width: 64px; height: 64px"
                   ><i class="fas fa-coins"></i
                 ></span>
                 <h6 class="fw-bold text-primary mb-2">
                   Duty & Tax Settlements
                 </h6>
-                <p class="text-secondary fs-8 mb-0">
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Filing duties payments through automated portals, ensuring
                   ports release cargo cargo instantly.
                 </p>
               </div>
             </div>
             <!-- step 3 -->
-            <div class="col-lg-4 text-center">
+            <div class="col-lg-4">
               <div
-                class="p-4 bg-white rounded shadow-sm border border-light h-100"
+                class="p-4 bg-white rounded-4 shadow-sm border border-light text-center h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-2 mb-3 d-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-2 mb-3"
+                  style="width: 64px; height: 64px"
                   ><i class="fas fa-stamp"></i
                 ></span>
                 <h6 class="fw-bold text-primary mb-2">Regulatory Release</h6>
-                <p class="text-secondary fs-8 mb-0">
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Receiving electronic import clearance documents, allowing
                   trucks to load cargo from port docks.
                 </p>
@@ -407,17 +553,21 @@
 
       <!-- Section 4: Incident & Weather Routing -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="row align-items-center g-5 flex-lg-row-reverse">
             <div class="col-lg-6">
-              <span
-                class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-                >Active Operations</span
+              <div
+                class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
               >
-              <h2 class="text-primary fw-extrabold display-6 mb-4">
+                <i class="fas fa-route me-2"></i> Active Operations
+              </div>
+              <h2
+                class="text-primary fw-extrabold display-5 mb-4"
+                style="line-height: 1.25"
+              >
                 Real-Time Routing Optimization
               </h2>
-              <p class="text-secondary mb-4 lh-lg">
+              <p class="text-secondary mb-4 fs-6" style="line-height: 1.8">
                 When shipping delays happen—weather alerts, rail strikes, or
                 port congestion—our dispatch center acts. We model alternative
                 travel lanes, re-routing cargo container ships or arranging air
@@ -425,24 +575,30 @@
               </p>
               <div class="row g-3">
                 <div class="col-sm-6">
-                  <div class="p-3 bg-light rounded">
+                  <div class="p-3 bg-light rounded-4 border border-light">
                     <h6 class="fw-bold text-primary mb-1">
                       <i class="fas fa-cloud-sun-rain text-accent me-2"></i
                       >Weather Tracking
                     </h6>
-                    <p class="text-secondary fs-8 mb-0">
+                    <p
+                      class="text-secondary fs-8 mb-0"
+                      style="line-height: 1.6"
+                    >
                       Satellite tracking monitors severe weather alerts along
                       sea lanes.
                     </p>
                   </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="p-3 bg-light rounded">
+                  <div class="p-3 bg-light rounded-4 border border-light">
                     <h6 class="fw-bold text-primary mb-1">
                       <i class="fas fa-route text-accent me-2"></i>Dynamic
                       Re-routing
                     </h6>
-                    <p class="text-secondary fs-8 mb-0">
+                    <p
+                      class="text-secondary fs-8 mb-0"
+                      style="line-height: 1.6"
+                    >
                       Re-dispatching trucking teams to highways, bypassing
                       highway bottlenecks.
                     </p>
@@ -451,11 +607,24 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <img
-                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80"
-                alt="Weather Radar Tracking Ops"
-                class="img-fluid rounded shadow-lg"
-              />
+              <div class="position-relative p-3">
+                <div
+                  class="position-absolute bg-accent rounded-4 opacity-10 end-0 bottom-0"
+                  style="width: 90%; height: 90%; z-index: 1"
+                ></div>
+                <img
+                  src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80"
+                  alt="Weather Radar Tracking Ops"
+                  class="img-fluid rounded-4 shadow-lg position-relative"
+                  style="
+                    z-index: 2;
+                    transition: var(--transition-smooth);
+                    transform-origin: center;
+                  "
+                  onmouseover="this.style.transform = 'scale(1.02)'"
+                  onmouseout="this.style.transform = 'none'"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -463,63 +632,102 @@
 
       <!-- Section 5: KPI & Dashboard Metrics -->
       <section class="section py-5 bg-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >Our Standards</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-white border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-chart-bar me-2"></i> Our Standards
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Key Performance Commitments
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               Our logistics operations are backed by verified performance
               metrics. We prioritize speed, safety, and transparency.
             </p>
           </div>
           <div class="row g-4">
-            <div class="col-lg-3 col-sm-6 text-center">
+            <div class="col-lg-3 col-sm-6">
               <div
-                class="p-4 bg-white rounded shadow-sm border border-light h-100"
+                class="p-4 bg-white rounded-4 shadow-sm border border-light text-center h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <h3 class="fw-extrabold text-accent mb-2">99.4%</h3>
-                <h6 class="fw-bold text-primary mb-2">On-Time Delivery</h6>
-                <p class="text-secondary fs-8 mb-0">
+                <div
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle mb-3"
+                  style="width: 54px; height: 54px"
+                >
+                  <i class="fas fa-history"></i>
+                </div>
+                <h3 class="fw-extrabold text-primary mb-2">99.4%</h3>
+                <h6 class="fw-bold text-accent mb-2 fs-7">On-Time Delivery</h6>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Consistently meeting contracted cargo arrival timelines across
                   sea and road lanes.
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-sm-6 text-center">
+            <div class="col-lg-3 col-sm-6">
               <div
-                class="p-4 bg-white rounded shadow-sm border border-light h-100"
+                class="p-4 bg-white rounded-4 shadow-sm border border-light text-center h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
+                <div
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle mb-3"
+                  style="width: 54px; height: 54px"
+                >
+                  <i class="fas fa-hourglass-half"></i>
+                </div>
                 <h3 class="fw-extrabold text-accent mb-2">&lt; 24h</h3>
-                <h6 class="fw-bold text-primary mb-2">Customs Release</h6>
-                <p class="text-secondary fs-8 mb-0">
+                <h6 class="fw-bold text-primary mb-2 fs-7">Customs Release</h6>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Speedy clearance times at major international ports of entry.
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-sm-6 text-center">
+            <div class="col-lg-3 col-sm-6">
               <div
-                class="p-4 bg-white rounded shadow-sm border border-light h-100"
+                class="p-4 bg-white rounded-4 shadow-sm border border-light text-center h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <h3 class="fw-extrabold text-accent mb-2">0.02%</h3>
-                <h6 class="fw-bold text-primary mb-2">Damage Incident Rate</h6>
-                <p class="text-secondary fs-8 mb-0">
+                <div
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle mb-3"
+                  style="width: 54px; height: 54px"
+                >
+                  <i class="fas fa-shield-virus"></i>
+                </div>
+                <h3 class="fw-extrabold text-primary mb-2">0.02%</h3>
+                <h6 class="fw-bold text-accent mb-2 fs-7">Damage Rate</h6>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Extremely low insurance incident rates thanks to strict
                   packing security.
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-sm-6 text-center">
+            <div class="col-lg-3 col-sm-6">
               <div
-                class="p-4 bg-white rounded shadow-sm border border-light h-100"
+                class="p-4 bg-white rounded-4 shadow-sm border border-light text-center h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
+                <div
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle mb-3"
+                  style="width: 54px; height: 54px"
+                >
+                  <i class="fas fa-satellite"></i>
+                </div>
                 <h3 class="fw-extrabold text-accent mb-2">100%</h3>
-                <h6 class="fw-bold text-primary mb-2">Telemetry Coverage</h6>
-                <p class="text-secondary fs-8 mb-0">
+                <h6 class="fw-bold text-primary mb-2 fs-7">
+                  Telemetry Coverage
+                </h6>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Active real-time GPS tracking on all intermodal logistics
                   paths.
                 </p>
@@ -533,27 +741,29 @@
       <section class="section py-5 bg-white border-bottom border-light">
         <div class="container py-4">
           <div
-            class="p-4 p-md-5 bg-dark text-white rounded shadow-lg position-relative overflow-hidden"
+            class="p-5 text-white rounded-5 shadow-lg border-0 position-relative overflow-hidden"
             style="
-              background-image: url(&quot;https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80&quot;);
-              background-size: cover;
-              background-position: center;
+              background: linear-gradient(
+                135deg,
+                var(--primary-color) 0%,
+                #1e293b 100%
+              );
             "
           >
-            <div
-              class="position-absolute top-0 left-0 w-100 h-100"
-              style="z-index: 1; background-color: rgba(11, 19, 43, 0.92)"
-            ></div>
-            <div class="row align-items-center g-4 position-relative z-2">
+            <div class="row align-items-center g-4 position-relative z-3">
               <div class="col-lg-8">
                 <span
-                  class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
+                  class="badge bg-accent text-white py-2 px-3 mb-3 text-uppercase tracking-wider fs-8"
+                  style="box-shadow: 0 4px 10px rgba(255, 107, 0, 0.25)"
                   >Customer Software</span
                 >
-                <h3 class="fw-bold text-white mb-3">
+                <h3
+                  class="fw-bold text-white display-6 mb-3"
+                  style="font-family: var(--font-heading)"
+                >
                   Live Telematics at Your Fingertips
                 </h3>
-                <p class="text-white-50 fs-7 mb-0">
+                <p class="text-white-50 fs-7 mb-0" style="line-height: 1.8">
                   Every booking gains access to our customer portal. Track cargo
                   GPS telemetry, review custom documentation history, download
                   temperature logs, and confirm digital signatures in real time
@@ -562,8 +772,8 @@
               </div>
               <div class="col-lg-4 text-lg-end">
                 <a
-                  href="#"
-                  class="btn btn-accent px-4 py-3 text-uppercase fw-bold fs-7 tracking-wide hover-grow"
+                  href="dashboard.html"
+                  class="btn btn-accent px-4 py-3 text-uppercase fw-bold fs-7 tracking-wide hover-grow shadow-lg"
                   >Access Portal Demo <i class="fas fa-sign-in-alt ms-2"></i
                 ></a>
               </div>

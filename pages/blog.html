@@ -39,19 +39,46 @@
           background-image: url(&quot;https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80&quot;);
         "
       >
-        <div class="container py-5">
-          <h1
-            class="display-4 fw-extrabold mb-2 animate__animated animate__fadeInDown"
+        <div class="container position-relative z-3">
+          <span
+            class="text-uppercase tracking-widest text-accent fw-bold fs-8 mb-2 d-inline-block animate__animated animate__fadeIn"
+            >LOGISTICS INSIGHTS</span
           >
-            Logistics Insights & News
+          <h1
+            class="display-3 fw-extrabold mb-3 text-white animate__animated animate__fadeInDown"
+            style="letter-spacing: -0.5px; font-family: var(--font-heading)"
+          >
+            Insights & News
           </h1>
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-center mb-0">
+          <div
+            class="mx-auto bg-accent animate__animated animate__zoomIn"
+            style="
+              width: 60px;
+              height: 3px;
+              border-radius: 2px;
+              margin-bottom: 1.5rem;
+            "
+          ></div>
+          <nav
+            aria-label="breadcrumb"
+            class="animate__animated animate__fadeInUp"
+          >
+            <ol
+              class="breadcrumb justify-content-center mb-0"
+              style="
+                background: rgba(255, 255, 255, 0.03);
+                backdrop-filter: blur(5px);
+                display: inline-flex;
+                padding: 0.6rem 1.5rem;
+                border-radius: 30px;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+              "
+            >
               <li class="breadcrumb-item">
                 <a
                   href="../index.html"
-                  class="text-white-50 text-decoration-none"
-                  >Home</a
+                  class="text-white-50 text-decoration-none hover-text-white transition"
+                  ><i class="fas fa-home me-1"></i> Home</a
                 >
               </li>
               <li class="breadcrumb-item text-white active" aria-current="page">
@@ -66,43 +93,75 @@
       <section class="section py-5 bg-light border-bottom border-light">
         <div class="container">
           <div
-            class="card border-0 rounded-4 overflow-hidden shadow-lg position-relative"
+            class="card border-0 rounded-5 overflow-hidden shadow-lg position-relative"
           >
             <div class="row g-0">
               <div class="col-lg-7">
-                <img
-                  src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1200&q=80"
-                  alt="Autonomous Container Ship"
-                  class="img-fluid h-100 w-100 object-fit-cover"
-                  style="min-height: 380px"
-                />
+                <div class="w-100 h-100 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1200&q=80"
+                    alt="Autonomous Container Ship"
+                    class="img-fluid h-100 w-100 object-fit-cover transition duration-500"
+                    style="min-height: 380px"
+                    onmouseover="this.style.transform = 'scale(1.03)'"
+                    onmouseout="this.style.transform = 'none'"
+                  />
+                </div>
               </div>
               <div
-                class="col-lg-5 bg-dark text-white d-flex align-items-center"
+                class="col-lg-5 text-white d-flex align-items-center"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--primary-color) 0%,
+                    #1e293b 100%
+                  ) !important;
+                "
               >
-                <div class="p-4 p-md-5">
+                <!-- Decorative element -->
+                <div
+                  class="position-absolute end-0 top-0 opacity-10 pointer-events-none"
+                  style="
+                    width: 150px;
+                    height: 150px;
+                    background: radial-gradient(
+                      circle,
+                      var(--secondary-color) 0%,
+                      transparent 70%
+                    );
+                  "
+                ></div>
+
+                <div class="p-5 position-relative z-3">
                   <span
-                    class="badge bg-accent text-white py-1 px-3 mb-3 text-uppercase tracking-wider fs-8"
+                    class="badge bg-accent text-white py-2 px-3 mb-3 text-uppercase tracking-wider fs-8"
+                    style="box-shadow: 0 4px 10px rgba(255, 107, 0, 0.25)"
                     >Featured Spotlight</span
                   >
                   <div class="d-flex gap-3 text-white-50 fs-8 mb-3">
                     <span
-                      ><i class="far fa-calendar-alt me-1"></i> Oct 28,
-                      2026</span
+                      ><i class="far fa-calendar-alt me-1 text-accent"></i> Oct
+                      28, 2026</span
                     >
-                    <span><i class="far fa-clock me-1"></i> 6 min read</span>
+                    <span
+                      ><i class="far fa-clock me-1 text-accent"></i> 6 min
+                      read</span
+                    >
                   </div>
-                  <h3 class="fw-bold text-white mb-3">
+                  <h3
+                    class="fw-bold text-white mb-3 display-7"
+                    style="font-family: var(--font-heading)"
+                  >
                     The Future of Autonomous Maritime Freight Networks
                   </h3>
-                  <p class="text-white-50 fs-7 mb-4">
+                  <p class="text-white-50 fs-7 mb-4" style="line-height: 1.7">
                     Autonomous container ships and remote-guided port cranes are
                     transitioning from labs to active sea lanes. We analyze the
                     regulatory, safety, and speed implications.
                   </p>
                   <a
-                    href="#"
-                    class="btn btn-accent px-4 py-2 fs-7 text-uppercase fw-bold tracking-wide hover-grow"
+                    href="contact.html"
+                    class="btn btn-accent px-4 py-2 fs-7 text-uppercase fw-bold tracking-wide hover-grow shadow"
                     >Read Spotlight <i class="fas fa-arrow-right ms-2"></i
                   ></a>
                 </div>
@@ -114,44 +173,64 @@
 
       <!-- Blog Feed & Sidebar -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="row g-5">
             <!-- Left: Blog Feed -->
             <div class="col-lg-8">
               <div class="d-flex flex-column gap-5">
                 <!-- Article 1 -->
-                <article class="blog-card overflow-hidden">
-                  <div class="blog-img-wrapper position-relative">
+                <article
+                  class="blog-card bg-white border border-light rounded-4 shadow-sm overflow-hidden transition hover-grow"
+                  style="
+                    box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                  "
+                >
+                  <div
+                    class="blog-img-wrapper position-relative overflow-hidden"
+                    style="max-height: 360px"
+                  >
                     <img
                       src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
                       alt="Warehouse Operations"
-                      class="img-fluid w-100 object-fit-cover"
-                      style="max-height: 360px"
+                      class="img-fluid w-100 object-fit-cover transition duration-500"
                     />
                     <span
-                      class="position-absolute bg-accent text-white py-1 px-3 fs-8 fw-bold text-uppercase tracking-wider top-0 start-0 m-3 rounded"
+                      class="position-absolute bg-accent text-white py-2 px-3 fs-8 fw-bold text-uppercase tracking-wider top-0 start-0 m-3 rounded-pill shadow-sm"
+                      style="
+                        box-shadow: 0 4px 10px rgba(255, 107, 0, 0.25) !important;
+                      "
                       >Supply Chain</span
                     >
                   </div>
                   <div class="card-body p-4">
                     <div class="d-flex gap-3 text-muted fs-8 mb-3">
                       <span
-                        ><i class="far fa-calendar-alt me-1"></i> Oct 24,
-                        2026</span
+                        ><i class="far fa-calendar-alt me-1 text-accent"></i>
+                        Oct 24, 2026</span
                       >
-                      <span><i class="far fa-user me-1"></i> Admin Ops</span>
                       <span
-                        ><i class="far fa-comment me-1"></i> 12 Comments</span
+                        ><i class="far fa-user me-1 text-accent"></i> Admin
+                        Ops</span
+                      >
+                      <span
+                        ><i class="far fa-comment me-1 text-accent"></i> 12
+                        Comments</span
                       >
                     </div>
-                    <h3 class="fw-bold mb-3 text-primary">
+                    <h3
+                      class="fw-bold mb-3 text-primary display-7"
+                      style="font-family: var(--font-heading)"
+                    >
                       <a
-                        href="#"
+                        href="contact.html"
                         class="text-decoration-none text-primary hover-text-accent transition"
                         >Optimizing Final-Mile Logistics Hubs in 2026</a
                       >
                     </h3>
-                    <p class="text-secondary fs-7 mb-4">
+                    <p
+                      class="text-secondary fs-7 mb-4"
+                      style="line-height: 1.7"
+                    >
                       Urban congestion poses structural obstacles for logistics
                       fleets. In this guide, we analyze how strategically
                       positioned micro-fulfillment nodes, dynamic sorting, and
@@ -159,244 +238,341 @@
                       up to 34%.
                     </p>
                     <a
-                      href="#"
-                      class="btn btn-outline-accent px-4 py-2 fs-7 text-uppercase tracking-wider"
+                      href="contact.html"
+                      class="btn btn-outline-accent px-4 py-2 fs-7 text-uppercase tracking-wider hover-grow mt-auto"
                       >Read Full Article</a
                     >
                   </div>
                 </article>
 
                 <!-- Article 2 -->
-                <article class="blog-card overflow-hidden">
-                  <div class="blog-img-wrapper position-relative">
+                <article
+                  class="blog-card bg-white border border-light rounded-4 shadow-sm overflow-hidden transition hover-grow"
+                  style="
+                    box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                  "
+                >
+                  <div
+                    class="blog-img-wrapper position-relative overflow-hidden"
+                    style="max-height: 360px"
+                  >
                     <img
                       src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=800&q=80"
                       alt="Sea Freight Vessel"
-                      class="img-fluid w-100 object-fit-cover"
-                      style="max-height: 360px"
+                      class="img-fluid w-100 object-fit-cover transition duration-500"
                     />
                     <span
-                      class="position-absolute bg-accent text-white py-1 px-3 fs-8 fw-bold text-uppercase tracking-wider top-0 start-0 m-3 rounded"
+                      class="position-absolute bg-accent text-white py-2 px-3 fs-8 fw-bold text-uppercase tracking-wider top-0 start-0 m-3 rounded-pill shadow-sm"
+                      style="
+                        box-shadow: 0 4px 10px rgba(255, 107, 0, 0.25) !important;
+                      "
                       >Sea Logistics</span
                     >
                   </div>
                   <div class="card-body p-4">
                     <div class="d-flex gap-3 text-muted fs-8 mb-3">
                       <span
-                        ><i class="far fa-calendar-alt me-1"></i> Oct 18,
-                        2026</span
+                        ><i class="far fa-calendar-alt me-1 text-accent"></i>
+                        Oct 18, 2026</span
                       >
                       <span
-                        ><i class="far fa-user me-1"></i> Sea Logistics
-                        Desk</span
+                        ><i class="far fa-user me-1 text-accent"></i> Sea
+                        Logistics Desk</span
                       >
                       <span
-                        ><i class="far fa-comment me-1"></i> 4 Comments</span
+                        ><i class="far fa-comment me-1 text-accent"></i> 4
+                        Comments</span
                       >
                     </div>
-                    <h3 class="fw-bold mb-3 text-primary">
+                    <h3
+                      class="fw-bold mb-3 text-primary display-7"
+                      style="font-family: var(--font-heading)"
+                    >
                       <a
-                        href="#"
+                        href="contact.html"
                         class="text-decoration-none text-primary hover-text-accent transition"
                         >Navigating Complex Maritime Compliance</a
                       >
                     </h3>
-                    <p class="text-secondary fs-7 mb-4">
+                    <p
+                      class="text-secondary fs-7 mb-4"
+                      style="line-height: 1.7"
+                    >
                       Regulatory requirements at port customs change regularly.
                       We discuss key updates to ocean freight manifest
                       declarations, duty audits, HS code compliance, and how to
                       protect international cargo from route hold-ups.
                     </p>
                     <a
-                      href="#"
-                      class="btn btn-outline-accent px-4 py-2 fs-7 text-uppercase tracking-wider"
+                      href="contact.html"
+                      class="btn btn-outline-accent px-4 py-2 fs-7 text-uppercase tracking-wider hover-grow mt-auto"
                       >Read Full Article</a
                     >
                   </div>
                 </article>
 
                 <!-- Article 3: Fuel Surcharges -->
-                <article class="blog-card overflow-hidden">
-                  <div class="blog-img-wrapper position-relative">
+                <article
+                  class="blog-card bg-white border border-light rounded-4 shadow-sm overflow-hidden transition hover-grow"
+                  style="
+                    box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                  "
+                >
+                  <div
+                    class="blog-img-wrapper position-relative overflow-hidden"
+                    style="max-height: 360px"
+                  >
                     <img
                       src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80"
                       alt="Overland Freight Fleet"
-                      class="img-fluid w-100 object-fit-cover"
-                      style="max-height: 360px"
+                      class="img-fluid w-100 object-fit-cover transition duration-500"
                     />
                     <span
-                      class="position-absolute bg-accent text-white py-1 px-3 fs-8 fw-bold text-uppercase tracking-wider top-0 start-0 m-3 rounded"
+                      class="position-absolute bg-accent text-white py-2 px-3 fs-8 fw-bold text-uppercase tracking-wider top-0 start-0 m-3 rounded-pill shadow-sm"
+                      style="
+                        box-shadow: 0 4px 10px rgba(255, 107, 0, 0.25) !important;
+                      "
                       >Freight Rates</span
                     >
                   </div>
                   <div class="card-body p-4">
                     <div class="d-flex gap-3 text-muted fs-8 mb-3">
                       <span
-                        ><i class="far fa-calendar-alt me-1"></i> Oct 12,
-                        2026</span
+                        ><i class="far fa-calendar-alt me-1 text-accent"></i>
+                        Oct 12, 2026</span
                       >
-                      <span><i class="far fa-user me-1"></i> Finance Desk</span>
                       <span
-                        ><i class="far fa-comment me-1"></i> 8 Comments</span
+                        ><i class="far fa-user me-1 text-accent"></i> Finance
+                        Desk</span
+                      >
+                      <span
+                        ><i class="far fa-comment me-1 text-accent"></i> 8
+                        Comments</span
                       >
                     </div>
-                    <h3 class="fw-bold mb-3 text-primary">
+                    <h3
+                      class="fw-bold mb-3 text-primary display-7"
+                      style="font-family: var(--font-heading)"
+                    >
                       <a
-                        href="#"
+                        href="contact.html"
                         class="text-decoration-none text-primary hover-text-accent transition"
                         >Managing Fuel Surcharges & Mitigating Cargo Transit
                         Fees</a
                       >
                     </h3>
-                    <p class="text-secondary fs-7 mb-4">
+                    <p
+                      class="text-secondary fs-7 mb-4"
+                      style="line-height: 1.7"
+                    >
                       Volatile fuel spot rates directly impact shipping budgets.
                       Our auditing division outlines strategies like intermodal
                       shift optimization, low-resistance routes, and locking
                       volume allocations to trim costs.
                     </p>
                     <a
-                      href="#"
-                      class="btn btn-outline-accent px-4 py-2 fs-7 text-uppercase tracking-wider"
+                      href="contact.html"
+                      class="btn btn-outline-accent px-4 py-2 fs-7 text-uppercase tracking-wider hover-grow mt-auto"
                       >Read Full Article</a
                     >
                   </div>
                 </article>
 
                 <!-- Article 4: Cold Chain Safeguards -->
-                <article class="blog-card overflow-hidden">
-                  <div class="blog-img-wrapper position-relative">
+                <article
+                  class="blog-card bg-white border border-light rounded-4 shadow-sm overflow-hidden transition hover-grow"
+                  style="
+                    box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                  "
+                >
+                  <div
+                    class="blog-img-wrapper position-relative overflow-hidden"
+                    style="max-height: 360px"
+                  >
                     <img
                       src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
                       alt="Cold Warehousing Racks"
-                      class="img-fluid w-100 object-fit-cover"
-                      style="max-height: 360px"
+                      class="img-fluid w-100 object-fit-cover transition duration-500"
                     />
                     <span
-                      class="position-absolute bg-accent text-white py-1 px-3 fs-8 fw-bold text-uppercase tracking-wider top-0 start-0 m-3 rounded"
+                      class="position-absolute bg-accent text-white py-2 px-3 fs-8 fw-bold text-uppercase tracking-wider top-0 start-0 m-3 rounded-pill shadow-sm"
+                      style="
+                        box-shadow: 0 4px 10px rgba(255, 107, 0, 0.25) !important;
+                      "
                       >Cold Chain</span
                     >
                   </div>
                   <div class="card-body p-4">
                     <div class="d-flex gap-3 text-muted fs-8 mb-3">
                       <span
-                        ><i class="far fa-calendar-alt me-1"></i> Oct 05,
-                        2026</span
+                        ><i class="far fa-calendar-alt me-1 text-accent"></i>
+                        Oct 05, 2026</span
                       >
-                      <span><i class="far fa-user me-1"></i> Pharma Ops</span>
                       <span
-                        ><i class="far fa-comment me-1"></i> 2 Comments</span
+                        ><i class="far fa-user me-1 text-accent"></i> Pharma
+                        Ops</span
+                      >
+                      <span
+                        ><i class="far fa-comment me-1 text-accent"></i> 2
+                        Comments</span
                       >
                     </div>
-                    <h3 class="fw-bold mb-3 text-primary">
+                    <h3
+                      class="fw-bold mb-3 text-primary display-7"
+                      style="font-family: var(--font-heading)"
+                    >
                       <a
-                        href="#"
+                        href="contact.html"
                         class="text-decoration-none text-primary hover-text-accent transition"
                         >Cold Chain Logistics: Safeguarding Perishables Across
                         Oceans</a
                       >
                     </h3>
-                    <p class="text-secondary fs-7 mb-4">
+                    <p
+                      class="text-secondary fs-7 mb-4"
+                      style="line-height: 1.7"
+                    >
                       Maintaining a strict temperature window is critical for
                       biological pharmaceuticals. We discuss active cooling
                       containers, remote sensor telemetry alerts, and seaport
                       clearance backups.
                     </p>
                     <a
-                      href="#"
-                      class="btn btn-outline-accent px-4 py-2 fs-7 text-uppercase tracking-wider"
+                      href="contact.html"
+                      class="btn btn-outline-accent px-4 py-2 fs-7 text-uppercase tracking-wider hover-grow mt-auto"
                       >Read Full Article</a
                     >
                   </div>
                 </article>
 
                 <!-- Article 5: Decarbonizing Fleet -->
-                <article class="blog-card overflow-hidden">
-                  <div class="blog-img-wrapper position-relative">
+                <article
+                  class="blog-card bg-white border border-light rounded-4 shadow-sm overflow-hidden transition hover-grow"
+                  style="
+                    box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                  "
+                >
+                  <div
+                    class="blog-img-wrapper position-relative overflow-hidden"
+                    style="max-height: 360px"
+                  >
                     <img
                       src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80"
                       alt="Electric Cargo Truck"
-                      class="img-fluid w-100 object-fit-cover"
-                      style="max-height: 360px"
+                      class="img-fluid w-100 object-fit-cover transition duration-500"
                     />
                     <span
-                      class="position-absolute bg-accent text-white py-1 px-3 fs-8 fw-bold text-uppercase tracking-wider top-0 start-0 m-3 rounded"
+                      class="position-absolute bg-accent text-white py-2 px-3 fs-8 fw-bold text-uppercase tracking-wider top-0 start-0 m-3 rounded-pill shadow-sm"
+                      style="
+                        box-shadow: 0 4px 10px rgba(255, 107, 0, 0.25) !important;
+                      "
                       >Sustainability</span
                     >
                   </div>
                   <div class="card-body p-4">
                     <div class="d-flex gap-3 text-muted fs-8 mb-3">
                       <span
-                        ><i class="far fa-calendar-alt me-1"></i> Sep 28,
-                        2026</span
+                        ><i class="far fa-calendar-alt me-1 text-accent"></i>
+                        Sep 28, 2026</span
                       >
-                      <span><i class="far fa-user me-1"></i> Green Fleet</span>
                       <span
-                        ><i class="far fa-comment me-1"></i> 15 Comments</span
+                        ><i class="far fa-user me-1 text-accent"></i> Green
+                        Fleet</span
+                      >
+                      <span
+                        ><i class="far fa-comment me-1 text-accent"></i> 15
+                        Comments</span
                       >
                     </div>
-                    <h3 class="fw-bold mb-3 text-primary">
+                    <h3
+                      class="fw-bold mb-3 text-primary display-7"
+                      style="font-family: var(--font-heading)"
+                    >
                       <a
-                        href="#"
+                        href="contact.html"
                         class="text-decoration-none text-primary hover-text-accent transition"
                         >Decarbonizing Overland Road Fleets: Biofuels & Electric
                         Trucks</a
                       >
                     </h3>
-                    <p class="text-secondary fs-7 mb-4">
+                    <p
+                      class="text-secondary fs-7 mb-4"
+                      style="line-height: 1.7"
+                    >
                       Governments are tightening carbon regulations. Discover
                       how Stackly is piloting hydrogen fuel-cell heavy rigs and
                       electric final-mile vans to exceed regional clean emission
                       standards.
                     </p>
                     <a
-                      href="#"
-                      class="btn btn-outline-accent px-4 py-2 fs-7 text-uppercase tracking-wider"
+                      href="contact.html"
+                      class="btn btn-outline-accent px-4 py-2 fs-7 text-uppercase tracking-wider hover-grow mt-auto"
                       >Read Full Article</a
                     >
                   </div>
                 </article>
 
                 <!-- Article 6: AI Routing -->
-                <article class="blog-card overflow-hidden">
-                  <div class="blog-img-wrapper position-relative">
+                <article
+                  class="blog-card bg-white border border-light rounded-4 shadow-sm overflow-hidden transition hover-grow"
+                  style="
+                    box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                  "
+                >
+                  <div
+                    class="blog-img-wrapper position-relative overflow-hidden"
+                    style="max-height: 360px"
+                  >
                     <img
                       src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80"
                       alt="Aviation cargo planes"
-                      class="img-fluid w-100 object-fit-cover"
-                      style="max-height: 360px"
+                      class="img-fluid w-100 object-fit-cover transition duration-500"
                     />
                     <span
-                      class="position-absolute bg-accent text-white py-1 px-3 fs-8 fw-bold text-uppercase tracking-wider top-0 start-0 m-3 rounded"
+                      class="position-absolute bg-accent text-white py-2 px-3 fs-8 fw-bold text-uppercase tracking-wider top-0 start-0 m-3 rounded-pill shadow-sm"
+                      style="
+                        box-shadow: 0 4px 10px rgba(255, 107, 0, 0.25) !important;
+                      "
                       >Tech & AI</span
                     >
                   </div>
                   <div class="card-body p-4">
                     <div class="d-flex gap-3 text-muted fs-8 mb-3">
                       <span
-                        ><i class="far fa-calendar-alt me-1"></i> Sep 15,
-                        2026</span
+                        ><i class="far fa-calendar-alt me-1 text-accent"></i>
+                        Sep 15, 2026</span
                       >
-                      <span><i class="far fa-user me-1"></i> Route AI Lab</span>
                       <span
-                        ><i class="far fa-comment me-1"></i> 9 Comments</span
+                        ><i class="far fa-user me-1 text-accent"></i> Route AI
+                        Lab</span
+                      >
+                      <span
+                        ><i class="far fa-comment me-1 text-accent"></i> 9
+                        Comments</span
                       >
                     </div>
-                    <h3 class="fw-bold mb-3 text-primary">
+                    <h3
+                      class="fw-bold mb-3 text-primary display-7"
+                      style="font-family: var(--font-heading)"
+                    >
                       <a
-                        href="#"
+                        href="contact.html"
                         class="text-decoration-none text-primary hover-text-accent transition"
                         >Leveraging AI for Fleet Route Optimization & Demand
                         Forecasting</a
                       >
                     </h3>
-                    <p class="text-secondary fs-7 mb-4">
+                    <p
+                      class="text-secondary fs-7 mb-4"
+                      style="line-height: 1.7"
+                    >
                       Predictive demand algorithms allow cargo hubs to
                       pre-position containers. We explain how machine learning
                       models avoid port bottlenecks and lower fuel waste.
                     </p>
                     <a
-                      href="#"
-                      class="btn btn-outline-accent px-4 py-2 fs-7 text-uppercase tracking-wider"
+                      href="contact.html"
+                      class="btn btn-outline-accent px-4 py-2 fs-7 text-uppercase tracking-wider hover-grow mt-auto"
                       >Read Full Article</a
                     >
                   </div>
@@ -440,10 +616,15 @@
             </div>
 
             <!-- Right: Sidebar -->
-            <div class="col-lg-4">
+            <div class="col-lg-4 blog-sidebar">
               <aside class="d-flex flex-column gap-4">
                 <!-- Widget: Search -->
-                <div class="p-4 bg-light rounded shadow-sm border border-light">
+                <div
+                  class="p-4 bg-light rounded-4 shadow-sm border border-light"
+                  style="
+                    box-shadow: 0 10px 30px rgba(11, 19, 43, 0.01) !important;
+                  "
+                >
                   <h6 class="fw-bold text-primary mb-3">Search Newsroom</h6>
                   <form>
                     <div class="input-group">
@@ -460,71 +641,97 @@
                 </div>
 
                 <!-- Widget: Categories -->
-                <div class="p-4 bg-light rounded shadow-sm border border-light">
+                <div
+                  class="p-4 bg-light rounded-4 shadow-sm border border-light"
+                  style="
+                    box-shadow: 0 10px 30px rgba(11, 19, 43, 0.01) !important;
+                  "
+                >
                   <h6 class="fw-bold text-primary mb-3">Categories</h6>
                   <ul class="list-unstyled mb-0 d-flex flex-column gap-2 fs-7">
-                    <li class="d-flex justify-content-between">
+                    <li
+                      class="d-flex justify-content-between pb-2 border-bottom border-light"
+                    >
                       <a
                         href="#"
                         class="text-secondary text-decoration-none hover-text-accent transition"
+                        ><i class="fas fa-ship me-2 text-accent opacity-50"></i
                         >Sea Cargo Operations</a
                       >
-                      <span class="text-muted">(14)</span>
+                      <span class="text-muted fw-bold">(14)</span>
                     </li>
-                    <li class="d-flex justify-content-between">
+                    <li
+                      class="d-flex justify-content-between pb-2 border-bottom border-light"
+                    >
                       <a
                         href="#"
                         class="text-secondary text-decoration-none hover-text-accent transition"
+                        ><i
+                          class="fas fa-plane-departure me-2 text-accent opacity-50"
+                        ></i
                         >Aviation Logistics</a
                       >
-                      <span class="text-muted">(9)</span>
+                      <span class="text-muted fw-bold">(9)</span>
                     </li>
-                    <li class="d-flex justify-content-between">
+                    <li
+                      class="d-flex justify-content-between pb-2 border-bottom border-light"
+                    >
                       <a
                         href="#"
                         class="text-secondary text-decoration-none hover-text-accent transition"
+                        ><i
+                          class="fas fa-file-signature me-2 text-accent opacity-50"
+                        ></i
                         >Custom Brokerage</a
                       >
-                      <span class="text-muted">(6)</span>
+                      <span class="text-muted fw-bold">(6)</span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <a
                         href="#"
                         class="text-secondary text-decoration-none hover-text-accent transition"
+                        ><i
+                          class="fas fa-warehouse me-2 text-accent opacity-50"
+                        ></i
                         >Warehousing Solutions</a
                       >
-                      <span class="text-muted">(11)</span>
+                      <span class="text-muted fw-bold">(11)</span>
                     </li>
                   </ul>
                 </div>
 
                 <!-- Widget: Popular Tags -->
-                <div class="p-4 bg-light rounded shadow-sm border border-light">
+                <div
+                  class="p-4 bg-light rounded-4 shadow-sm border border-light"
+                  style="
+                    box-shadow: 0 10px 30px rgba(11, 19, 43, 0.01) !important;
+                  "
+                >
                   <h6 class="fw-bold text-primary mb-3">Popular Tags</h6>
                   <div class="d-flex flex-wrap gap-2">
                     <a
                       href="#"
-                      class="badge bg-white text-secondary border border-light text-decoration-none py-2 px-3 fs-8 transition hover-text-accent"
+                      class="badge bg-white text-secondary border border-light text-decoration-none py-2 px-3 fs-8 transition hover-text-accent shadow-sm"
                       >FCL Cargo</a
                     >
                     <a
                       href="#"
-                      class="badge bg-white text-secondary border border-light text-decoration-none py-2 px-3 fs-8 transition hover-text-accent"
+                      class="badge bg-white text-secondary border border-light text-decoration-none py-2 px-3 fs-8 transition hover-text-accent shadow-sm"
                       >Air Freight</a
                     >
                     <a
                       href="#"
-                      class="badge bg-white text-secondary border border-light text-decoration-none py-2 px-3 fs-8 transition hover-text-accent"
+                      class="badge bg-white text-secondary border border-light text-decoration-none py-2 px-3 fs-8 transition hover-text-accent shadow-sm"
                       >Compliance</a
                     >
                     <a
                       href="#"
-                      class="badge bg-white text-secondary border border-light text-decoration-none py-2 px-3 fs-8 transition hover-text-accent"
+                      class="badge bg-white text-secondary border border-light text-decoration-none py-2 px-3 fs-8 transition hover-text-accent shadow-sm"
                       >Telemetry</a
                     >
                     <a
                       href="#"
-                      class="badge bg-white text-secondary border border-light text-decoration-none py-2 px-3 fs-8 transition hover-text-accent"
+                      class="badge bg-white text-secondary border border-light text-decoration-none py-2 px-3 fs-8 transition hover-text-accent shadow-sm"
                       >OSHA</a
                     >
                   </div>
@@ -537,29 +744,31 @@
 
       <!-- Section 6: Weekly Logistics Digest Subscription Form -->
       <section class="section py-5 bg-light border-top border-light">
-        <div class="container">
+        <div class="container py-4">
           <div
-            class="p-4 p-md-5 bg-primary text-white rounded shadow-lg position-relative overflow-hidden"
+            class="p-5 text-white rounded-5 shadow-lg border-0 position-relative overflow-hidden"
             style="
-              background-image: url(&quot;https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80&quot;);
-              background-size: cover;
-              background-position: center;
+              background: linear-gradient(
+                135deg,
+                var(--primary-color) 0%,
+                #1e293b 100%
+              );
             "
           >
-            <div
-              class="position-absolute top-0 left-0 w-100 h-100"
-              style="z-index: 1; background-color: rgba(11, 19, 43, 0.93)"
-            ></div>
-            <div class="row align-items-center g-4 position-relative z-2">
+            <div class="row align-items-center g-4 position-relative z-3">
               <div class="col-lg-6">
                 <span
-                  class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
+                  class="badge bg-accent text-white py-2 px-3 mb-3 text-uppercase tracking-wider fs-8"
+                  style="box-shadow: 0 4px 10px rgba(255, 107, 0, 0.25)"
                   >Digest Subscription</span
                 >
-                <h3 class="fw-bold text-white mb-2">
+                <h3
+                  class="fw-bold text-white display-6 mb-2"
+                  style="font-family: var(--font-heading)"
+                >
                   Get Industry Reports Weekly
                 </h3>
-                <p class="text-white-50 fs-7 mb-0">
+                <p class="text-white-50 fs-7 mb-0" style="line-height: 1.8">
                   Stay updated on port closures, fuel surcharges, regulatory
                   compliance codes, and global cargo updates. We send one
                   premium logistics report every Monday morning.
@@ -572,13 +781,13 @@
                 >
                   <input
                     type="email"
-                    class="form-control bg-white text-dark shadow-none border-0 py-3"
+                    class="form-control bg-white text-dark shadow-none border-0 py-3 rounded-3"
                     placeholder="Enter your business email"
                     required
                   />
                   <button
                     type="submit"
-                    class="btn btn-accent px-4 py-3 text-uppercase fw-bold fs-7 tracking-wider hover-grow"
+                    class="btn btn-accent px-4 py-3 text-uppercase fw-bold fs-7 tracking-wider hover-grow shadow-lg d-flex align-items-center"
                   >
                     Subscribe <i class="fas fa-paper-plane ms-1"></i>
                   </button>

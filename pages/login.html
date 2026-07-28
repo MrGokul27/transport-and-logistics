@@ -267,11 +267,15 @@
 
           if (hasError) return;
 
-          // Success - Simulation
+          // Success - Simulation and storage
+          localStorage.setItem("userEmail", emailInput.value);
+          localStorage.setItem("userRole", roleSelect.value);
+          localStorage.setItem("userRoleText", roleSelect.options[roleSelect.selectedIndex].text);
+
           alert(
             `Successfully signed in as ${roleSelect.options[roleSelect.selectedIndex].text}!`,
           );
-          window.location.href = "../index.html";
+          window.location.href = "dashboard.html";
         });
       });
     </script>

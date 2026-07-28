@@ -39,19 +39,46 @@
           background-image: url(&quot;https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1920&q=80&quot;);
         "
       >
-        <div class="container py-5">
+        <div class="container position-relative z-3">
+          <span
+            class="text-uppercase tracking-widest text-accent fw-bold fs-8 mb-2 d-inline-block animate__animated animate__fadeIn"
+            >GET IN TOUCH</span
+          >
           <h1
-            class="display-4 fw-extrabold mb-2 animate__animated animate__fadeInDown"
+            class="display-3 fw-extrabold mb-3 text-white animate__animated animate__fadeInDown"
+            style="letter-spacing: -0.5px; font-family: var(--font-heading)"
           >
             Contact Our Offices
           </h1>
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-center mb-0">
+          <div
+            class="mx-auto bg-accent animate__animated animate__zoomIn"
+            style="
+              width: 60px;
+              height: 3px;
+              border-radius: 2px;
+              margin-bottom: 1.5rem;
+            "
+          ></div>
+          <nav
+            aria-label="breadcrumb"
+            class="animate__animated animate__fadeInUp"
+          >
+            <ol
+              class="breadcrumb justify-content-center mb-0"
+              style="
+                background: rgba(255, 255, 255, 0.03);
+                backdrop-filter: blur(5px);
+                display: inline-flex;
+                padding: 0.6rem 1.5rem;
+                border-radius: 30px;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+              "
+            >
               <li class="breadcrumb-item">
                 <a
                   href="../index.html"
-                  class="text-white-50 text-decoration-none"
-                  >Home</a
+                  class="text-white-50 text-decoration-none hover-text-white transition"
+                  ><i class="fas fa-home me-1"></i> Home</a
                 >
               </li>
               <li class="breadcrumb-item text-white active" aria-current="page">
@@ -64,16 +91,17 @@
 
       <!-- Global Locations Grid -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >Offices</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-building me-2"></i> Offices
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Our Operations Hubs
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               Direct communication channels to our main logistics depots and
               custom compliance desks.
             </p>
@@ -82,113 +110,73 @@
           <div class="row g-4">
             <!-- Location 1 -->
             <div class="col-lg-3 col-sm-6">
-              <div
-                class="card p-4 bg-light rounded shadow-sm border border-light h-100 text-center hover-grow"
-              >
-                <span
-                  class="bg-white p-3 rounded text-accent fs-4 mb-3 d-inline-block shadow-sm"
-                  style="
-                    width: 50px;
-                    height: 50px;
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                  ><i class="fas fa-map-marker-alt"></i
-                ></span>
-                <h6 class="fw-bold text-primary mb-2">New York Office</h6>
-                <p class="text-secondary fs-8 mb-3">
+              <div class="contact-hub-card h-100 text-center">
+                <span class="hub-badge">Global HQ</span>
+                <div class="icon-wrapper">
+                  <i class="fas fa-city"></i>
+                </div>
+                <h5 class="fw-bold text-primary mb-2">New York Office</h5>
+                <p class="text-secondary fs-8 mb-4 lh-lg">
                   4517 Washington Ave, New York, USA
                 </p>
                 <a
-                  href="#"
-                  class="text-decoration-none text-primary fs-8 fw-semibold d-block"
-                  ><i class="fas fa-phone-alt me-1 text-accent"></i> +1 (800)
-                  555-0199</a
+                  href="tel:+18005550199"
+                  class="btn btn-sm btn-outline-accent w-100 py-2 fs-8 text-uppercase fw-bold mt-auto"
+                  ><i class="fas fa-phone-alt me-2"></i> +1 (800) 555-0199</a
                 >
               </div>
             </div>
             <!-- Location 2 -->
             <div class="col-lg-3 col-sm-6">
-              <div
-                class="card p-4 bg-light rounded shadow-sm border border-light h-100 text-center hover-grow"
-              >
-                <span
-                  class="bg-white p-3 rounded text-accent fs-4 mb-3 d-inline-block shadow-sm"
-                  style="
-                    width: 50px;
-                    height: 50px;
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                  ><i class="fas fa-map-marker-alt"></i
-                ></span>
-                <h6 class="fw-bold text-primary mb-2">Rotterdam Depot</h6>
-                <p class="text-secondary fs-8 mb-3">
+              <div class="contact-hub-card h-100 text-center">
+                <span class="hub-badge">Europe Port</span>
+                <div class="icon-wrapper">
+                  <i class="fas fa-ship"></i>
+                </div>
+                <h5 class="fw-bold text-primary mb-2">Rotterdam Depot</h5>
+                <p class="text-secondary fs-8 mb-4 lh-lg">
                   Havenpoort 12, Rotterdam, Netherlands
                 </p>
                 <a
-                  href="#"
-                  class="text-decoration-none text-primary fs-8 fw-semibold d-block"
-                  ><i class="fas fa-phone-alt me-1 text-accent"></i> +1 (800)
-                  555-0199</a
+                  href="tel:+18005550199"
+                  class="btn btn-sm btn-outline-accent w-100 py-2 fs-8 text-uppercase fw-bold mt-auto"
+                  ><i class="fas fa-phone-alt me-2"></i> +1 (800) 555-0199</a
                 >
               </div>
             </div>
             <!-- Location 3 -->
             <div class="col-lg-3 col-sm-6">
-              <div
-                class="card p-4 bg-light rounded shadow-sm border border-light h-100 text-center hover-grow"
-              >
-                <span
-                  class="bg-white p-3 rounded text-accent fs-4 mb-3 d-inline-block shadow-sm"
-                  style="
-                    width: 50px;
-                    height: 50px;
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                  ><i class="fas fa-map-marker-alt"></i
-                ></span>
-                <h6 class="fw-bold text-primary mb-2">London Port Hub</h6>
-                <p class="text-secondary fs-8 mb-3">
+              <div class="contact-hub-card h-100 text-center">
+                <span class="hub-badge">UK Transit</span>
+                <div class="icon-wrapper">
+                  <i class="fas fa-warehouse"></i>
+                </div>
+                <h5 class="fw-bold text-primary mb-2">London Port Hub</h5>
+                <p class="text-secondary fs-8 mb-4 lh-lg">
                   22 London Gateway, Essex, UK
                 </p>
                 <a
-                  href="#"
-                  class="text-decoration-none text-primary fs-8 fw-semibold d-block"
-                  ><i class="fas fa-phone-alt me-1 text-accent"></i> +1 (800)
-                  555-0199</a
+                  href="tel:+18005550199"
+                  class="btn btn-sm btn-outline-accent w-100 py-2 fs-8 text-uppercase fw-bold mt-auto"
+                  ><i class="fas fa-phone-alt me-2"></i> +1 (800) 555-0199</a
                 >
               </div>
             </div>
             <!-- Location 4 -->
             <div class="col-lg-3 col-sm-6">
-              <div
-                class="card p-4 bg-light rounded shadow-sm border border-light h-100 text-center hover-grow"
-              >
-                <span
-                  class="bg-white p-3 rounded text-accent fs-4 mb-3 d-inline-block shadow-sm"
-                  style="
-                    width: 50px;
-                    height: 50px;
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                  ><i class="fas fa-map-marker-alt"></i
-                ></span>
-                <h6 class="fw-bold text-primary mb-2">Singapore Depot</h6>
-                <p class="text-secondary fs-8 mb-3">
+              <div class="contact-hub-card h-100 text-center">
+                <span class="hub-badge">Asia Pacific</span>
+                <div class="icon-wrapper">
+                  <i class="fas fa-plane-departure"></i>
+                </div>
+                <h5 class="fw-bold text-primary mb-2">Singapore Depot</h5>
+                <p class="text-secondary fs-8 mb-4 lh-lg">
                   10 Harbour Drive, Singapore Hub
                 </p>
                 <a
-                  href="#"
-                  class="text-decoration-none text-primary fs-8 fw-semibold d-block"
-                  ><i class="fas fa-phone-alt me-1 text-accent"></i> +1 (800)
-                  555-0199</a
+                  href="tel:+18005550199"
+                  class="btn btn-sm btn-outline-accent w-100 py-2 fs-8 text-uppercase fw-bold mt-auto"
+                  ><i class="fas fa-phone-alt me-2"></i> +1 (800) 555-0199</a
                 >
               </div>
             </div>
@@ -199,13 +187,16 @@
       <!-- Contact Form & Iframe Map -->
       <section class="section py-5 bg-light">
         <div class="container py-4">
-          <div class="row g-5">
+          <div class="row g-5 align-items-center">
             <!-- Form Column -->
             <div class="col-lg-6">
-              <div
-                class="bg-white p-4 p-md-5 rounded shadow-sm border border-light"
-              >
-                <h4 class="fw-bold text-primary mb-3">Send Us a Cargo Query</h4>
+              <div class="contact-form-card">
+                <h4
+                  class="fw-bold text-primary mb-3"
+                  style="font-family: var(--font-heading)"
+                >
+                  Send Us a Cargo Query
+                </h4>
                 <p class="text-secondary fs-7 mb-4">
                   Have an upcoming transport transit or cargo inquiry? Complete
                   the details below and an operations coordinator will reply in
@@ -220,7 +211,7 @@
                       >
                       <input
                         type="text"
-                        class="form-control bg-light border-light shadow-none fs-7 py-2"
+                        class="form-control contact-input-field shadow-none fs-7 py-2"
                         placeholder="Full Name"
                         required
                       />
@@ -231,8 +222,8 @@
                       >
                       <input
                         type="email"
-                        class="form-control bg-light border-light shadow-none fs-7 py-2"
-                        placeholder="Email"
+                        class="form-control contact-input-field shadow-none fs-7 py-2"
+                        placeholder="Email Address"
                         required
                       />
                     </div>
@@ -242,7 +233,7 @@
                       >
                       <input
                         type="text"
-                        class="form-control bg-light border-light shadow-none fs-7 py-2"
+                        class="form-control contact-input-field shadow-none fs-7 py-2"
                         placeholder="e.g. Customs brokerage tariff inquiry"
                         required
                       />
@@ -252,7 +243,7 @@
                         >Detailed Cargo Specifications</label
                       >
                       <textarea
-                        class="form-control bg-light border-light shadow-none fs-7 py-2"
+                        class="form-control contact-input-field shadow-none fs-7 py-2"
                         rows="4"
                         placeholder="Describe weights, dimensions, origins, destinations..."
                         required
@@ -274,15 +265,12 @@
 
             <!-- Map Column -->
             <div class="col-lg-6">
-              <div
-                class="w-100 h-100 rounded overflow-hidden shadow-sm border border-light position-relative"
-                style="min-height: 400px"
-              >
+              <div class="map-frame-wrapper w-100 h-100" style="min-height: 480px">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3179.960389549842!2d-83.76408938441998!3d37.15364135542302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884352a00e70879f%3A0x1ad06ed33b7003c!2sIangar!5e0!3m2!1svi!2s!4v1678013229780!5m2!1svi!2s"
                   width="100%"
                   height="100%"
-                  style="border: 0; position: absolute; top: 0; left: 0"
+                  style="border: 0; min-height: 480px;"
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
@@ -296,19 +284,21 @@
       <!-- Section 1: Emergency Operations Hotlines -->
       <section class="section py-5 bg-white border-top border-light">
         <div class="container py-4">
-          <div
-            class="p-4 p-md-5 bg-light border-start border-4 border-danger rounded shadow-sm"
-          >
-            <div class="row align-items-center g-4">
+          <div class="crisis-banner p-5 text-white rounded-5 shadow-lg border-0 position-relative overflow-hidden">
+            <div class="row align-items-center g-4 position-relative z-3">
               <div class="col-lg-8">
                 <span
-                  class="badge bg-danger text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
+                  class="badge bg-white text-danger py-2 px-3 mb-3 text-uppercase tracking-wider fs-8 fw-bold"
+                  style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15)"
                   >24/7 Hotlines</span
                 >
-                <h4 class="fw-bold text-primary mb-2">
+                <h4
+                  class="fw-bold text-white display-6 mb-2"
+                  style="font-family: var(--font-heading)"
+                >
                   Emergency Routing & Compliance Actions
                 </h4>
-                <p class="text-secondary fs-8 mb-0">
+                <p class="text-white-50 fs-7 mb-0 lh-lg">
                   Are you facing immediate border clearance holds, hazardous
                   material accidents, or need immediate air charter dispatch?
                   Our global crisis team is on stand-by.
@@ -316,8 +306,8 @@
               </div>
               <div class="col-lg-4 text-lg-end">
                 <a
-                  href="#"
-                  class="btn btn-danger px-4 py-3 text-uppercase fw-bold fs-7 tracking-wide hover-grow"
+                  href="tel:+18005550199"
+                  class="btn crisis-pulse-button px-4 py-3 text-uppercase fw-bold fs-7 tracking-wide hover-grow shadow-lg"
                   ><i
                     class="fas fa-phone-alt me-2 animate__animated animate__shakeX animate__infinite"
                   ></i>
@@ -331,16 +321,17 @@
 
       <!-- Section 2: Departmental Contact Directory -->
       <section class="section py-5 bg-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >Staff Directory</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-white border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-folder-open me-2"></i> Staff Directory
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Direct Contact Channels
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               Skip the general queue and email our departments directly for
               specific invoicing, customs, or depot space queries.
             </p>
@@ -348,77 +339,69 @@
           <div class="row g-4">
             <!-- Dept 1 -->
             <div class="col-lg-3 col-sm-6 text-center">
-              <div
-                class="card p-4 bg-white rounded shadow-sm border border-light h-100 hover-grow"
-              >
-                <span class="text-accent fs-3 mb-3 d-block"
-                  ><i class="fas fa-file-invoice"></i
-                ></span>
-                <h6 class="fw-bold text-primary mb-1">Billing & Invoicing</h6>
-                <p class="text-secondary fs-8 mb-3">
-                  Invoice auditing, tariff disputes, and payments.
+              <div class="dept-directory-card h-100 d-flex flex-column align-items-center">
+                <span class="dept-icon-wrapper">
+                  <i class="fas fa-file-invoice-dollar"></i>
+                </span>
+                <h5 class="fw-bold text-primary mb-2">Billing & Invoicing</h5>
+                <p class="text-secondary fs-8 mb-4 lh-lg">
+                  Invoice auditing, tariff disputes, and payment solutions.
                 </p>
                 <a
-                  href="#"
-                  class="text-accent text-decoration-none fs-8 fw-semibold mt-auto"
-                  ><i class="fas fa-envelope me-1"></i> billing@stackly.com</a
+                  href="mailto:billing@stackly.com"
+                  class="btn btn-sm btn-outline-accent w-100 py-2 fs-8 text-uppercase fw-bold mt-auto"
+                  ><i class="fas fa-envelope me-1"></i> Email Team</a
                 >
               </div>
             </div>
             <!-- Dept 2 -->
             <div class="col-lg-3 col-sm-6 text-center">
-              <div
-                class="card p-4 bg-white rounded shadow-sm border border-light h-100 hover-grow"
-              >
-                <span class="text-accent fs-3 mb-3 d-block"
-                  ><i class="fas fa-balance-scale"></i
-                ></span>
-                <h6 class="fw-bold text-primary mb-1">Customs Clearance</h6>
-                <p class="text-secondary fs-8 mb-3">
-                  HS classifications, duty filings, customs bonds.
+              <div class="dept-directory-card h-100 d-flex flex-column align-items-center">
+                <span class="dept-icon-wrapper">
+                  <i class="fas fa-shield-halved"></i>
+                </span>
+                <h5 class="fw-bold text-primary mb-2">Customs Clearance</h5>
+                <p class="text-secondary fs-8 mb-4 lh-lg">
+                  HS classifications, duty filings, and customs bonds.
                 </p>
                 <a
-                  href="#"
-                  class="text-accent text-decoration-none fs-8 fw-semibold mt-auto"
-                  ><i class="fas fa-envelope me-1"></i> brokerage@stackly.com</a
+                  href="mailto:brokerage@stackly.com"
+                  class="btn btn-sm btn-outline-accent w-100 py-2 fs-8 text-uppercase fw-bold mt-auto"
+                  ><i class="fas fa-envelope me-1"></i> Email Team</a
                 >
               </div>
             </div>
             <!-- Dept 3 -->
             <div class="col-lg-3 col-sm-6 text-center">
-              <div
-                class="card p-4 bg-white rounded shadow-sm border border-light h-100 hover-grow"
-              >
-                <span class="text-accent fs-3 mb-3 d-block"
-                  ><i class="fas fa-boxes"></i
-                ></span>
-                <h6 class="fw-bold text-primary mb-1">Depot & Storage</h6>
-                <p class="text-secondary fs-8 mb-3">
-                  Cold-chain, hazmat space booking, kitting.
+              <div class="dept-directory-card h-100 d-flex flex-column align-items-center">
+                <span class="dept-icon-wrapper">
+                  <i class="fas fa-boxes-stacked"></i>
+                </span>
+                <h5 class="fw-bold text-primary mb-2">Depot & Storage</h5>
+                <p class="text-secondary fs-8 mb-4 lh-lg">
+                  Cold-chain storage, hazardous materials, and space bookings.
                 </p>
                 <a
-                  href="#"
-                  class="text-accent text-decoration-none fs-8 fw-semibold mt-auto"
-                  ><i class="fas fa-envelope me-1"></i> depots@stackly.com</a
+                  href="mailto:depots@stackly.com"
+                  class="btn btn-sm btn-outline-accent w-100 py-2 fs-8 text-uppercase fw-bold mt-auto"
+                  ><i class="fas fa-envelope me-1"></i> Email Team</a
                 >
               </div>
             </div>
             <!-- Dept 4 -->
             <div class="col-lg-3 col-sm-6 text-center">
-              <div
-                class="card p-4 bg-white rounded shadow-sm border border-light h-100 hover-grow"
-              >
-                <span class="text-accent fs-3 mb-3 d-block"
-                  ><i class="fas fa-user-tie"></i
-                ></span>
-                <h6 class="fw-bold text-primary mb-1">Careers Desk</h6>
-                <p class="text-secondary fs-8 mb-3">
-                  Recruitment, internships, academy enrollment.
+              <div class="dept-directory-card h-100 d-flex flex-column align-items-center">
+                <span class="dept-icon-wrapper">
+                  <i class="fas fa-handshake"></i>
+                </span>
+                <h5 class="fw-bold text-primary mb-2">Careers Desk</h5>
+                <p class="text-secondary fs-8 mb-4 lh-lg">
+                  Recruitment, internships, and logistics academy enrollment.
                 </p>
                 <a
-                  href="#"
-                  class="text-accent text-decoration-none fs-8 fw-semibold mt-auto"
-                  ><i class="fas fa-envelope me-1"></i> careers@stackly.com</a
+                  href="mailto:careers@stackly.com"
+                  class="btn btn-sm btn-outline-accent w-100 py-2 fs-8 text-uppercase fw-bold mt-auto"
+                  ><i class="fas fa-envelope me-1"></i> Email Team</a
                 >
               </div>
             </div>
@@ -428,41 +411,56 @@
 
       <!-- Section 3: Schedule a Consultant Callback -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="row align-items-center g-5">
             <div class="col-lg-6">
-              <span
-                class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-                >Sales Consulting</span
+              <div
+                class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
               >
-              <h2 class="text-primary fw-extrabold display-6 mb-4">
+                <i class="fas fa-phone-volume me-2"></i> Sales Consulting
+              </div>
+              <h2
+                class="text-primary fw-extrabold display-5 mb-4"
+                style="line-height: 1.25"
+              >
                 Request a Route Optimization Call
               </h2>
-              <p class="text-secondary mb-4">
+              <p class="text-secondary mb-4 fs-6 lh-lg">
                 Fill in your availability, and a senior logistics operations
                 coordinator will call you back to evaluate your container space
                 requirements and tariff models.
               </p>
               <ul
-                class="list-unstyled text-secondary fs-8 d-flex flex-column gap-2 mb-0"
+                class="list-unstyled text-secondary fs-8 d-flex flex-column gap-3 mb-0"
               >
-                <li>
-                  <i class="fas fa-check text-accent me-2"></i>Free 30-minute
-                  supply chain route analysis.
+                <li class="d-flex align-items-center">
+                  <span class="bg-accent bg-opacity-10 text-accent rounded-circle me-3 d-inline-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">
+                    <i class="fas fa-check fs-8"></i>
+                  </span>
+                  Free 30-minute supply chain route analysis.
                 </li>
-                <li>
-                  <i class="fas fa-check text-accent me-2"></i>Analysis of
-                  customs clearances bottlenecks at destination ports.
+                <li class="d-flex align-items-center">
+                  <span class="bg-accent bg-opacity-10 text-accent rounded-circle me-3 d-inline-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">
+                    <i class="fas fa-check fs-8"></i>
+                  </span>
+                  Analysis of customs clearance bottlenecks at destination ports.
                 </li>
-                <li>
-                  <i class="fas fa-check text-accent me-2"></i>Quotes for air
-                  and sea consolidation rates.
+                <li class="d-flex align-items-center">
+                  <span class="bg-accent bg-opacity-10 text-accent rounded-circle me-3 d-inline-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">
+                    <i class="fas fa-check fs-8"></i>
+                  </span>
+                  Quotes for air and sea consolidation rates.
                 </li>
               </ul>
             </div>
             <div class="col-lg-6">
-              <div class="bg-light p-4 rounded shadow-sm border border-light">
-                <h5 class="fw-bold text-primary mb-3">Schedule Callback</h5>
+              <div class="contact-form-card">
+                <h5
+                  class="fw-bold text-primary mb-4"
+                  style="font-family: var(--font-heading)"
+                >
+                  Schedule Callback
+                </h5>
                 <form id="callbackForm">
                   <div class="row g-3">
                     <div class="col-sm-6">
@@ -471,7 +469,7 @@
                       >
                       <input
                         type="date"
-                        class="form-control bg-white border-light shadow-none fs-7 py-2"
+                        class="form-control contact-input-field shadow-none fs-7 py-2"
                         required
                       />
                     </div>
@@ -480,7 +478,7 @@
                         >Preferred Time</label
                       >
                       <select
-                        class="form-select bg-white border-light shadow-none fs-7 py-2"
+                        class="form-select contact-input-field shadow-none fs-7 py-2"
                         required
                       >
                         <option value="morning">
@@ -500,15 +498,15 @@
                       >
                       <input
                         type="tel"
-                        class="form-control bg-white border-light shadow-none fs-7 py-2"
+                        class="form-control contact-input-field shadow-none fs-7 py-2"
                         placeholder="e.g. +1 (555) 0199"
                         required
                       />
                     </div>
-                    <div class="col-12 d-grid mt-3">
+                    <div class="col-12 d-grid mt-4">
                       <button
                         type="submit"
-                        class="btn btn-accent py-2 text-uppercase tracking-wider fs-8 fw-bold"
+                        class="btn btn-accent py-3 text-uppercase tracking-wider fs-8 fw-bold"
                       >
                         Book Callback Time
                       </button>
@@ -524,16 +522,17 @@
 
       <!-- Section 4: Network Coverage Metrics -->
       <section class="section py-5 bg-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >Network Reach</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-white border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-globe me-2"></i> Network Reach
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Global Cargo Coverage
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               Our logistics operations span major shipping lanes, port
               authorities, and air freight networks globally.
             </p>
@@ -541,11 +540,13 @@
           <div class="row g-4 text-center">
             <div class="col-lg-3 col-sm-6">
               <div
-                class="card p-4 bg-white rounded shadow-sm border border-light h-100 hover-grow"
+                class="card p-4 bg-white rounded-4 border border-light h-100 transition hover-grow"
+                style="box-shadow: 0 10px 30px rgba(11, 19, 43, 0.02) !important; border-radius: var(--card-radius) !important;"
               >
-                <h3 class="fw-extrabold text-accent mb-1">120+</h3>
+                <div class="text-accent mb-2 fs-3"><i class="fas fa-earth-americas"></i></div>
+                <h3 class="fw-extrabold text-primary mb-1">120+</h3>
                 <h6
-                  class="fw-bold text-primary mb-0 fs-8 text-uppercase tracking-wide"
+                  class="fw-bold text-secondary mb-0 fs-8 text-uppercase tracking-wide"
                 >
                   Countries Covered
                 </h6>
@@ -553,11 +554,13 @@
             </div>
             <div class="col-lg-3 col-sm-6">
               <div
-                class="card p-4 bg-white rounded shadow-sm border border-light h-100 hover-grow"
+                class="card p-4 bg-white rounded-4 border border-light h-100 transition hover-grow"
+                style="box-shadow: 0 10px 30px rgba(11, 19, 43, 0.02) !important; border-radius: var(--card-radius) !important;"
               >
-                <h3 class="fw-extrabold text-accent mb-1">300+</h3>
+                <div class="text-accent mb-2 fs-3"><i class="fas fa-anchor"></i></div>
+                <h3 class="fw-extrabold text-primary mb-1">300+</h3>
                 <h6
-                  class="fw-bold text-primary mb-0 fs-8 text-uppercase tracking-wide"
+                  class="fw-bold text-secondary mb-0 fs-8 text-uppercase tracking-wide"
                 >
                   Port Gateways
                 </h6>
@@ -565,11 +568,13 @@
             </div>
             <div class="col-lg-3 col-sm-6">
               <div
-                class="card p-4 bg-white rounded shadow-sm border border-light h-100 hover-grow"
+                class="card p-4 bg-white rounded-4 border border-light h-100 transition hover-grow"
+                style="box-shadow: 0 10px 30px rgba(11, 19, 43, 0.02) !important; border-radius: var(--card-radius) !important;"
               >
-                <h3 class="fw-extrabold text-accent mb-1">5 Key</h3>
+                <div class="text-accent mb-2 fs-3"><i class="fas fa-boxes-packing"></i></div>
+                <h3 class="fw-extrabold text-primary mb-1">5 Key</h3>
                 <h6
-                  class="fw-bold text-primary mb-0 fs-8 text-uppercase tracking-wide"
+                  class="fw-bold text-secondary mb-0 fs-8 text-uppercase tracking-wide"
                 >
                   Depot Terminals
                 </h6>
@@ -577,11 +582,13 @@
             </div>
             <div class="col-lg-3 col-sm-6">
               <div
-                class="card p-4 bg-white rounded shadow-sm border border-light h-100 hover-grow"
+                class="card p-4 bg-white rounded-4 border border-light h-100 transition hover-grow"
+                style="box-shadow: 0 10px 30px rgba(11, 19, 43, 0.02) !important; border-radius: var(--card-radius) !important;"
               >
-                <h3 class="fw-extrabold text-accent mb-1">1,500+</h3>
+                <div class="text-accent mb-2 fs-3"><i class="fas fa-users-gear"></i></div>
+                <h3 class="fw-extrabold text-primary mb-1">1,500+</h3>
                 <h6
-                  class="fw-bold text-primary mb-0 fs-8 text-uppercase tracking-wide"
+                  class="fw-bold text-secondary mb-0 fs-8 text-uppercase tracking-wide"
                 >
                   Operators & Crew
                 </h6>
@@ -593,23 +600,27 @@
 
       <!-- Section 5: Common Contact FAQs -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >Help Desk</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-question-circle me-2"></i> Help Desk
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Contact Desk FAQs
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               Quick answers to common questions about communication options,
               damaged cargo, and bonded depots.
             </p>
           </div>
           <div class="row justify-content-center">
             <div class="col-lg-8">
-              <div class="accordion accordion-flush" id="contactFaq">
+              <div
+                class="accordion accordion-flush faq-accordion"
+                id="contactFaq"
+              >
                 <!-- FAQ 1 -->
                 <div class="accordion-item border-bottom border-light">
                   <h2 class="accordion-header">
@@ -695,16 +706,17 @@
 
       <!-- Section 6: Resource & Brochure Downloads -->
       <section class="section py-5 bg-light border-bottom border-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >Documents</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-white border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-file-pdf me-2"></i> Documents
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Resource & Guide Downloads
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               Grab our official documentation, standard shipping compliance
               checklists, and customs manifest templates.
             </p>
@@ -712,63 +724,55 @@
           <div class="row g-4 justify-content-center">
             <!-- doc 1 -->
             <div class="col-lg-4 col-md-6">
-              <div
-                class="card p-4 bg-white rounded shadow-sm border border-light h-100 text-center hover-grow"
-              >
-                <span class="text-accent fs-2 mb-3 d-block"
-                  ><i class="fas fa-file-pdf"></i
-                ></span>
-                <h6 class="fw-bold text-primary mb-1">Company Profile PDF</h6>
-                <p class="text-secondary fs-8 mb-3">
-                  General history, fleet specifications, and coverage nodes
-                  detail.
+              <div class="brochure-download-card h-100 text-center">
+                <span class="file-badge">PDF - 4.2 MB</span>
+                <div class="doc-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="fw-bold text-primary mb-2">Company Profile</h5>
+                <p class="text-secondary fs-8 mb-4 lh-lg">
+                  General history, fleet specifications, and global coverage nodes detail.
                 </p>
                 <a
                   href="#"
-                  class="btn btn-outline-accent px-3 py-2 fs-8 text-uppercase fw-bold mt-auto"
-                  ><i class="fas fa-download me-1"></i> Download PDF</a
+                  class="btn btn-sm btn-outline-accent w-100 py-2 fs-8 text-uppercase fw-bold mt-auto"
+                  ><i class="fas fa-download me-2"></i> Download Profile</a
                 >
               </div>
             </div>
             <!-- doc 2 -->
             <div class="col-lg-4 col-md-6">
-              <div
-                class="card p-4 bg-white rounded shadow-sm border border-light h-100 text-center hover-grow"
-              >
-                <span class="text-accent fs-2 mb-3 d-block"
-                  ><i class="fas fa-check-square"></i
-                ></span>
-                <h6 class="fw-bold text-primary mb-1">
-                  Customs Clearance Checklist
-                </h6>
-                <p class="text-secondary fs-8 mb-3">
-                  Guide to assigning HS codes and verifying manifest entries.
+              <div class="brochure-download-card h-100 text-center">
+                <span class="file-badge">PDF - 1.8 MB</span>
+                <div class="doc-icon">
+                  <i class="fas fa-circle-check"></i>
+                </div>
+                <h5 class="fw-bold text-primary mb-2">Customs Checklist</h5>
+                <p class="text-secondary fs-8 mb-4 lh-lg">
+                  Step-by-step guide to assigning HS codes and verifying manifest entries.
                 </p>
                 <a
                   href="#"
-                  class="btn btn-outline-accent px-3 py-2 fs-8 text-uppercase fw-bold mt-auto"
-                  ><i class="fas fa-download me-1"></i> Download Checklist</a
+                  class="btn btn-sm btn-outline-accent w-100 py-2 fs-8 text-uppercase fw-bold mt-auto"
+                  ><i class="fas fa-download me-2"></i> Download Checklist</a
                 >
               </div>
             </div>
             <!-- doc 3 -->
             <div class="col-lg-4 col-md-6">
-              <div
-                class="card p-4 bg-white rounded shadow-sm border border-light h-100 text-center hover-grow"
-              >
-                <span class="text-accent fs-2 mb-3 d-block"
-                  ><i class="fas fa-biohazard"></i
-                ></span>
-                <h6 class="fw-bold text-primary mb-1">
-                  Hazmat Declaration Sheet
-                </h6>
-                <p class="text-secondary fs-8 mb-3">
-                  Safety manifest template required for chemical cargo bookings.
+              <div class="brochure-download-card h-100 text-center">
+                <span class="file-badge">PDF - 2.5 MB</span>
+                <div class="doc-icon">
+                  <i class="fas fa-triangle-exclamation"></i>
+                </div>
+                <h5 class="fw-bold text-primary mb-2">Hazmat Declaration</h5>
+                <p class="text-secondary fs-8 mb-4 lh-lg">
+                  Safety manifest template required for chemical and hazardous cargo bookings.
                 </p>
                 <a
                   href="#"
-                  class="btn btn-outline-accent px-3 py-2 fs-8 text-uppercase fw-bold mt-auto"
-                  ><i class="fas fa-download me-1"></i> Download Manifest</a
+                  class="btn btn-sm btn-outline-accent w-100 py-2 fs-8 text-uppercase fw-bold mt-auto"
+                  ><i class="fas fa-download me-2"></i> Download Template</a
                 >
               </div>
             </div>
@@ -798,19 +802,6 @@
             form.reset();
             setTimeout(() => {
               status.innerHTML = "";
-            }, 5000);
-          });
-        }
-
-        const callbackForm = document.getElementById("callbackForm");
-        const callbackStatus = document.getElementById("callbackFormStatus");
-        if (callbackForm && callbackStatus) {
-          callbackForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-            callbackStatus.innerHTML = `<div class="alert alert-success fs-8 py-2 mt-2"><i class="fas fa-check-circle me-1"></i> Callback scheduled! We will contact you.</div>`;
-            callbackForm.reset();
-            setTimeout(() => {
-              callbackStatus.innerHTML = "";
             }, 5000);
           });
         }

@@ -150,6 +150,17 @@ function setupNavbarScroll() {
 
   window.addEventListener("scroll", handleScroll);
   handleScroll();
+
+  // Mobile menu background scroll lock
+  const navMenu = document.getElementById("navMenu");
+  if (navMenu) {
+    navMenu.addEventListener("show.bs.collapse", () => {
+      document.body.style.overflow = "hidden";
+    });
+    navMenu.addEventListener("hide.bs.collapse", () => {
+      document.body.style.overflow = "";
+    });
+  }
 }
 
 /**

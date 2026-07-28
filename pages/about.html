@@ -39,19 +39,46 @@
           background-image: url(&quot;https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80&quot;);
         "
       >
-        <div class="container py-5">
+        <div class="container position-relative z-3">
+          <span
+            class="text-uppercase tracking-widest text-accent fw-bold fs-8 mb-2 d-inline-block animate__animated animate__fadeIn"
+            >WHO WE ARE</span
+          >
           <h1
-            class="display-4 fw-extrabold mb-2 animate__animated animate__fadeInDown"
+            class="display-3 fw-extrabold mb-3 text-white animate__animated animate__fadeInDown"
+            style="letter-spacing: -0.5px; font-family: var(--font-heading)"
           >
             About Our Company
           </h1>
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-center mb-0">
+          <div
+            class="mx-auto bg-accent animate__animated animate__zoomIn"
+            style="
+              width: 60px;
+              height: 3px;
+              border-radius: 2px;
+              margin-bottom: 1.5rem;
+            "
+          ></div>
+          <nav
+            aria-label="breadcrumb"
+            class="animate__animated animate__fadeInUp"
+          >
+            <ol
+              class="breadcrumb justify-content-center mb-0"
+              style="
+                background: rgba(255, 255, 255, 0.03);
+                backdrop-filter: blur(5px);
+                display: inline-flex;
+                padding: 0.6rem 1.5rem;
+                border-radius: 30px;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+              "
+            >
               <li class="breadcrumb-item">
                 <a
                   href="../index.html"
-                  class="text-white-50 text-decoration-none"
-                  >Home</a
+                  class="text-white-50 text-decoration-none hover-text-white transition"
+                  ><i class="fas fa-home me-1"></i> Home</a
                 >
               </li>
               <li class="breadcrumb-item text-white active" aria-current="page">
@@ -64,17 +91,27 @@
 
       <!-- Core Mission & Values -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="row align-items-center g-5">
             <div class="col-lg-6">
-              <span
-                class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-                >Our Identity</span
+              <div
+                class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
               >
-              <h2 class="text-primary fw-extrabold display-6 mb-4">
-                Driving Global Commerce Forward
+                <i class="fas fa-fingerprint me-2"></i> Our Identity
+              </div>
+              <h2
+                class="text-primary fw-extrabold display-5 mb-4"
+                style="line-height: 1.25"
+              >
+                Driving Global
+                <span class="text-accent position-relative"
+                  >Commerce Forward<span
+                    class="position-absolute bottom-0 start-0 w-100 bg-accent bg-opacity-20"
+                    style="height: 8px; z-index: -1"
+                  ></span
+                ></span>
               </h2>
-              <p class="text-secondary mb-4">
+              <p class="text-secondary mb-4 fs-6" style="line-height: 1.8">
                 Stackly was established with a singular focus: to strip away the
                 complexities of international trade and supply chain management.
                 By weaving high-efficiency transport routes with robust IT
@@ -82,28 +119,77 @@
                 worldwide.
               </p>
               <div class="row g-4 mt-2">
-                <div class="col-sm-6">
+                <div class="col-sm-6 animate-item">
                   <div
-                    class="p-3 bg-light rounded-3 border-start border-3 border-accent"
+                    class="p-4 bg-light rounded-4 border-start border-4 border-accent shadow-sm transition h-100"
+                    style="
+                      border-top: 1px solid rgba(11, 19, 43, 0.03);
+                      border-right: 1px solid rgba(11, 19, 43, 0.03);
+                      border-bottom: 1px solid rgba(11, 19, 43, 0.03);
+                    "
+                    onmouseover="
+                      this.style.transform = 'translateY(-5px)';
+                      this.style.boxShadow =
+                        '0 10px 20px rgba(255, 107, 0, 0.08)';
+                      this.style.backgroundColor = '#ffffff';
+                    "
+                    onmouseout="
+                      this.style.transform = 'none';
+                      this.style.boxShadow = 'none';
+                      this.style.backgroundColor = '';
+                    "
                   >
-                    <h6 class="fw-bold text-primary mb-2">
-                      <i class="fas fa-bullseye me-2 text-accent"></i>Our
-                      Mission
-                    </h6>
-                    <p class="text-secondary fs-8 mb-0">
+                    <div class="d-flex align-items-center mb-3">
+                      <span
+                        class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle me-3"
+                        style="width: 42px; height: 42px"
+                      >
+                        <i class="fas fa-bullseye"></i>
+                      </span>
+                      <h5 class="fw-bold text-primary mb-0">Our Mission</h5>
+                    </div>
+                    <p
+                      class="text-secondary fs-7 mb-0"
+                      style="line-height: 1.6"
+                    >
                       To connect international markets safely, efficiently, and
                       responsibly, reducing carbon prints where possible.
                     </p>
                   </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 animate-item">
                   <div
-                    class="p-3 bg-light rounded-3 border-start border-3 border-accent"
+                    class="p-4 bg-light rounded-4 border-start border-4 border-accent shadow-sm transition h-100"
+                    style="
+                      border-top: 1px solid rgba(11, 19, 43, 0.03);
+                      border-right: 1px solid rgba(11, 19, 43, 0.03);
+                      border-bottom: 1px solid rgba(11, 19, 43, 0.03);
+                    "
+                    onmouseover="
+                      this.style.transform = 'translateY(-5px)';
+                      this.style.boxShadow =
+                        '0 10px 20px rgba(255, 107, 0, 0.08)';
+                      this.style.backgroundColor = '#ffffff';
+                    "
+                    onmouseout="
+                      this.style.transform = 'none';
+                      this.style.boxShadow = 'none';
+                      this.style.backgroundColor = '';
+                    "
                   >
-                    <h6 class="fw-bold text-primary mb-2">
-                      <i class="fas fa-eye me-2 text-accent"></i>Our Vision
-                    </h6>
-                    <p class="text-secondary fs-8 mb-0">
+                    <div class="d-flex align-items-center mb-3">
+                      <span
+                        class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle me-3"
+                        style="width: 42px; height: 42px"
+                      >
+                        <i class="fas fa-eye"></i>
+                      </span>
+                      <h5 class="fw-bold text-primary mb-0">Our Vision</h5>
+                    </div>
+                    <p
+                      class="text-secondary fs-7 mb-0"
+                      style="line-height: 1.6"
+                    >
                       To lead autonomous and smart shipping systems, delivering
                       freight reliably across land, sea, and air.
                     </p>
@@ -112,11 +198,24 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <img
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
-                alt="Logistics Center Operations"
-                class="img-fluid rounded shadow-lg"
-              />
+              <div class="position-relative p-3">
+                <div
+                  class="position-absolute bg-accent rounded-4 opacity-10 end-0 bottom-0"
+                  style="width: 90%; height: 90%; z-index: 1"
+                ></div>
+                <img
+                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
+                  alt="Logistics Center Operations"
+                  class="img-fluid rounded-4 shadow-lg position-relative"
+                  style="
+                    z-index: 2;
+                    transition: var(--transition-smooth);
+                    transform-origin: center;
+                  "
+                  onmouseover="this.style.transform = 'scale(1.02)'"
+                  onmouseout="this.style.transform = 'none'"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -124,96 +223,171 @@
 
       <!-- History Timeline -->
       <section class="section py-5 bg-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >Timeline</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-white border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-history me-2"></i> Our Journey
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Our Corporate Milestones
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               How Stackly grew from a regional road shipper to an international
               intermodal logistics authority.
             </p>
           </div>
 
           <div class="row justify-content-center">
-            <div class="col-lg-10">
+            <div class="col-lg-9">
               <div
-                class="position-relative border-start border-2 border-accent ps-4 ms-2 py-2"
+                class="position-relative ps-4 py-2"
+                style="border-left: 3px dashed rgba(255, 107, 0, 0.4)"
               >
                 <!-- Milestone 1 -->
-                <div class="mb-5 position-relative">
+                <div
+                  class="mb-5 position-relative timeline-item"
+                  style="transition: var(--transition-smooth)"
+                >
                   <div
-                    class="position-absolute bg-accent rounded-circle"
+                    class="position-absolute rounded-circle bg-accent"
                     style="
-                      width: 16px;
-                      height: 16px;
-                      left: -33px;
-                      top: 6px;
-                      border: 3px solid #f8fafc;
+                      width: 20px;
+                      height: 20px;
+                      left: -36px;
+                      top: 4px;
+                      border: 4px solid #f8fafc;
+                      box-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
                     "
                   ></div>
-                  <h5 class="fw-bold text-primary mb-1">2012 — Foundation</h5>
-                  <p class="text-muted fs-8 mb-2">
-                    Regional trucking logistics agency serving East Coast lines.
-                  </p>
-                  <p class="text-secondary fs-7">
-                    We launched with 5 freight vehicles and a commitment to safe
-                    overland shipping. Our local compliance record paved the way
-                    for early partnerships.
-                  </p>
+                  <div
+                    class="p-4 bg-white rounded-4 shadow-sm border border-light transition hover-grow"
+                    style="
+                      border-top: 3px solid var(--primary-color) !important;
+                    "
+                  >
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2"
+                    >
+                      <span
+                        class="badge bg-primary text-white py-2 px-3 rounded-pill fs-7 fw-bold"
+                        >2012 — Foundation</span
+                      >
+                      <small class="text-accent fw-bold fs-8"
+                        ><i class="fas fa-shipping-fast me-1"></i> Launch
+                        Era</small
+                      >
+                    </div>
+                    <h5 class="fw-bold text-primary mb-2">
+                      Regional Road Shipping
+                    </h5>
+                    <p
+                      class="text-secondary fs-7 mb-0"
+                      style="line-height: 1.6"
+                    >
+                      We launched with 5 freight vehicles and a commitment to
+                      safe overland shipping. Our local compliance record paved
+                      the way for early partnerships, serving East Coast lines.
+                    </p>
+                  </div>
                 </div>
+
                 <!-- Milestone 2 -->
-                <div class="mb-5 position-relative">
+                <div
+                  class="mb-5 position-relative timeline-item"
+                  style="transition: var(--transition-smooth)"
+                >
                   <div
-                    class="position-absolute bg-accent rounded-circle"
+                    class="position-absolute rounded-circle bg-accent"
                     style="
-                      width: 16px;
-                      height: 16px;
-                      left: -33px;
-                      top: 6px;
-                      border: 3px solid #f8fafc;
+                      width: 20px;
+                      height: 20px;
+                      left: -36px;
+                      top: 4px;
+                      border: 4px solid #f8fafc;
+                      box-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
                     "
                   ></div>
-                  <h5 class="fw-bold text-primary mb-1">
-                    2017 — Aviation & Sea Expansion
-                  </h5>
-                  <p class="text-muted fs-8 mb-2">
-                    Charter air agreements and maritime broker registry.
-                  </p>
-                  <p class="text-secondary fs-7">
-                    We expanded globally, opening ports of entry partnerships in
-                    Rotterdam and London. Stackly introduced consolidated
-                    sea-cargo pricing models to save shipper overhead costs.
-                  </p>
+                  <div
+                    class="p-4 bg-white rounded-4 shadow-sm border border-light transition hover-grow"
+                    style="
+                      border-top: 3px solid var(--secondary-color) !important;
+                    "
+                  >
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2"
+                    >
+                      <span
+                        class="badge bg-accent text-white py-2 px-3 rounded-pill fs-7 fw-bold"
+                        >2017 — Expansion</span
+                      >
+                      <small class="text-primary fw-bold fs-8"
+                        ><i class="fas fa-globe-americas me-1"></i> Global
+                        Reach</small
+                      >
+                    </div>
+                    <h5 class="fw-bold text-primary mb-2">
+                      Maritime Broker & Charter Air Agreements
+                    </h5>
+                    <p
+                      class="text-secondary fs-7 mb-0"
+                      style="line-height: 1.6"
+                    >
+                      We expanded globally, opening ports of entry partnerships
+                      in Rotterdam and London. Stackly introduced consolidated
+                      sea-cargo pricing models to save shipper overhead costs.
+                    </p>
+                  </div>
                 </div>
+
                 <!-- Milestone 3 -->
-                <div class="position-relative">
+                <div
+                  class="position-relative timeline-item"
+                  style="transition: var(--transition-smooth)"
+                >
                   <div
-                    class="position-absolute bg-accent rounded-circle"
+                    class="position-absolute rounded-circle bg-accent"
                     style="
-                      width: 16px;
-                      height: 16px;
-                      left: -33px;
-                      top: 6px;
-                      border: 3px solid #f8fafc;
+                      width: 20px;
+                      height: 20px;
+                      left: -36px;
+                      top: 4px;
+                      border: 4px solid #f8fafc;
+                      box-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
                     "
                   ></div>
-                  <h5 class="fw-bold text-primary mb-1">
-                    2023 — Smart Digitization
-                  </h5>
-                  <p class="text-muted fs-8 mb-2">
-                    Real-time GPS telemetry client portals and automated
-                    sorting.
-                  </p>
-                  <p class="text-secondary fs-7">
-                    We completely digitalized fleet telemetry, giving shippers
-                    access to climate alerts, live routes, and automated customs
-                    document submission.
-                  </p>
+                  <div
+                    class="p-4 bg-white rounded-4 shadow-sm border border-light transition hover-grow"
+                    style="
+                      border-top: 3px solid var(--primary-color) !important;
+                    "
+                  >
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2"
+                    >
+                      <span
+                        class="badge bg-primary text-white py-2 px-3 rounded-pill fs-7 fw-bold"
+                        >2023 — Digitization</span
+                      >
+                      <small class="text-accent fw-bold fs-8"
+                        ><i class="fas fa-microchip me-1"></i> Tech
+                        Integration</small
+                      >
+                    </div>
+                    <h5 class="fw-bold text-primary mb-2">
+                      GPS Telemetry & Sorting Systems
+                    </h5>
+                    <p
+                      class="text-secondary fs-7 mb-0"
+                      style="line-height: 1.6"
+                    >
+                      We completely digitalized fleet telemetry, giving shippers
+                      access to climate alerts, live routes, and automated
+                      customs document submission, setting standard for
+                      intelligent routing.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -223,16 +397,17 @@
 
       <!-- Section 1: Global Reach & Operations Hubs -->
       <section class="section py-5 bg-white border-top border-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >Our Network</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-network-wired me-2"></i> Our Network
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Global Hub Facilities
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               Our strategic logistical nodes connect continents, offering
               temperature-controlled storage and advanced cargo clearing.
             </p>
@@ -241,117 +416,223 @@
             <!-- Hub 1 -->
             <div class="col-lg-3 col-md-6">
               <div
-                class="card border-0 bg-light rounded shadow-sm p-4 h-100 hover-grow"
+                class="card border-0 bg-white rounded-4 shadow-sm p-4 h-100 transition hover-grow"
+                style="
+                  border-top: 4px solid var(--primary-color) !important;
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.05) !important;
+                "
               >
-                <div class="d-flex align-items-center mb-3">
-                  <span class="bg-white p-2 rounded text-accent fs-4 me-3"
+                <div class="d-flex align-items-center mb-4">
+                  <span
+                    class="d-inline-flex align-items-center justify-content-center bg-light text-accent rounded-3 fs-4 me-3"
+                    style="width: 50px; height: 50px"
                     ><i class="fas fa-ship"></i
                   ></span>
-                  <h5 class="fw-bold text-primary mb-0">Rotterdam Hub</h5>
+                  <h5 class="fw-bold text-primary mb-0 fs-6">Rotterdam Hub</h5>
                 </div>
-                <ul
-                  class="list-unstyled text-secondary fs-8 mb-0 d-flex flex-column gap-2"
-                >
-                  <li>
-                    <i class="fas fa-check text-accent me-2"></i
-                    ><strong>Cap:</strong> 750,000 sq ft
-                  </li>
-                  <li>
-                    <i class="fas fa-check text-accent me-2"></i
-                    ><strong>Specialty:</strong> Cold-Chain
-                  </li>
-                  <li>
-                    <i class="fas fa-check text-accent me-2"></i
-                    ><strong>Throughput:</strong> 45k TEU/mo
-                  </li>
-                </ul>
+                <div class="d-flex flex-column gap-3">
+                  <div
+                    class="pb-2 border-bottom border-light d-flex justify-content-between align-items-center"
+                  >
+                    <span class="text-secondary fs-8"
+                      ><i
+                        class="fas fa-expand-arrows-alt me-1 text-accent opacity-50"
+                      ></i>
+                      Capacity</span
+                    >
+                    <span class="text-primary fw-bold fs-7">750k sq ft</span>
+                  </div>
+                  <div
+                    class="pb-2 border-bottom border-light d-flex justify-content-between align-items-center"
+                  >
+                    <span class="text-secondary fs-8"
+                      ><i
+                        class="fas fa-snowflake me-1 text-accent opacity-50"
+                      ></i>
+                      Specialty</span
+                    >
+                    <span class="text-primary fw-bold fs-7">Cold-Chain</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span class="text-secondary fs-8"
+                      ><i
+                        class="fas fa-chart-line me-1 text-accent opacity-50"
+                      ></i>
+                      Output</span
+                    >
+                    <span class="text-accent fw-extrabold fs-7"
+                      >45k TEU/mo</span
+                    >
+                  </div>
+                </div>
               </div>
             </div>
             <!-- Hub 2 -->
             <div class="col-lg-3 col-md-6">
               <div
-                class="card border-0 bg-light rounded shadow-sm p-4 h-100 hover-grow"
+                class="card border-0 bg-white rounded-4 shadow-sm p-4 h-100 transition hover-grow"
+                style="
+                  border-top: 4px solid var(--secondary-color) !important;
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.05) !important;
+                "
               >
-                <div class="d-flex align-items-center mb-3">
-                  <span class="bg-white p-2 rounded text-accent fs-4 me-3"
+                <div class="d-flex align-items-center mb-4">
+                  <span
+                    class="d-inline-flex align-items-center justify-content-center bg-light text-accent rounded-3 fs-4 me-3"
+                    style="width: 50px; height: 50px"
                     ><i class="fas fa-plane-arrival"></i
                   ></span>
-                  <h5 class="fw-bold text-primary mb-0">New York Port</h5>
+                  <h5 class="fw-bold text-primary mb-0 fs-6">New York Port</h5>
                 </div>
-                <ul
-                  class="list-unstyled text-secondary fs-8 mb-0 d-flex flex-column gap-2"
-                >
-                  <li>
-                    <i class="fas fa-check text-accent me-2"></i
-                    ><strong>Cap:</strong> 520,000 sq ft
-                  </li>
-                  <li>
-                    <i class="fas fa-check text-accent me-2"></i
-                    ><strong>Specialty:</strong> Express Air-to-Road
-                  </li>
-                  <li>
-                    <i class="fas fa-check text-accent me-2"></i
-                    ><strong>Throughput:</strong> 18k tons/mo
-                  </li>
-                </ul>
+                <div class="d-flex flex-column gap-3">
+                  <div
+                    class="pb-2 border-bottom border-light d-flex justify-content-between align-items-center"
+                  >
+                    <span class="text-secondary fs-8"
+                      ><i
+                        class="fas fa-expand-arrows-alt me-1 text-accent opacity-50"
+                      ></i>
+                      Capacity</span
+                    >
+                    <span class="text-primary fw-bold fs-7">520k sq ft</span>
+                  </div>
+                  <div
+                    class="pb-2 border-bottom border-light d-flex justify-content-between align-items-center"
+                  >
+                    <span class="text-secondary fs-8"
+                      ><i
+                        class="fas fa-shipping-fast me-1 text-accent opacity-50"
+                      ></i>
+                      Specialty</span
+                    >
+                    <span class="text-primary fw-bold fs-7">Air-to-Road</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span class="text-secondary fs-8"
+                      ><i
+                        class="fas fa-chart-line me-1 text-accent opacity-50"
+                      ></i>
+                      Output</span
+                    >
+                    <span class="text-accent fw-extrabold fs-7"
+                      >18k tons/mo</span
+                    >
+                  </div>
+                </div>
               </div>
             </div>
             <!-- Hub 3 -->
             <div class="col-lg-3 col-md-6">
               <div
-                class="card border-0 bg-light rounded shadow-sm p-4 h-100 hover-grow"
+                class="card border-0 bg-white rounded-4 shadow-sm p-4 h-100 transition hover-grow"
+                style="
+                  border-top: 4px solid var(--primary-color) !important;
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.05) !important;
+                "
               >
-                <div class="d-flex align-items-center mb-3">
-                  <span class="bg-white p-2 rounded text-accent fs-4 me-3"
+                <div class="d-flex align-items-center mb-4">
+                  <span
+                    class="d-inline-flex align-items-center justify-content-center bg-light text-accent rounded-3 fs-4 me-3"
+                    style="width: 50px; height: 50px"
                     ><i class="fas fa-anchor"></i
                   ></span>
-                  <h5 class="fw-bold text-primary mb-0">Singapore Hub</h5>
+                  <h5 class="fw-bold text-primary mb-0 fs-6">Singapore Hub</h5>
                 </div>
-                <ul
-                  class="list-unstyled text-secondary fs-8 mb-0 d-flex flex-column gap-2"
-                >
-                  <li>
-                    <i class="fas fa-check text-accent me-2"></i
-                    ><strong>Cap:</strong> 900,000 sq ft
-                  </li>
-                  <li>
-                    <i class="fas fa-check text-accent me-2"></i
-                    ><strong>Specialty:</strong> Automated Sorting
-                  </li>
-                  <li>
-                    <i class="fas fa-check text-accent me-2"></i
-                    ><strong>Throughput:</strong> 60k TEU/mo
-                  </li>
-                </ul>
+                <div class="d-flex flex-column gap-3">
+                  <div
+                    class="pb-2 border-bottom border-light d-flex justify-content-between align-items-center"
+                  >
+                    <span class="text-secondary fs-8"
+                      ><i
+                        class="fas fa-expand-arrows-alt me-1 text-accent opacity-50"
+                      ></i>
+                      Capacity</span
+                    >
+                    <span class="text-primary fw-bold fs-7">900k sq ft</span>
+                  </div>
+                  <div
+                    class="pb-2 border-bottom border-light d-flex justify-content-between align-items-center"
+                  >
+                    <span class="text-secondary fs-8"
+                      ><i class="fas fa-robot me-1 text-accent opacity-50"></i>
+                      Specialty</span
+                    >
+                    <span class="text-primary fw-bold fs-7">Auto Sorting</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span class="text-secondary fs-8"
+                      ><i
+                        class="fas fa-chart-line me-1 text-accent opacity-50"
+                      ></i>
+                      Output</span
+                    >
+                    <span class="text-accent fw-extrabold fs-7"
+                      >60k TEU/mo</span
+                    >
+                  </div>
+                </div>
               </div>
             </div>
             <!-- Hub 4 -->
             <div class="col-lg-3 col-md-6">
               <div
-                class="card border-0 bg-light rounded shadow-sm p-4 h-100 hover-grow"
+                class="card border-0 bg-white rounded-4 shadow-sm p-4 h-100 transition hover-grow"
+                style="
+                  border-top: 4px solid var(--secondary-color) !important;
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.05) !important;
+                "
               >
-                <div class="d-flex align-items-center mb-3">
-                  <span class="bg-white p-2 rounded text-accent fs-4 me-3"
+                <div class="d-flex align-items-center mb-4">
+                  <span
+                    class="d-inline-flex align-items-center justify-content-center bg-light text-accent rounded-3 fs-4 me-3"
+                    style="width: 50px; height: 50px"
                     ><i class="fas fa-warehouse"></i
                   ></span>
-                  <h5 class="fw-bold text-primary mb-0">Dubai Depot</h5>
+                  <h5 class="fw-bold text-primary mb-0 fs-6">Dubai Depot</h5>
                 </div>
-                <ul
-                  class="list-unstyled text-secondary fs-8 mb-0 d-flex flex-column gap-2"
-                >
-                  <li>
-                    <i class="fas fa-check text-accent me-2"></i
-                    ><strong>Cap:</strong> 400,000 sq ft
-                  </li>
-                  <li>
-                    <i class="fas fa-check text-accent me-2"></i
-                    ><strong>Specialty:</strong> High-Sec Hazmat
-                  </li>
-                  <li>
-                    <i class="fas fa-check text-accent me-2"></i
-                    ><strong>Throughput:</strong> 15k tons/mo
-                  </li>
-                </ul>
+                <div class="d-flex flex-column gap-3">
+                  <div
+                    class="pb-2 border-bottom border-light d-flex justify-content-between align-items-center"
+                  >
+                    <span class="text-secondary fs-8"
+                      ><i
+                        class="fas fa-expand-arrows-alt me-1 text-accent opacity-50"
+                      ></i>
+                      Capacity</span
+                    >
+                    <span class="text-primary fw-bold fs-7">400k sq ft</span>
+                  </div>
+                  <div
+                    class="pb-2 border-bottom border-light d-flex justify-content-between align-items-center"
+                  >
+                    <span class="text-secondary fs-8"
+                      ><i
+                        class="fas fa-biohazard me-1 text-accent opacity-50"
+                      ></i>
+                      Specialty</span
+                    >
+                    <span class="text-primary fw-bold fs-7">Hazmat Sec</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span class="text-secondary fs-8"
+                      ><i
+                        class="fas fa-chart-line me-1 text-accent opacity-50"
+                      ></i>
+                      Output</span
+                    >
+                    <span class="text-accent fw-extrabold fs-7"
+                      >15k tons/mo</span
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -360,31 +641,42 @@
 
       <!-- Section 2: Why Choose Us / Differentiators -->
       <section class="section py-5 bg-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="row align-items-center g-5">
             <div class="col-lg-6">
-              <span
-                class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-                >Why Stackly</span
+              <div
+                class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-white border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
               >
-              <h2 class="text-primary fw-extrabold display-6 mb-4">
+                <i class="fas fa-award me-2"></i> Why Stackly
+              </div>
+              <h2
+                class="text-primary fw-extrabold display-5 mb-4"
+                style="line-height: 1.25"
+              >
                 Precision Logistics Built For Scale
               </h2>
-              <p class="text-secondary mb-4">
+              <p class="text-secondary mb-4 fs-6" style="line-height: 1.8">
                 We set our standard on absolute reliability, leveraging
                 proprietary telemetry and strategic customs pipelines to keep
                 cargo moving when others stall.
               </p>
-              <div class="row g-3">
+              <div class="row g-3 mt-2">
                 <div class="col-sm-6">
                   <div
-                    class="p-3 bg-white rounded shadow-sm border-start border-3 border-accent"
+                    class="p-4 bg-white rounded-4 shadow-sm transition hover-grow border-0 h-100"
+                    style="
+                      border-left: 4px solid var(--secondary-color) !important;
+                      box-shadow: 0 10px 25px rgba(11, 19, 43, 0.02) !important;
+                    "
                   >
-                    <h6 class="fw-bold text-primary mb-1">
+                    <h6 class="fw-bold text-primary mb-2 fs-6">
                       <i class="fas fa-leaf text-accent me-2"></i>Green
                       Logistics
                     </h6>
-                    <p class="text-secondary fs-8 mb-0">
+                    <p
+                      class="text-secondary fs-8 mb-0"
+                      style="line-height: 1.6"
+                    >
                       Reducing carbon footprint through low-emission intermodal
                       systems.
                     </p>
@@ -392,13 +684,20 @@
                 </div>
                 <div class="col-sm-6">
                   <div
-                    class="p-3 bg-white rounded shadow-sm border-start border-3 border-accent"
+                    class="p-4 bg-white rounded-4 shadow-sm transition hover-grow border-0 h-100"
+                    style="
+                      border-left: 4px solid var(--primary-color) !important;
+                      box-shadow: 0 10px 25px rgba(11, 19, 43, 0.02) !important;
+                    "
                   >
-                    <h6 class="fw-bold text-primary mb-1">
+                    <h6 class="fw-bold text-primary mb-2 fs-6">
                       <i class="fas fa-headset text-accent me-2"></i>24/7
                       Command
                     </h6>
-                    <p class="text-secondary fs-8 mb-0">
+                    <p
+                      class="text-secondary fs-8 mb-0"
+                      style="line-height: 1.6"
+                    >
                       Live route telemetry monitored day and night by our ops
                       center.
                     </p>
@@ -406,13 +705,20 @@
                 </div>
                 <div class="col-sm-6">
                   <div
-                    class="p-3 bg-white rounded shadow-sm border-start border-3 border-accent"
+                    class="p-4 bg-white rounded-4 shadow-sm transition hover-grow border-0 h-100"
+                    style="
+                      border-left: 4px solid var(--primary-color) !important;
+                      box-shadow: 0 10px 25px rgba(11, 19, 43, 0.02) !important;
+                    "
                   >
-                    <h6 class="fw-bold text-primary mb-1">
+                    <h6 class="fw-bold text-primary mb-2 fs-6">
                       <i class="fas fa-biohazard text-accent me-2"></i>Hazmat
                       Certified
                     </h6>
-                    <p class="text-secondary fs-8 mb-0">
+                    <p
+                      class="text-secondary fs-8 mb-0"
+                      style="line-height: 1.6"
+                    >
                       Specially licensed handlers for chemical and hazardous
                       freight.
                     </p>
@@ -420,13 +726,20 @@
                 </div>
                 <div class="col-sm-6">
                   <div
-                    class="p-3 bg-white rounded shadow-sm border-start border-3 border-accent"
+                    class="p-4 bg-white rounded-4 shadow-sm transition hover-grow border-0 h-100"
+                    style="
+                      border-left: 4px solid var(--secondary-color) !important;
+                      box-shadow: 0 10px 25px rgba(11, 19, 43, 0.02) !important;
+                    "
                   >
-                    <h6 class="fw-bold text-primary mb-1">
+                    <h6 class="fw-bold text-primary mb-2 fs-6">
                       <i class="fas fa-file-invoice-dollar text-accent me-2"></i
-                      >Duty Optimization
+                      >Duty Opt
                     </h6>
-                    <p class="text-secondary fs-8 mb-0">
+                    <p
+                      class="text-secondary fs-8 mb-0"
+                      style="line-height: 1.6"
+                    >
                       Customs compliance agents minimizing tariff and duty fees.
                     </p>
                   </div>
@@ -434,11 +747,24 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <img
-                src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80"
-                alt="Logistics Command Center"
-                class="img-fluid rounded shadow-lg"
-              />
+              <div class="position-relative p-3">
+                <div
+                  class="position-absolute bg-primary rounded-4 opacity-10 start-0 top-0"
+                  style="width: 90%; height: 90%; z-index: 1"
+                ></div>
+                <img
+                  src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80"
+                  alt="Logistics Command Center"
+                  class="img-fluid rounded-4 shadow-lg position-relative"
+                  style="
+                    z-index: 2;
+                    transition: var(--transition-smooth);
+                    transform-origin: center;
+                  "
+                  onmouseover="this.style.transform = 'scale(1.02)'"
+                  onmouseout="this.style.transform = 'none'"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -446,53 +772,96 @@
 
       <!-- Section 3: CSR & Sustainability -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="row align-items-center g-5 flex-lg-row-reverse">
             <div class="col-lg-6">
-              <span
-                class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-                >Eco-Logistics</span
+              <div
+                class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
               >
-              <h2 class="text-primary fw-extrabold display-6 mb-4">
+                <i class="fas fa-seedling me-2"></i> Eco-Logistics
+              </div>
+              <h2
+                class="text-primary fw-extrabold display-5 mb-4"
+                style="line-height: 1.25"
+              >
                 Driving Towards Net-Zero Shipments
               </h2>
-              <p class="text-secondary mb-4 lh-lg">
+              <p class="text-secondary mb-4 fs-6" style="line-height: 1.8">
                 At Stackly, we take our environmental responsibility seriously.
                 We actively reduce emissions by optimizing cargo loads,
                 integrating electric cargo vans for final-mile routes, and
                 investing in biofuel shipping options.
               </p>
-              <div class="d-flex gap-4">
-                <div>
-                  <h4 class="fw-extrabold text-accent mb-0">30%</h4>
-                  <span class="fs-8 text-secondary"
-                    >Emissions Cut since 2020</span
+              <div class="row g-3 mt-2">
+                <div class="col-md-4 col-sm-6">
+                  <div
+                    class="p-3 bg-light rounded-4 text-center border border-light h-100 shadow-sm transition hover-grow"
                   >
+                    <div
+                      class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle mb-2"
+                      style="width: 48px; height: 48px"
+                    >
+                      <i class="fas fa-smog"></i>
+                    </div>
+                    <h3 class="fw-extrabold text-primary mb-1">30%</h3>
+                    <p class="fs-8 text-secondary mb-0 fw-semibold">
+                      Emissions Cut since 2020
+                    </p>
+                  </div>
                 </div>
-                <div
-                  class="border-start border-secondary border-opacity-25 ps-4"
-                >
-                  <h4 class="fw-extrabold text-accent mb-0">150+</h4>
-                  <span class="fs-8 text-secondary"
-                    >Electric Final-Mile Vehicles</span
+                <div class="col-md-4 col-sm-6">
+                  <div
+                    class="p-3 bg-light rounded-4 text-center border border-light h-100 shadow-sm transition hover-grow"
                   >
+                    <div
+                      class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle mb-2"
+                      style="width: 48px; height: 48px"
+                    >
+                      <i class="fas fa-charging-station"></i>
+                    </div>
+                    <h3 class="fw-extrabold text-accent mb-1">150+</h3>
+                    <p class="fs-8 text-secondary mb-0 fw-semibold">
+                      Electric Vehicles
+                    </p>
+                  </div>
                 </div>
-                <div
-                  class="border-start border-secondary border-opacity-25 ps-4"
-                >
-                  <h4 class="fw-extrabold text-accent mb-0">100%</h4>
-                  <span class="fs-8 text-secondary"
-                    >Recyclable Packing Options</span
+                <div class="col-md-4 col-sm-12">
+                  <div
+                    class="p-3 bg-light rounded-4 text-center border border-light h-100 shadow-sm transition hover-grow"
                   >
+                    <div
+                      class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle mb-2"
+                      style="width: 48px; height: 48px"
+                    >
+                      <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3 class="fw-extrabold text-primary mb-1">100%</h3>
+                    <p class="fs-8 text-secondary mb-0 fw-semibold">
+                      Recyclable Packing
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-6">
-              <img
-                src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80"
-                alt="Sustainable Fleet Truck"
-                class="img-fluid rounded shadow-lg"
-              />
+              <div class="position-relative p-3">
+                <div
+                  class="position-absolute bg-accent rounded-4 opacity-10 end-0 bottom-0"
+                  style="width: 90%; height: 90%; z-index: 1"
+                ></div>
+                <img
+                  src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80"
+                  alt="Sustainable Fleet Truck"
+                  class="img-fluid rounded-4 shadow-lg position-relative"
+                  style="
+                    z-index: 2;
+                    transition: var(--transition-smooth);
+                    transform-origin: center;
+                  "
+                  onmouseover="this.style.transform = 'scale(1.02)'"
+                  onmouseout="this.style.transform = 'none'"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -500,76 +869,99 @@
 
       <!-- Section 4: Accreditations & Certifications -->
       <section class="section py-5 bg-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >Trust & Safety</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-white border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-shield-alt me-2"></i> Trust & Safety
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Accredited Standards & Audits
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               Our systems are validated by major trade safety groups,
               guaranteeing compliance at every airport and sea terminal.
             </p>
           </div>
           <div class="row g-4 justify-content-center">
             <!-- Cert 1 -->
-            <div class="col-lg-3 col-sm-6 text-center">
+            <div class="col-lg-3 col-sm-6">
               <div
-                class="p-4 bg-white rounded shadow-sm border border-light h-100"
+                class="p-4 bg-white rounded-4 shadow-sm border border-light text-center h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-1 mb-3 d-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-2 mb-3"
+                  style="width: 64px; height: 64px"
                   ><i class="fas fa-ribbon"></i
                 ></span>
-                <h6 class="fw-bold text-primary mb-2">ISO 9001:2015</h6>
-                <p class="text-secondary fs-8 mb-0">
+                <h6 class="fw-bold text-primary mb-2 fs-6">ISO 9001:2015</h6>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Certified logistics management systems emphasizing consistent
                   customer satisfaction and operations safety.
                 </p>
               </div>
             </div>
             <!-- Cert 2 -->
-            <div class="col-lg-3 col-sm-6 text-center">
+            <div class="col-lg-3 col-sm-6">
               <div
-                class="p-4 bg-white rounded shadow-sm border border-light h-100"
+                class="p-4 bg-white rounded-4 shadow-sm border border-light text-center h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-1 mb-3 d-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-2 mb-3"
+                  style="width: 64px; height: 64px"
                   ><i class="fas fa-seedling"></i
                 ></span>
-                <h6 class="fw-bold text-primary mb-2">ISO 14001:2015</h6>
-                <p class="text-secondary fs-8 mb-0">
+                <h6 class="fw-bold text-primary mb-2 fs-6">ISO 14001:2015</h6>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Certified environmental management policy, showing our active
                   commit to eco-friendly fuel usage standards.
                 </p>
               </div>
             </div>
             <!-- Cert 3 -->
-            <div class="col-lg-3 col-sm-6 text-center">
+            <div class="col-lg-3 col-sm-6">
               <div
-                class="p-4 bg-white rounded shadow-sm border border-light h-100"
+                class="p-4 bg-white rounded-4 shadow-sm border border-light text-center h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-1 mb-3 d-block"
-                  ><i class="fas fa-shield-alt"></i
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-2 mb-3"
+                  style="width: 64px; height: 64px"
+                  ><i class="fas fa-user-shield"></i
                 ></span>
-                <h6 class="fw-bold text-primary mb-2">C-TPAT Registered</h6>
-                <p class="text-secondary fs-8 mb-0">
+                <h6 class="fw-bold text-primary mb-2 fs-6">
+                  C-TPAT Registered
+                </h6>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Customs Trade Partnership Against Terrorism validation,
                   streamlining entry across international borders.
                 </p>
               </div>
             </div>
             <!-- Cert 4 -->
-            <div class="col-lg-3 col-sm-6 text-center">
+            <div class="col-lg-3 col-sm-6">
               <div
-                class="p-4 bg-white rounded shadow-sm border border-light h-100"
+                class="p-4 bg-white rounded-4 shadow-sm border border-light text-center h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-1 mb-3 d-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-2 mb-3"
+                  style="width: 64px; height: 64px"
                   ><i class="fas fa-plane"></i
                 ></span>
-                <h6 class="fw-bold text-primary mb-2">IATA Cargo Agent</h6>
-                <p class="text-secondary fs-8 mb-0">
+                <h6 class="fw-bold text-primary mb-2 fs-6">IATA Cargo Agent</h6>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Licensed international air transport cargo agent, holding
                   direct agreements with top air carrier fleets.
                 </p>
@@ -581,16 +973,17 @@
 
       <!-- Section 5: Strategic Partners & Port Alliances -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >Partnerships</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-handshake me-2"></i> Partnerships
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Global Maritime & Air Alliances
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               Our deep integrations with international carrier networks ensure
               guaranteed container space allocations even during peak seasons.
             </p>
@@ -600,44 +993,51 @@
           >
             <div class="col-6 col-md-3 col-lg-2">
               <div
-                class="p-3 border border-light rounded shadow-sm text-primary-50 hover-grow fw-bold fs-7"
+                class="p-3 bg-light border border-light rounded-4 shadow-sm text-primary transition hover-grow fw-bold fs-7 d-flex align-items-center justify-content-center gap-2"
+                style="min-height: 80px"
               >
-                <i class="fas fa-anchor me-2"></i>Maritime Alliance
+                <i class="fas fa-anchor text-accent"></i>Maritime Alliance
               </div>
             </div>
             <div class="col-6 col-md-3 col-lg-2">
               <div
-                class="p-3 border border-light rounded shadow-sm text-primary-50 hover-grow fw-bold fs-7"
+                class="p-3 bg-light border border-light rounded-4 shadow-sm text-primary transition hover-grow fw-bold fs-7 d-flex align-items-center justify-content-center gap-2"
+                style="min-height: 80px"
               >
-                <i class="fas fa-plane-departure me-2"></i>Air-Carrier Corp
+                <i class="fas fa-plane-departure text-accent"></i>Air-Carrier
+                Corp
               </div>
             </div>
             <div class="col-6 col-md-3 col-lg-2">
               <div
-                class="p-3 border border-light rounded shadow-sm text-primary-50 hover-grow fw-bold fs-7"
+                class="p-3 bg-light border border-light rounded-4 shadow-sm text-primary transition hover-grow fw-bold fs-7 d-flex align-items-center justify-content-center gap-2"
+                style="min-height: 80px"
               >
-                <i class="fas fa-truck-moving me-2"></i>Overland Lines
+                <i class="fas fa-truck-moving text-accent"></i>Overland Lines
               </div>
             </div>
             <div class="col-6 col-md-3 col-lg-2">
               <div
-                class="p-3 border border-light rounded shadow-sm text-primary-50 hover-grow fw-bold fs-7"
+                class="p-3 bg-light border border-light rounded-4 shadow-sm text-primary transition hover-grow fw-bold fs-7 d-flex align-items-center justify-content-center gap-2"
+                style="min-height: 80px"
               >
-                <i class="fas fa-network-wired me-2"></i>Rail Transit Hub
+                <i class="fas fa-network-wired text-accent"></i>Rail Transit Hub
               </div>
             </div>
             <div class="col-6 col-md-3 col-lg-2">
               <div
-                class="p-3 border border-light rounded shadow-sm text-primary-50 hover-grow fw-bold fs-7"
+                class="p-3 bg-light border border-light rounded-4 shadow-sm text-primary transition hover-grow fw-bold fs-7 d-flex align-items-center justify-content-center gap-2"
+                style="min-height: 80px"
               >
-                <i class="fas fa-file-contract me-2"></i>Customs Board
+                <i class="fas fa-file-contract text-accent"></i>Customs Board
               </div>
             </div>
             <div class="col-6 col-md-3 col-lg-2">
               <div
-                class="p-3 border border-light rounded shadow-sm text-primary-50 hover-grow fw-bold fs-7"
+                class="p-3 bg-light border border-light rounded-4 shadow-sm text-primary transition hover-grow fw-bold fs-7 d-flex align-items-center justify-content-center gap-2"
+                style="min-height: 80px"
               >
-                <i class="fas fa-globe me-2"></i>Intermodal Assoc
+                <i class="fas fa-globe text-accent"></i>Intermodal Assoc
               </div>
             </div>
           </div>
@@ -648,18 +1048,29 @@
       <section class="section py-5 bg-light border-bottom border-light">
         <div class="container py-4">
           <div
-            class="p-4 p-md-5 bg-white rounded shadow-lg border border-light"
+            class="p-5 text-white rounded-5 shadow-lg border-0 position-relative overflow-hidden"
+            style="
+              background: linear-gradient(
+                135deg,
+                var(--primary-color) 0%,
+                #1e293b 100%
+              );
+            "
           >
-            <div class="row align-items-center g-4">
+            <div class="row align-items-center g-4 position-relative z-3">
               <div class="col-lg-8">
                 <span
-                  class="badge bg-accent text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
+                  class="badge bg-accent text-white py-2 px-3 mb-3 text-uppercase tracking-wider fs-8"
+                  style="box-shadow: 0 4px 10px rgba(255, 107, 0, 0.25)"
                   >Join the Operations Desk</span
                 >
-                <h3 class="fw-bold text-primary mb-3">
+                <h3
+                  class="fw-bold text-white display-6 mb-3"
+                  style="font-family: var(--font-heading)"
+                >
                   Looking to Shape the Future of Logistics?
                 </h3>
-                <p class="text-secondary fs-7 mb-0">
+                <p class="text-white-50 fs-7 mb-0" style="line-height: 1.8">
                   We are always seeking compliance specialists, terminal agents,
                   and software engineers to optimize global routes. Join Stackly
                   and access premium health packages, continuous certification
@@ -668,8 +1079,8 @@
               </div>
               <div class="col-lg-4 text-lg-end">
                 <a
-                  href="#"
-                  class="btn btn-accent px-4 py-3 text-uppercase fw-bold fs-7 tracking-wide hover-grow"
+                  href="team.html"
+                  class="btn btn-accent px-4 py-3 text-uppercase fw-bold fs-7 tracking-wide hover-grow shadow-lg"
                   >View Job Openings <i class="fas fa-briefcase ms-2"></i
                 ></a>
               </div>
@@ -682,26 +1093,31 @@
       <section
         class="section py-5 bg-dark text-white text-center position-relative overflow-hidden"
         style="
-          background-image: url(&quot;https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80&quot;);
+          background:
+            linear-gradient(rgba(11, 19, 43, 0.92), rgba(11, 19, 43, 0.92)),
+            url(&quot;https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80&quot;);
           background-size: cover;
           background-position: center;
+          padding: 6rem 0;
         "
       >
-        <div
-          class="position-absolute top-0 left-0 w-100 h-100"
-          style="z-index: 1; background-color: rgba(11, 19, 43, 0.9)"
-        ></div>
-        <div class="container py-4 position-relative z-3">
-          <h3 class="fw-bold display-6 mb-3 text-white">
+        <div class="container position-relative z-3">
+          <h3
+            class="fw-bold display-5 mb-3 text-white"
+            style="font-family: var(--font-heading); letter-spacing: -0.5px"
+          >
             Optimize Your Supply Chain Operations Today
           </h3>
-          <p class="text-white-50 mx-auto mb-4" style="max-width: 600px">
+          <p
+            class="text-white-50 mx-auto mb-4 fs-6"
+            style="max-width: 600px; line-height: 1.8"
+          >
             Get a comprehensive routing audit and cost estimate from our
             logistics consulting team. Let's grow together.
           </p>
           <a
-            href="#"
-            class="btn btn-accent px-5 py-3 text-uppercase fw-bold fs-7 tracking-wide hover-grow"
+            href="contact.html"
+            class="btn btn-accent px-5 py-3 text-uppercase fw-bold fs-7 tracking-wide hover-grow shadow"
             >Get Routing Audit <i class="fas fa-chevron-right ms-2"></i
           ></a>
         </div>

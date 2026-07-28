@@ -39,19 +39,46 @@
           background-image: url(&quot;https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1920&q=80&quot;);
         "
       >
-        <div class="container py-5">
+        <div class="container position-relative z-3">
+          <span
+            class="text-uppercase tracking-widest text-accent fw-bold fs-8 mb-2 d-inline-block animate__animated animate__fadeIn"
+            >WHAT WE OFFER</span
+          >
           <h1
-            class="display-4 fw-extrabold mb-2 animate__animated animate__fadeInDown"
+            class="display-3 fw-extrabold mb-3 text-white animate__animated animate__fadeInDown"
+            style="letter-spacing: -0.5px; font-family: var(--font-heading)"
           >
             Our Logistics Services
           </h1>
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-center mb-0">
+          <div
+            class="mx-auto bg-accent animate__animated animate__zoomIn"
+            style="
+              width: 60px;
+              height: 3px;
+              border-radius: 2px;
+              margin-bottom: 1.5rem;
+            "
+          ></div>
+          <nav
+            aria-label="breadcrumb"
+            class="animate__animated animate__fadeInUp"
+          >
+            <ol
+              class="breadcrumb justify-content-center mb-0"
+              style="
+                background: rgba(255, 255, 255, 0.03);
+                backdrop-filter: blur(5px);
+                display: inline-flex;
+                padding: 0.6rem 1.5rem;
+                border-radius: 30px;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+              "
+            >
               <li class="breadcrumb-item">
                 <a
                   href="../index.html"
-                  class="text-white-50 text-decoration-none"
-                  >Home</a
+                  class="text-white-50 text-decoration-none hover-text-white transition"
+                  ><i class="fas fa-home me-1"></i> Home</a
                 >
               </li>
               <li class="breadcrumb-item text-white active" aria-current="page">
@@ -64,13 +91,29 @@
 
       <!-- Services Detailed Grid -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
+          <div class="text-center mb-5">
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
+            >
+              <i class="fas fa-cubes me-2"></i> Comprehensive Solutions
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
+              Core Transport Capabilities
+            </h2>
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
+              We leverage multi-modal pathways to ensure container allocations,
+              speedy route timings, and optimal transport costs.
+            </p>
+          </div>
           <div class="row g-4">
             <!-- Service 1: Ocean Freight -->
             <div class="col-lg-4 col-md-6">
               <div
-                class="card-service h-100 p-4 border border-light shadow-sm text-center"
+                class="card-service h-100 p-5 border border-light shadow-sm text-center position-relative transition hover-grow"
+                style="background-color: #ffffff !important"
               >
+                <div class="service-number">01</div>
                 <div class="service-icon"><i class="fas fa-ship"></i></div>
                 <h5 class="fw-bold mb-3 text-primary">
                   Sea Forwarding (FCL/LCL)
@@ -81,13 +124,18 @@
                   consolidation, and arrange harbor transport with full
                   documentation clearances.
                 </p>
+                <a href="contact.html" class="service-link mt-4"
+                  >Learn More <i class="fas fa-arrow-right"></i
+                ></a>
               </div>
             </div>
             <!-- Service 2: Air Cargo -->
             <div class="col-lg-4 col-md-6">
               <div
-                class="card-service h-100 p-4 border border-light shadow-sm text-center"
+                class="card-service h-100 p-5 border border-light shadow-sm text-center position-relative transition hover-grow"
+                style="background-color: #ffffff !important"
               >
+                <div class="service-number">02</div>
                 <div class="service-icon"><i class="fas fa-plane"></i></div>
                 <h5 class="fw-bold mb-3 text-primary">Air Cargo Expediting</h5>
                 <p class="text-secondary fs-7 mb-0">
@@ -95,13 +143,18 @@
                   coordinates deferred or direct flights, priority clearances,
                   customs brokers, and cargo temperature regulation.
                 </p>
+                <a href="contact.html" class="service-link mt-4"
+                  >Learn More <i class="fas fa-arrow-right"></i
+                ></a>
               </div>
             </div>
             <!-- Service 3: Land Freight -->
             <div class="col-lg-4 col-md-6">
               <div
-                class="card-service h-100 p-4 border border-light shadow-sm text-center"
+                class="card-service h-100 p-5 border border-light shadow-sm text-center position-relative transition hover-grow"
+                style="background-color: #ffffff !important"
               >
+                <div class="service-number">03</div>
                 <div class="service-icon">
                   <i class="fas fa-truck-moving"></i>
                 </div>
@@ -111,13 +164,18 @@
                   and oversized equipment transits. Real-time telemetry delivers
                   container status, route delays, and cargo temperatures.
                 </p>
+                <a href="contact.html" class="service-link mt-4"
+                  >Learn More <i class="fas fa-arrow-right"></i
+                ></a>
               </div>
             </div>
             <!-- Service 4: Warehouse Storage -->
             <div class="col-lg-4 col-md-6">
               <div
-                class="card-service h-100 p-4 border border-light shadow-sm text-center"
+                class="card-service h-100 p-5 border border-light shadow-sm text-center position-relative transition hover-grow"
+                style="background-color: #ffffff !important"
               >
+                <div class="service-number">04</div>
                 <div class="service-icon"><i class="fas fa-warehouse"></i></div>
                 <h5 class="fw-bold mb-3 text-primary">Smart Warehousing</h5>
                 <p class="text-secondary fs-7 mb-0">
@@ -125,13 +183,18 @@
                   fencing, inventory database mapping, automated kitting, and
                   final-mile distribution services.
                 </p>
+                <a href="contact.html" class="service-link mt-4"
+                  >Learn More <i class="fas fa-arrow-right"></i
+                ></a>
               </div>
             </div>
             <!-- Service 5: Customs Brokerage -->
             <div class="col-lg-4 col-md-6">
               <div
-                class="card-service h-100 p-4 border border-light shadow-sm text-center"
+                class="card-service h-100 p-5 border border-light shadow-sm text-center position-relative transition hover-grow"
+                style="background-color: #ffffff !important"
               >
+                <div class="service-number">05</div>
                 <div class="service-icon">
                   <i class="fas fa-file-signature"></i>
                 </div>
@@ -141,13 +204,18 @@
                   documentation, tariff classifications, duties payments, and
                   regulatory clearances to prevent route fines.
                 </p>
+                <a href="contact.html" class="service-link mt-4"
+                  >Learn More <i class="fas fa-arrow-right"></i
+                ></a>
               </div>
             </div>
             <!-- Service 6: Intermodal Consulting -->
             <div class="col-lg-4 col-md-6">
               <div
-                class="card-service h-100 p-4 border border-light shadow-sm text-center"
+                class="card-service h-100 p-5 border border-light shadow-sm text-center position-relative transition hover-grow"
+                style="background-color: #ffffff !important"
               >
+                <div class="service-number">06</div>
                 <div class="service-icon">
                   <i class="fas fa-project-diagram"></i>
                 </div>
@@ -159,6 +227,9 @@
                   helping enterprise clients combine sea, rail, and road
                   pathways to lower shipping rates and carbon levels.
                 </p>
+                <a href="contact.html" class="service-link mt-4"
+                  >Learn More <i class="fas fa-arrow-right"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -167,17 +238,18 @@
 
       <!-- Quote Calculator Section -->
       <section class="section py-5 bg-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="row justify-content-center">
             <div class="col-lg-8 text-center mb-5">
-              <span
-                class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-                >Cost Estimator</span
+              <div
+                class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-white border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
               >
-              <h2 class="text-primary fw-extrabold display-6 mb-3">
+                <i class="fas fa-calculator me-2"></i> Cost Estimator
+              </div>
+              <h2 class="text-primary fw-extrabold display-5 mb-3">
                 Freight Shipping Calculator
               </h2>
-              <p class="text-secondary">
+              <p class="text-secondary fs-6">
                 Select your route, cargo mass, and dimension specifications to
                 calculate automated estimates based on standard ocean, air, and
                 road tariffs.
@@ -185,7 +257,10 @@
             </div>
             <div class="col-lg-10">
               <div
-                class="calculator-card shadow-sm bg-white border border-light"
+                class="calculator-card shadow-lg bg-white border-0 rounded-4 p-5"
+                style="
+                  box-shadow: 0 20px 50px rgba(11, 19, 43, 0.05) !important;
+                "
               >
                 <form id="quoteCalculatorForm">
                   <div class="row g-3">
@@ -307,24 +382,30 @@
 
       <!-- Section 1: Cold Chain & Temperature Logistics -->
       <section class="section py-5 bg-white border-top border-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="row align-items-center g-5">
             <div class="col-lg-6">
-              <span
-                class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-                >Cold Chain Logistics</span
+              <div
+                class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
               >
-              <h2 class="text-primary fw-extrabold display-6 mb-4">
+                <i class="fas fa-snowflake me-2"></i> Cold Chain Logistics
+              </div>
+              <h2
+                class="text-primary fw-extrabold display-5 mb-4"
+                style="line-height: 1.25"
+              >
                 Temperature-Sensitive Cargo Safeguards
               </h2>
-              <p class="text-secondary mb-4">
+              <p class="text-secondary mb-4 fs-6" style="line-height: 1.8">
                 We operate a state-of-the-art climate-controlled fleet and
                 refrigerated warehousing nodes to secure fragile pharmaceutical,
                 medical, and food cargoes.
               </p>
               <div class="d-flex flex-column gap-3">
                 <div class="d-inline-flex gap-3 align-items-start">
-                  <span class="bg-light p-2 rounded text-accent fs-5"
+                  <span
+                    class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-3 fs-5"
+                    style="width: 44px; height: 44px"
                     ><i class="fas fa-snowflake"></i
                   ></span>
                   <div>
@@ -338,7 +419,9 @@
                   </div>
                 </div>
                 <div class="d-inline-flex gap-3 align-items-start">
-                  <span class="bg-light p-2 rounded text-accent fs-5"
+                  <span
+                    class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-3 fs-5"
+                    style="width: 44px; height: 44px"
                     ><i class="fas fa-temperature-low"></i
                   ></span>
                   <div>
@@ -354,11 +437,24 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <img
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
-                alt="Cold Chain Cargo Storage"
-                class="img-fluid rounded shadow-lg"
-              />
+              <div class="position-relative p-3">
+                <div
+                  class="position-absolute bg-accent rounded-4 opacity-10 end-0 bottom-0"
+                  style="width: 90%; height: 90%; z-index: 1"
+                ></div>
+                <img
+                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
+                  alt="Cold Chain Cargo Storage"
+                  class="img-fluid rounded-4 shadow-lg position-relative"
+                  style="
+                    z-index: 2;
+                    transition: var(--transition-smooth);
+                    transform-origin: center;
+                  "
+                  onmouseover="this.style.transform = 'scale(1.02)'"
+                  onmouseout="this.style.transform = 'none'"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -366,16 +462,17 @@
 
       <!-- Section 2: Industry-Specific Solutions -->
       <section class="section py-5 bg-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >Sectors We Serve</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-white border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-industry me-2"></i> Sectors We Serve
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Tailored Supply Chain Solutions
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               Different sectors require distinct transit protocols. We deliver
               custom compliance, handling, and loading arrays.
             </p>
@@ -384,13 +481,18 @@
             <!-- Sector 1 -->
             <div class="col-md-6 col-lg-3">
               <div
-                class="card border-0 bg-white rounded shadow-sm p-4 h-100 text-center hover-grow"
+                class="card border-0 bg-white rounded-4 shadow-sm p-4 h-100 text-center transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-1 mb-3 d-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-2 mb-3"
+                  style="width: 64px; height: 64px"
                   ><i class="fas fa-car"></i
                 ></span>
                 <h5 class="fw-bold text-primary mb-2">Automotive</h5>
-                <p class="text-secondary fs-8 mb-0">
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Just-In-Time parts delivery, assembly line integration, and
                   specialized vehicle transport containers.
                 </p>
@@ -399,13 +501,18 @@
             <!-- Sector 2 -->
             <div class="col-md-6 col-lg-3">
               <div
-                class="card border-0 bg-white rounded shadow-sm p-4 h-100 text-center hover-grow"
+                class="card border-0 bg-white rounded-4 shadow-sm p-4 h-100 text-center transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-1 mb-3 d-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-2 mb-3"
+                  style="width: 64px; height: 64px"
                   ><i class="fas fa-laptop-code"></i
                 ></span>
                 <h5 class="fw-bold text-primary mb-2">High-Tech</h5>
-                <p class="text-secondary fs-8 mb-0">
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   High-security shipping, shock-monitored air forwarding, and
                   anti-static warehouse storage racks.
                 </p>
@@ -414,13 +521,18 @@
             <!-- Sector 3 -->
             <div class="col-md-6 col-lg-3">
               <div
-                class="card border-0 bg-white rounded shadow-sm p-4 h-100 text-center hover-grow"
+                class="card border-0 bg-white rounded-4 shadow-sm p-4 h-100 text-center transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-1 mb-3 d-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-2 mb-3"
+                  style="width: 64px; height: 64px"
                   ><i class="fas fa-prescription-bottle-alt"></i
                 ></span>
                 <h5 class="fw-bold text-primary mb-2">Healthcare</h5>
-                <p class="text-secondary fs-8 mb-0">
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   GDP-compliant pharma transportation, clinical trials
                   logistics, and customs priority clearances.
                 </p>
@@ -429,13 +541,18 @@
             <!-- Sector 4 -->
             <div class="col-md-6 col-lg-3">
               <div
-                class="card border-0 bg-white rounded shadow-sm p-4 h-100 text-center hover-grow"
+                class="card border-0 bg-white rounded-4 shadow-sm p-4 h-100 text-center transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-1 mb-3 d-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-2 mb-3"
+                  style="width: 64px; height: 64px"
                   ><i class="fas fa-space-shuttle"></i
                 ></span>
                 <h5 class="fw-bold text-primary mb-2">Aerospace</h5>
-                <p class="text-secondary fs-8 mb-0">
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   AOG (Aircraft on Ground) priority shipping, oversized jet
                   engines forwarding, and customs clearance bonds.
                 </p>
@@ -447,50 +564,61 @@
 
       <!-- Section 3: Hazmat & Dangerous Goods Handling -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="row align-items-center g-5 flex-lg-row-reverse">
             <div class="col-lg-6">
-              <span
-                class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-                >Hazmat Logistics</span
+              <div
+                class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
               >
-              <h2 class="text-primary fw-extrabold display-6 mb-4">
+                <i class="fas fa-biohazard me-2"></i> Hazmat Logistics
+              </div>
+              <h2
+                class="text-primary fw-extrabold display-5 mb-4"
+                style="line-height: 1.25"
+              >
                 Certified Dangerous Goods Transits
               </h2>
-              <p class="text-secondary mb-4">
+              <p class="text-secondary mb-4 fs-6" style="line-height: 1.8">
                 Shipping chemicals, gas compounds, and explosive materials
                 requires specialized safety profiles. Our certified dangerous
                 goods technicians guide your shipments safely through ports.
               </p>
               <ul
-                class="list-unstyled text-secondary fs-8 d-flex flex-column gap-2 mb-0"
+                class="list-unstyled text-secondary fs-8 d-flex flex-column gap-3 mb-0"
               >
-                <li>
-                  <i class="fas fa-exclamation-triangle text-accent me-2"></i
+                <li class="d-flex align-items-center">
+                  <i
+                    class="fas fa-exclamation-triangle text-accent me-3 fs-6"
+                  ></i
                   >Class 1-9 Hazmat transport capability, approved by maritime
                   boards.
                 </li>
-                <li>
-                  <i class="fas fa-file-alt text-accent me-2"></i>Preparation of
-                  specialized DG declarations, customs certifications, and
-                  manifests.
+                <li class="d-flex align-items-center">
+                  <i class="fas fa-file-alt text-accent me-3 fs-6"></i
+                  >Preparation of specialized DG declarations, customs
+                  certifications, and manifests.
                 </li>
-                <li>
-                  <i class="fas fa-shield-alt text-accent me-2"></i>OSHA and ADR
-                  compliant fleet drivers equipped with emergency safety
+                <li class="d-flex align-items-center">
+                  <i class="fas fa-shield-alt text-accent me-3 fs-6"></i>OSHA
+                  and ADR compliant fleet drivers equipped with emergency safety
                   modules.
                 </li>
               </ul>
             </div>
             <div class="col-lg-6">
               <div
-                class="p-4 p-md-5 bg-light rounded border-start border-4 border-warning shadow-sm"
+                class="p-5 bg-light rounded-4 border-start border-5 border-accent shadow-sm"
+                style="
+                  border-top: 1px solid rgba(11, 19, 43, 0.03);
+                  border-right: 1px solid rgba(11, 19, 43, 0.03);
+                  border-bottom: 1px solid rgba(11, 19, 43, 0.03);
+                "
               >
-                <h5 class="fw-bold text-primary mb-3">
-                  <i class="fas fa-shield-virus me-2 text-warning"></i>Safety
-                  Compliancy Note
+                <h5 class="fw-bold text-accent mb-3">
+                  <i class="fas fa-shield-virus me-2 text-primary fs-4"></i
+                  >Safety Compliancy Note
                 </h5>
-                <p class="text-secondary fs-8 mb-0">
+                <p class="text-secondary fs-7 mb-0" style="line-height: 1.8">
                   Dangerous goods shipments are subject to rigorous checks. We
                   require cargo bookings at least 7 business days prior to
                   sailing to guarantee dangerous goods container authorization
@@ -506,18 +634,29 @@
       <section class="section py-5 bg-light">
         <div class="container py-4">
           <div
-            class="p-4 p-md-5 bg-white rounded shadow-sm border border-light"
+            class="p-5 text-white rounded-5 shadow-lg border-0 position-relative overflow-hidden"
+            style="
+              background: linear-gradient(
+                135deg,
+                var(--primary-color) 0%,
+                #1e293b 100%
+              );
+            "
           >
-            <div class="row align-items-center g-4">
+            <div class="row align-items-center g-4 position-relative z-3">
               <div class="col-lg-8">
                 <span
-                  class="badge bg-accent text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
+                  class="badge bg-accent text-white py-2 px-3 mb-3 text-uppercase tracking-wider fs-8"
+                  style="box-shadow: 0 4px 10px rgba(255, 107, 0, 0.25)"
                   >Operations Consulting</span
                 >
-                <h3 class="fw-bold text-primary mb-3">
+                <h3
+                  class="fw-bold text-white display-6 mb-3"
+                  style="font-family: var(--font-heading)"
+                >
                   Optimize Supply Chain Efficiency & Tariff Costs
                 </h3>
-                <p class="text-secondary fs-7 mb-0">
+                <p class="text-white-50 fs-7 mb-0" style="line-height: 1.8">
                   Our trade engineers analyze your shipping networks,
                   identifying ways to lower custom duty assessments, avoid
                   demurrage penalties, and consolidate FCL space. Get a custom
@@ -526,10 +665,9 @@
               </div>
               <div class="col-lg-4 text-lg-end">
                 <a
-                  href="#"
-                  class="btn btn-accent px-4 py-3 text-uppercase fw-bold fs-7 tracking-wide hover-grow"
-                  >Request Network Audit
-                  <i class="fas fa-file-chart-line ms-2"></i
+                  href="contact.html"
+                  class="btn btn-accent px-4 py-3 text-uppercase fw-bold fs-7 tracking-wide hover-grow shadow-lg"
+                  >Request Network Audit <i class="fas fa-chart-line ms-2"></i
                 ></a>
               </div>
             </div>
@@ -539,17 +677,21 @@
 
       <!-- Section 5: Project Cargo & Heavy Lift -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="row align-items-center g-5">
             <div class="col-lg-6">
-              <span
-                class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-                >Heavy Logistics</span
+              <div
+                class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
               >
-              <h2 class="text-primary fw-extrabold display-6 mb-4">
+                <i class="fas fa-dolly me-2"></i> Heavy Logistics
+              </div>
+              <h2
+                class="text-primary fw-extrabold display-5 mb-4"
+                style="line-height: 1.25"
+              >
                 Breakbulk & Heavy Machinery Cargo
               </h2>
-              <p class="text-secondary mb-4 lh-lg">
+              <p class="text-secondary mb-4 fs-6" style="line-height: 1.8">
                 For oversized, high-mass machinery that doesn't fit standard
                 containers, our heavy lift department coordinates custom
                 maritime charters, crane loading rigs, and specialized
@@ -557,31 +699,49 @@
               </p>
               <div class="row g-3">
                 <div class="col-6">
-                  <div class="p-3 bg-light rounded">
+                  <div class="p-3 bg-light rounded-4 border border-light">
                     <h6 class="fw-bold text-primary mb-1">Custom Charters</h6>
-                    <p class="text-secondary fs-8 mb-0">
+                    <p
+                      class="text-secondary fs-8 mb-0"
+                      style="line-height: 1.6"
+                    >
                       Full or part vessel charter agreements for heavy maritime
                       hauls.
                     </p>
                   </div>
                 </div>
                 <div class="col-6">
-                  <div class="p-3 bg-light rounded">
+                  <div class="p-3 bg-light rounded-4 border border-light">
                     <h6 class="fw-bold text-primary mb-1">Road Permits</h6>
-                    <p class="text-secondary fs-8 mb-0">
-                      Securing local highway authorizations and safety pilot
-                      cars.
+                    <p
+                      class="text-secondary fs-8 mb-0"
+                      style="line-height: 1.6"
+                    >
+                      Securing highway authorizations and safety pilot cars.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-6">
-              <img
-                src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=800&q=80"
-                alt="Heavy Cargo Ship Loading"
-                class="img-fluid rounded shadow-lg"
-              />
+              <div class="position-relative p-3">
+                <div
+                  class="position-absolute bg-primary rounded-4 opacity-10 end-0 bottom-0"
+                  style="width: 90%; height: 90%; z-index: 1"
+                ></div>
+                <img
+                  src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=800&q=80"
+                  alt="Heavy Cargo Ship Loading"
+                  class="img-fluid rounded-4 shadow-lg position-relative"
+                  style="
+                    z-index: 2;
+                    transition: var(--transition-smooth);
+                    transform-origin: center;
+                  "
+                  onmouseover="this.style.transform = 'scale(1.02)'"
+                  onmouseout="this.style.transform = 'none'"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -589,16 +749,17 @@
 
       <!-- Section 6: E-commerce Fulfillment & Distribution -->
       <section class="section py-5 bg-light border-bottom border-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >E-commerce Logistics</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-white border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-shopping-cart me-2"></i> E-commerce Logistics
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Smart Warehouse Integration & Final-Mile
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               Connect your online store directly to our warehousing APIs. We
               handle inventory sync, pick-and-pack, and priority courier
               shipping.
@@ -607,13 +768,18 @@
           <div class="row g-4">
             <div class="col-md-4">
               <div
-                class="card p-4 bg-white rounded shadow-sm border border-light h-100 hover-grow"
+                class="card p-4 bg-white rounded-4 shadow-sm border border-light h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-2 mb-3 d-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-2 mb-3"
+                  style="width: 54px; height: 54px"
                   ><i class="fas fa-plug"></i
                 ></span>
                 <h6 class="fw-bold text-primary mb-2">API Platform Sync</h6>
-                <p class="text-secondary fs-8 mb-0">
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Direct plugin integrations for WooCommerce, Shopify, and
                   enterprise ERP systems to automate customer orders.
                 </p>
@@ -621,13 +787,18 @@
             </div>
             <div class="col-md-4">
               <div
-                class="card p-4 bg-white rounded shadow-sm border border-light h-100 hover-grow"
+                class="card p-4 bg-white rounded-4 shadow-sm border border-light h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-2 mb-3 d-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-2 mb-3"
+                  style="width: 54px; height: 54px"
                   ><i class="fas fa-box-open"></i
                 ></span>
                 <h6 class="fw-bold text-primary mb-2">Pick, Pack & Kit</h6>
-                <p class="text-secondary fs-8 mb-0">
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Custom branding options, automated barcode scanning, and
                   precise item verification within minutes of purchase.
                 </p>
@@ -635,13 +806,18 @@
             </div>
             <div class="col-md-4">
               <div
-                class="card p-4 bg-white rounded shadow-sm border border-light h-100 hover-grow"
+                class="card p-4 bg-white rounded-4 shadow-sm border border-light h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+                "
               >
-                <span class="text-accent fs-2 mb-3 d-block"
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 text-white rounded-circle fs-2 mb-3"
+                  style="width: 54px; height: 54px"
                   ><i class="fas fa-shipping-fast"></i
                 ></span>
                 <h6 class="fw-bold text-primary mb-2">Final-Mile Delivery</h6>
-                <p class="text-secondary fs-8 mb-0">
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
                   Local delivery networks coordinating same-day or next-day
                   shipping options directly to the customer's door.
                 </p>
@@ -653,16 +829,17 @@
 
       <!-- FAQs Accordion -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >FAQs</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-question-circle me-2"></i> FAQs
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Frequently Asked Questions
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               Clear guidance regarding custom duties classifications, shipping
               volume weight, and telemetry access.
             </p>
@@ -670,7 +847,10 @@
 
           <div class="row justify-content-center">
             <div class="col-lg-8">
-              <div class="accordion accordion-flush" id="servicesFaq">
+              <div
+                class="accordion accordion-flush faq-accordion"
+                id="servicesFaq"
+              >
                 <!-- FAQ 1 -->
                 <div class="accordion-item border-bottom border-light">
                   <h2 class="accordion-header" id="faq-heading-1">

@@ -39,19 +39,46 @@
           background-image: url(&quot;https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80&quot;);
         "
       >
-        <div class="container py-5">
+        <div class="container position-relative z-3">
+          <span
+            class="text-uppercase tracking-widest text-accent fw-bold fs-8 mb-2 d-inline-block animate__animated animate__fadeIn"
+            >WHO WE ARE</span
+          >
           <h1
-            class="display-4 fw-extrabold mb-2 animate__animated animate__fadeInDown"
+            class="display-3 fw-extrabold mb-3 text-white animate__animated animate__fadeInDown"
+            style="letter-spacing: -0.5px; font-family: var(--font-heading)"
           >
             Our Executive Team
           </h1>
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-center mb-0">
+          <div
+            class="mx-auto bg-accent animate__animated animate__zoomIn"
+            style="
+              width: 60px;
+              height: 3px;
+              border-radius: 2px;
+              margin-bottom: 1.5rem;
+            "
+          ></div>
+          <nav
+            aria-label="breadcrumb"
+            class="animate__animated animate__fadeInUp"
+          >
+            <ol
+              class="breadcrumb justify-content-center mb-0"
+              style="
+                background: rgba(255, 255, 255, 0.03);
+                backdrop-filter: blur(5px);
+                display: inline-flex;
+                padding: 0.6rem 1.5rem;
+                border-radius: 30px;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+              "
+            >
               <li class="breadcrumb-item">
                 <a
                   href="../index.html"
-                  class="text-white-50 text-decoration-none"
-                  >Home</a
+                  class="text-white-50 text-decoration-none hover-text-white transition"
+                  ><i class="fas fa-home me-1"></i> Home</a
                 >
               </li>
               <li class="breadcrumb-item text-white active" aria-current="page">
@@ -64,16 +91,17 @@
 
       <!-- Team Members Grid -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span
-              class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-              >Leadership</span
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
             >
-            <h2 class="text-primary fw-extrabold display-6 mb-3">
+              <i class="fas fa-user-friends me-2"></i> Leadership
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
               Logistics Decision Makers
             </h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px">
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
               Our board coordinates port authorities, air cargo alliances,
               customs compliance networks, and fleet routing assets daily.
             </p>
@@ -83,16 +111,20 @@
             <!-- Leader 1 -->
             <div class="col-lg-3 col-md-6">
               <div
-                class="card border-0 bg-light rounded shadow-sm text-center h-100 p-4 transition hover-grow"
+                class="card border-0 bg-light rounded-4 text-center h-100 p-4 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.02) !important;
+                "
               >
                 <div
-                  class="avatar-wrapper mb-3 mx-auto rounded-circle text-white d-flex align-items-center justify-content-center"
+                  class="avatar-wrapper mb-3 mx-auto rounded-circle text-white d-flex align-items-center justify-content-center shadow"
                   style="
                     width: 100px;
                     height: 100px;
                     font-size: 2.2rem;
                     font-weight: 700;
                     background-color: var(--primary-color);
+                    border: 4px solid #ffffff;
                   "
                 >
                   MK
@@ -103,17 +135,21 @@
                 <p class="text-accent fs-8 fw-semibold mb-3">
                   Chief Executive Officer
                 </p>
-                <p class="text-secondary fs-8 mb-4">
+                <p class="text-secondary fs-8 mb-4" style="line-height: 1.6">
                   A former marine terminal superintendent with 20+ years of
                   logistics leadership experience.
                 </p>
                 <div
-                  class="socials d-flex gap-2 justify-content-center fs-7 text-secondary"
+                  class="socials d-flex gap-2 justify-content-center fs-7 text-secondary mt-auto"
                 >
-                  <a href="#" class="text-secondary hover-text-accent"
+                  <a
+                    href="#"
+                    class="text-secondary hover-text-accent transition"
                     ><i class="fab fa-linkedin"></i
                   ></a>
-                  <a href="#" class="text-secondary hover-text-accent"
+                  <a
+                    href="#"
+                    class="text-secondary hover-text-accent transition"
                     ><i class="fab fa-x-twitter"></i
                   ></a>
                 </div>
@@ -122,16 +158,20 @@
             <!-- Leader 2 -->
             <div class="col-lg-3 col-md-6">
               <div
-                class="card border-0 bg-light rounded shadow-sm text-center h-100 p-4 transition hover-grow"
+                class="card border-0 bg-light rounded-4 text-center h-100 p-4 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.02) !important;
+                "
               >
                 <div
-                  class="avatar-wrapper mb-3 mx-auto rounded-circle text-white d-flex align-items-center justify-content-center"
+                  class="avatar-wrapper mb-3 mx-auto rounded-circle text-white d-flex align-items-center justify-content-center shadow"
                   style="
                     width: 100px;
                     height: 100px;
                     font-size: 2.2rem;
                     font-weight: 700;
                     background-color: var(--secondary-color);
+                    border: 4px solid #ffffff;
                   "
                 >
                   SC
@@ -142,18 +182,22 @@
                 <p class="text-accent fs-8 fw-semibold mb-3">
                   VP of Operations
                 </p>
-                <p class="text-secondary fs-8 mb-4">
+                <p class="text-secondary fs-8 mb-4" style="line-height: 1.6">
                   Coordinates intermodal rail networks, overland trucking
                   contracts, and terminal logistics operations.
                 </p>
                 <div
-                  class="socials d-flex gap-2 justify-content-center fs-7 text-secondary"
+                  class="socials d-flex gap-2 justify-content-center fs-7 text-secondary mt-auto"
                 >
-                  <a href="#" class="text-secondary hover-text-accent"
+                  <a
+                    href="#"
+                    class="text-secondary hover-text-accent transition"
                     ><i class="fab fa-linkedin"></i
                   ></a>
-                  <a href="#" class="text-secondary hover-text-accent"
-                    ><i class="fab fa-envelope"></i
+                  <a
+                    href="#"
+                    class="text-secondary hover-text-accent transition"
+                    ><i class="fas fa-envelope"></i
                   ></a>
                 </div>
               </div>
@@ -161,16 +205,20 @@
             <!-- Leader 3 -->
             <div class="col-lg-3 col-md-6">
               <div
-                class="card border-0 bg-light rounded shadow-sm text-center h-100 p-4 transition hover-grow"
+                class="card border-0 bg-light rounded-4 text-center h-100 p-4 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.02) !important;
+                "
               >
                 <div
-                  class="avatar-wrapper mb-3 mx-auto rounded-circle text-white d-flex align-items-center justify-content-center"
+                  class="avatar-wrapper mb-3 mx-auto rounded-circle text-white d-flex align-items-center justify-content-center shadow"
                   style="
                     width: 100px;
                     height: 100px;
                     font-size: 2.2rem;
                     font-weight: 700;
                     background-color: #1e293b;
+                    border: 4px solid #ffffff;
                   "
                 >
                   DB
@@ -181,17 +229,21 @@
                 <p class="text-accent fs-8 fw-semibold mb-3">
                   Customs Broker Director
                 </p>
-                <p class="text-secondary fs-8 mb-4">
+                <p class="text-secondary fs-8 mb-4" style="line-height: 1.6">
                   Expert on international trade tariff classifications,
                   compliance rules, and port of entry clearances.
                 </p>
                 <div
-                  class="socials d-flex gap-2 justify-content-center fs-7 text-secondary"
+                  class="socials d-flex gap-2 justify-content-center fs-7 text-secondary mt-auto"
                 >
-                  <a href="#" class="text-secondary hover-text-accent"
+                  <a
+                    href="#"
+                    class="text-secondary hover-text-accent transition"
                     ><i class="fab fa-linkedin"></i
                   ></a>
-                  <a href="#" class="text-secondary hover-text-accent"
+                  <a
+                    href="#"
+                    class="text-secondary hover-text-accent transition"
                     ><i class="fab fa-x-twitter"></i
                   ></a>
                 </div>
@@ -200,16 +252,20 @@
             <!-- Leader 4 -->
             <div class="col-lg-3 col-md-6">
               <div
-                class="card border-0 bg-light rounded shadow-sm text-center h-100 p-4 transition hover-grow"
+                class="card border-0 bg-light rounded-4 text-center h-100 p-4 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.02) !important;
+                "
               >
                 <div
-                  class="avatar-wrapper mb-3 mx-auto rounded-circle text-white d-flex align-items-center justify-content-center"
+                  class="avatar-wrapper mb-3 mx-auto rounded-circle text-white d-flex align-items-center justify-content-center shadow"
                   style="
                     width: 100px;
                     height: 100px;
                     font-size: 2.2rem;
                     font-weight: 700;
-                    background-color: var(--accent-color);
+                    background-color: var(--secondary-color);
+                    border: 4px solid #ffffff;
                   "
                 >
                   EV
@@ -220,18 +276,22 @@
                 <p class="text-accent fs-8 fw-semibold mb-3">
                   Aviation Route Planner
                 </p>
-                <p class="text-secondary fs-8 mb-4">
+                <p class="text-secondary fs-8 mb-4" style="line-height: 1.6">
                   Maintains partnerships with air cargo carriers to book
                   consolidated trans-pacific slot availability.
                 </p>
                 <div
-                  class="socials d-flex gap-2 justify-content-center fs-7 text-secondary"
+                  class="socials d-flex gap-2 justify-content-center fs-7 text-secondary mt-auto"
                 >
-                  <a href="#" class="text-secondary hover-text-accent"
+                  <a
+                    href="#"
+                    class="text-secondary hover-text-accent transition"
                     ><i class="fab fa-linkedin"></i
                   ></a>
-                  <a href="#" class="text-secondary hover-text-accent"
-                    ><i class="fab fa-envelope"></i
+                  <a
+                    href="#"
+                    class="text-secondary hover-text-accent transition"
+                    ><i class="fas fa-envelope"></i
                   ></a>
                 </div>
               </div>
@@ -242,24 +302,41 @@
 
       <!-- Company Values Section -->
       <section class="section py-5 bg-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="row align-items-center g-5">
             <div class="col-lg-6">
-              <img
-                src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80"
-                alt="Supply Chain Teamwork"
-                class="img-fluid rounded shadow-lg"
-              />
+              <div class="position-relative p-3">
+                <div
+                  class="position-absolute bg-primary rounded-4 opacity-10 end-0 bottom-0"
+                  style="width: 90%; height: 90%; z-index: 1"
+                ></div>
+                <img
+                  src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80"
+                  alt="Supply Chain Teamwork"
+                  class="img-fluid rounded-4 shadow-lg position-relative"
+                  style="
+                    z-index: 2;
+                    transition: var(--transition-smooth);
+                    transform-origin: center;
+                  "
+                  onmouseover="this.style.transform = 'scale(1.02)'"
+                  onmouseout="this.style.transform = 'none'"
+                />
+              </div>
             </div>
             <div class="col-lg-6">
-              <span
-                class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8"
-                >Our Team Promise</span
+              <div
+                class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-white border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
               >
-              <h2 class="text-primary fw-extrabold display-6 mb-4">
+                <i class="fas fa-shield-alt me-2"></i> Our Team Promise
+              </div>
+              <h2
+                class="text-primary fw-extrabold display-5 mb-4"
+                style="line-height: 1.25"
+              >
                 Specialists at Every Stage
               </h2>
-              <p class="text-secondary mb-4">
+              <p class="text-secondary mb-4 fs-6" style="line-height: 1.8">
                 From certified hazardous materials cargo handlers to logistics
                 route planners, our workers hold verified certificates and
                 undergo regular logistics compliance drills.
@@ -267,13 +344,11 @@
               <div class="d-flex flex-column gap-3">
                 <div class="d-inline-flex gap-3 align-items-start">
                   <span
-                    class="bg-white p-2 rounded text-accent fs-5"
+                    class="d-inline-flex align-items-center justify-content-center bg-accent text-white rounded-3 shadow-sm fs-5"
                     style="
-                      width: 40px;
-                      height: 40px;
-                      display: inline-flex;
-                      align-items: center;
-                      justify-content: center;
+                      width: 48px;
+                      height: 48px;
+                      border: 1px solid rgba(11, 19, 43, 0.03);
                     "
                     ><i class="fas fa-certificate"></i
                   ></span>
@@ -289,13 +364,11 @@
                 </div>
                 <div class="d-inline-flex gap-3 align-items-start">
                   <span
-                    class="bg-white p-2 rounded text-accent fs-5"
+                    class="d-inline-flex align-items-center justify-content-center bg-accent text-white rounded-3 shadow-sm fs-5"
                     style="
-                      width: 40px;
-                      height: 40px;
-                      display: inline-flex;
-                      align-items: center;
-                      justify-content: center;
+                      width: 48px;
+                      height: 48px;
+                      border: 1px solid rgba(11, 19, 43, 0.03);
                     "
                     ><i class="fas fa-user-shield"></i
                   ></span>
@@ -307,6 +380,8 @@
                       We employ custom brokers registered with international
                       port regulatory boards.
                     </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -315,40 +390,93 @@
 
       <!-- Section 1: Board of Advisory Directors -->
       <section class="section py-5 bg-white border-top border-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8">Advisory Board</span>
-            <h2 class="text-primary fw-extrabold display-6 mb-3">Strategic Advisory Committee</h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px;">
-              Industry veterans advising Stackly on international customs compliance, maritime safety, and smart terminal automation.
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
+            >
+              <i class="fas fa-landmark me-2"></i> Advisory Board
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
+              Strategic Advisory Committee
+            </h2>
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
+              Industry veterans advising Stackly on international customs
+              compliance, maritime safety, and smart terminal automation.
             </p>
           </div>
           <div class="row g-4 justify-content-center">
             <!-- Advisory 1 -->
             <div class="col-lg-4 col-md-6">
-              <div class="card border-0 bg-light rounded shadow-sm p-4 h-100 text-center hover-grow">
-                <span class="text-accent fs-1 mb-3 d-block"><i class="fas fa-landmark"></i></span>
-                <h5 class="fw-bold text-primary mb-1">Admiral Thomas Vance (Retd.)</h5>
-                <p class="text-accent fs-8 fw-semibold mb-2">Maritime Policy Advisor</p>
-                <p class="text-secondary fs-8 mb-0">Former port security director and advisor to international maritime transport commissions.</p>
+              <div
+                class="card border-0 bg-light rounded-4 shadow-sm p-4 h-100 text-center transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.02) !important;
+                "
+              >
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent text-white rounded-circle fs-2 mb-3 shadow-sm"
+                  style="width: 64px; height: 64px"
+                  ><i class="fas fa-landmark"></i
+                ></span>
+                <h5 class="fw-bold text-primary mb-1">
+                  Admiral Thomas Vance (Retd.)
+                </h5>
+                <p class="text-accent fs-8 fw-semibold mb-2">
+                  Maritime Policy Advisor
+                </p>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
+                  Former port security director and advisor to international
+                  maritime transport commissions.
+                </p>
               </div>
             </div>
             <!-- Advisory 2 -->
             <div class="col-lg-4 col-md-6">
-              <div class="card border-0 bg-light rounded shadow-sm p-4 h-100 text-center hover-grow">
-                <span class="text-accent fs-1 mb-3 d-block"><i class="fas fa-brain"></i></span>
+              <div
+                class="card border-0 bg-light rounded-4 shadow-sm p-4 h-100 text-center transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.02) !important;
+                "
+              >
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent text-white rounded-circle fs-2 mb-3 shadow-sm"
+                  style="width: 64px; height: 64px"
+                  ><i class="fas fa-brain"></i
+                ></span>
                 <h5 class="fw-bold text-primary mb-1">Dr. Aris Thorne</h5>
-                <p class="text-accent fs-8 fw-semibold mb-2">Logistics Analytics Head</p>
-                <p class="text-secondary fs-8 mb-0">Doctor of Operations Research, modeling machine learning route algorithms for shipping corridors.</p>
+                <p class="text-accent fs-8 fw-semibold mb-2">
+                  Logistics Analytics Head
+                </p>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
+                  Doctor of Operations Research, modeling machine learning route
+                  algorithms for shipping corridors.
+                </p>
               </div>
             </div>
             <!-- Advisory 3 -->
             <div class="col-lg-4 col-md-6">
-              <div class="card border-0 bg-light rounded shadow-sm p-4 h-100 text-center hover-grow">
-                <span class="text-accent fs-1 mb-3 d-block"><i class="fas fa-balance-scale"></i></span>
-                <h5 class="fw-bold text-primary mb-1">Baroness Sarah Jenkins</h5>
-                <p class="text-accent fs-8 fw-semibold mb-2">International Trade Law</p>
-                <p class="text-secondary fs-8 mb-0">Expert in trans-continental trade treaties, duty classifications, and customs clearances bonds.</p>
+              <div
+                class="card border-0 bg-light rounded-4 shadow-sm p-4 h-100 text-center transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.02) !important;
+                "
+              >
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent text-white rounded-circle fs-2 mb-3 shadow-sm"
+                  style="width: 64px; height: 64px"
+                  ><i class="fas fa-balance-scale"></i
+                ></span>
+                <h5 class="fw-bold text-primary mb-1">
+                  Baroness Sarah Jenkins
+                </h5>
+                <p class="text-accent fs-8 fw-semibold mb-2">
+                  International Trade Law
+                </p>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
+                  Expert in trans-continental trade treaties, duty
+                  classifications, and customs clearances bonds.
+                </p>
               </div>
             </div>
           </div>
@@ -357,40 +485,103 @@
 
       <!-- Section 2: Regional Operations Directors -->
       <section class="section py-5 bg-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8">Global Leadership</span>
-            <h2 class="text-primary fw-extrabold display-6 mb-3">Regional Operations Heads</h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px;">
-              Our regional operations directors manage depots, local trucking fleets, and compliance clearing at local ports.
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-white border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
+            >
+              <i class="fas fa-globe-americas me-2"></i> Global Leadership
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
+              Regional Operations Heads
+            </h2>
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
+              Our regional operations directors manage depots, local trucking
+              fleets, and compliance clearing at local ports.
             </p>
           </div>
           <div class="row g-4 justify-content-center">
             <!-- Reg 1 -->
-            <div class="col-lg-4 col-md-6 text-center">
-              <div class="card p-4 bg-white rounded shadow-sm border border-light h-100 hover-grow">
-                <div class="avatar-wrapper mb-3 mx-auto rounded-circle text-white bg-primary d-flex align-items-center justify-content-center" style="width: 70px; height: 70px; font-weight:700;">MS</div>
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="card p-4 bg-white rounded-4 shadow-sm border border-light text-center h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.02) !important;
+                "
+              >
+                <div
+                  class="avatar-wrapper mb-3 mx-auto rounded-circle text-white bg-primary d-flex align-items-center justify-content-center shadow"
+                  style="
+                    width: 70px;
+                    height: 70px;
+                    font-weight: 700;
+                    border: 3px solid #ffffff;
+                  "
+                >
+                  MS
+                </div>
                 <h6 class="fw-bold text-primary mb-1">Marcus Sterling</h6>
-                <p class="text-accent fs-8 fw-semibold mb-2">Director — Americas</p>
-                <p class="text-secondary fs-8 mb-0">Oversees terminal yards in New York and customs corridors along North and South America.</p>
+                <p class="text-accent fs-8 fw-semibold mb-2">
+                  Director — Americas
+                </p>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
+                  Oversees terminal yards in New York and customs corridors
+                  along North and South America.
+                </p>
               </div>
             </div>
             <!-- Reg 2 -->
-            <div class="col-lg-4 col-md-6 text-center">
-              <div class="card p-4 bg-white rounded shadow-sm border border-light h-100 hover-grow">
-                <div class="avatar-wrapper mb-3 mx-auto rounded-circle text-white bg-secondary d-flex align-items-center justify-content-center" style="width: 70px; height: 70px; font-weight:700;">AD</div>
+            <div class="col-lg-4 col-md-6">
+              <div
+                class="card p-4 bg-white rounded-4 shadow-sm border border-light text-center h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.02) !important;
+                "
+              >
+                <div
+                  class="avatar-wrapper mb-3 mx-auto rounded-circle text-white bg-secondary d-flex align-items-center justify-content-center shadow"
+                  style="
+                    width: 70px;
+                    height: 70px;
+                    font-weight: 700;
+                    border: 3px solid #ffffff;
+                  "
+                >
+                  AD
+                </div>
                 <h6 class="fw-bold text-primary mb-1">Amelie Dubois</h6>
                 <p class="text-accent fs-8 fw-semibold mb-2">Director — EMEA</p>
-                <p class="text-secondary fs-8 mb-0">Coordinates Rotterdam depot operations, European road routes, and African port hubs.</p>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
+                  Coordinates Rotterdam depot operations, European road routes,
+                  and African port hubs.
+                </p>
               </div>
             </div>
             <!-- Reg 3 -->
             <div class="col-lg-4 col-md-6 text-center">
-              <div class="card p-4 bg-white rounded shadow-sm border border-light h-100 hover-grow">
-                <div class="avatar-wrapper mb-3 mx-auto rounded-circle text-white bg-dark d-flex align-items-center justify-content-center" style="width: 70px; height: 70px; font-weight:700;">KS</div>
+              <div
+                class="card p-4 bg-white rounded-4 shadow-sm border border-light text-center h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.02) !important;
+                "
+              >
+                <div
+                  class="avatar-wrapper mb-3 mx-auto rounded-circle text-white bg-dark d-flex align-items-center justify-content-center shadow"
+                  style="
+                    width: 70px;
+                    height: 70px;
+                    font-weight: 700;
+                    border: 3px solid #ffffff;
+                  "
+                >
+                  KS
+                </div>
                 <h6 class="fw-bold text-primary mb-1">Kenji Sato</h6>
                 <p class="text-accent fs-8 fw-semibold mb-2">Director — APAC</p>
-                <p class="text-secondary fs-8 mb-0">Directs Singapore container sorting hubs and manages trans-pacific container allocations.</p>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
+                  Directs Singapore container sorting hubs and manages
+                  trans-pacific container allocations.
+                </p>
               </div>
             </div>
           </div>
@@ -399,49 +590,104 @@
 
       <!-- Section 3: Department Heads Directory -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8">Department Heads</span>
-            <h2 class="text-primary fw-extrabold display-6 mb-3">Key Department Managers</h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px;">
-              Specialized leaders managing warehouse fulfillment, trucking safety, customer support, and aviation cargo charters.
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
+            >
+              <i class="fas fa-sitemap me-2"></i> Department Heads
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
+              Key Department Managers
+            </h2>
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
+              Specialized leaders managing warehouse fulfillment, trucking
+              safety, customer support, and aviation cargo charters.
             </p>
           </div>
           <div class="row g-4">
             <!-- Head 1 -->
             <div class="col-md-6 col-lg-3 text-center">
-              <div class="card p-4 bg-light rounded shadow-sm border border-light h-100 hover-grow">
-                <span class="text-accent fs-2 mb-2 d-block"><i class="fas fa-warehouse"></i></span>
+              <div
+                class="card p-4 bg-light rounded-4 shadow-sm border border-light h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.01) !important;
+                "
+              >
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent text-white rounded-circle fs-2 mb-2 shadow-sm"
+                  style="width: 50px; height: 50px"
+                  ><i class="fas fa-warehouse"></i
+                ></span>
                 <h6 class="fw-bold text-primary mb-1">Robert Vance</h6>
                 <p class="text-accent fs-8 mb-2">Warehouse Operations</p>
-                <p class="text-secondary fs-8 mb-0">Responsible for climate control racks, kitting speed, and sorting terminal automation.</p>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
+                  Responsible for climate control racks, kitting speed, and
+                  sorting terminal automation.
+                </p>
               </div>
             </div>
             <!-- Head 2 -->
             <div class="col-md-6 col-lg-3 text-center">
-              <div class="card p-4 bg-light rounded shadow-sm border border-light h-100 hover-grow">
-                <span class="text-accent fs-2 mb-2 d-block"><i class="fas fa-shield-alt"></i></span>
+              <div
+                class="card p-4 bg-light rounded-4 shadow-sm border border-light h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.01) !important;
+                "
+              >
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent text-white rounded-circle fs-2 mb-2 shadow-sm"
+                  style="width: 50px; height: 50px"
+                  ><i class="fas fa-shield-alt"></i
+                ></span>
                 <h6 class="fw-bold text-primary mb-1">Linus Odegard</h6>
                 <p class="text-accent fs-8 mb-2">Fleet Safety & Compliance</p>
-                <p class="text-secondary fs-8 mb-0">Enforces OSHA terminal guidelines, driver rest logs, and vehicle mechanical audits.</p>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
+                  Enforces OSHA terminal guidelines, driver rest logs, and
+                  vehicle mechanical audits.
+                </p>
               </div>
             </div>
             <!-- Head 3 -->
             <div class="col-md-6 col-lg-3 text-center">
-              <div class="card p-4 bg-light rounded shadow-sm border border-light h-100 hover-grow">
-                <span class="text-accent fs-2 mb-2 d-block"><i class="fas fa-user-friends"></i></span>
+              <div
+                class="card p-4 bg-light rounded-4 shadow-sm border border-light h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.01) !important;
+                "
+              >
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent text-white rounded-circle fs-2 mb-2 shadow-sm"
+                  style="width: 50px; height: 50px"
+                  ><i class="fas fa-user-friends"></i
+                ></span>
                 <h6 class="fw-bold text-primary mb-1">Clara Oswald</h6>
                 <p class="text-accent fs-8 mb-2">Customer Success Director</p>
-                <p class="text-secondary fs-8 mb-0">Manages cargo tracking queries, customer account reports, and priority quotes requests.</p>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
+                  Manages cargo tracking queries, customer account reports, and
+                  priority quotes requests.
+                </p>
               </div>
             </div>
             <!-- Head 4 -->
             <div class="col-md-6 col-lg-3 text-center">
-              <div class="card p-4 bg-light rounded shadow-sm border border-light h-100 hover-grow">
-                <span class="text-accent fs-2 mb-2 d-block"><i class="fas fa-plane-departure"></i></span>
+              <div
+                class="card p-4 bg-light rounded-4 shadow-sm border border-light h-100 transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.01) !important;
+                "
+              >
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent text-white rounded-circle fs-2 mb-2 shadow-sm"
+                  style="width: 50px; height: 50px"
+                  ><i class="fas fa-plane-departure"></i
+                ></span>
                 <h6 class="fw-bold text-primary mb-1">Captain Sean Mercer</h6>
                 <p class="text-accent fs-8 mb-2">Air Charter Manager</p>
-                <p class="text-secondary fs-8 mb-0">Directs aviation cargo charter agreements, emergency flights, and airport customs filings.</p>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
+                  Directs aviation cargo charter agreements, emergency flights,
+                  and airport customs filings.
+                </p>
               </div>
             </div>
           </div>
@@ -450,31 +696,77 @@
 
       <!-- Section 4: Training & Compliance Academy -->
       <section class="section py-5 bg-light">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="row align-items-center g-5">
             <div class="col-lg-6">
-              <span class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8">Training Academy</span>
-              <h2 class="text-primary fw-extrabold display-6 mb-4">Certified Logistics Academy</h2>
-              <p class="text-secondary mb-4 lh-lg">
-                At Stackly, safety is built on knowledge. Every team member—from terminal handlers to billing officers—completes mandatory courses at our in-house Training & Compliance Academy.
+              <div
+                class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-white border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
+              >
+                <i class="fas fa-graduation-cap me-2"></i> Training Academy
+              </div>
+              <h2
+                class="text-primary fw-extrabold display-5 mb-4"
+                style="line-height: 1.25"
+              >
+                Certified Logistics Academy
+              </h2>
+              <p class="text-secondary mb-4 fs-6" style="line-height: 1.8">
+                At Stackly, safety is built on knowledge. Every team member—from
+                terminal handlers to billing officers—completes mandatory
+                courses at our in-house Training & Compliance Academy.
               </p>
               <div class="row g-3">
                 <div class="col-6">
-                  <div class="p-3 bg-white rounded shadow-sm border-start border-3 border-accent">
-                    <h6 class="fw-bold text-primary mb-1">OSHA Certification</h6>
-                    <p class="text-secondary fs-8 mb-0">Forklift and machinery handlers hold verified OSHA safety certificates.</p>
+                  <div
+                    class="p-3 bg-white rounded-4 shadow-sm border-start border-3 border-accent"
+                  >
+                    <h6 class="fw-bold text-primary mb-1">
+                      OSHA Certification
+                    </h6>
+                    <p
+                      class="text-secondary fs-8 mb-0"
+                      style="line-height: 1.6"
+                    >
+                      Forklift and machinery handlers hold verified OSHA safety
+                      certificates.
+                    </p>
                   </div>
                 </div>
                 <div class="col-6">
-                  <div class="p-3 bg-white rounded shadow-sm border-start border-3 border-accent">
+                  <div
+                    class="p-3 bg-white rounded-4 shadow-sm border-start border-3 border-accent"
+                  >
                     <h6 class="fw-bold text-primary mb-1">Hazmat Security</h6>
-                    <p class="text-secondary fs-8 mb-0">Regular training for chemical handling and hazardous cargo procedures.</p>
+                    <p
+                      class="text-secondary fs-8 mb-0"
+                      style="line-height: 1.6"
+                    >
+                      Regular training for chemical handling and hazardous cargo
+                      procedures.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-6">
-              <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80" alt="Employees in Logistics Training" class="img-fluid rounded shadow-lg" />
+              <div class="position-relative p-3">
+                <div
+                  class="position-absolute bg-accent rounded-4 opacity-10 end-0 bottom-0"
+                  style="width: 90%; height: 90%; z-index: 1"
+                ></div>
+                <img
+                  src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80"
+                  alt="Employees in Logistics Training"
+                  class="img-fluid rounded-4 shadow-lg position-relative"
+                  style="
+                    z-index: 2;
+                    transition: var(--transition-smooth);
+                    transform-origin: center;
+                  "
+                  onmouseover="this.style.transform = 'scale(1.02)'"
+                  onmouseout="this.style.transform = 'none'"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -482,45 +774,102 @@
 
       <!-- Section 5: Core Shared Values -->
       <section class="section py-5 bg-white">
-        <div class="container py-4">
+        <div class="container py-5">
           <div class="text-center mb-5">
-            <span class="badge bg-secondary text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8">Our Core Values</span>
-            <h2 class="text-primary fw-extrabold display-6 mb-3">Our Operations Foundation</h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px;">
-              Four pillars that guide our customer solutions, terminal safety, and logistics decisions daily.
+            <div
+              class="d-inline-flex align-items-center py-1 px-3 mb-3 bg-light border border-accent border-opacity-20 text-accent rounded-pill fs-8 fw-bold text-uppercase tracking-wider"
+            >
+              <i class="fas fa-gem me-2"></i> Our Core Values
+            </div>
+            <h2 class="text-primary fw-extrabold display-5 mb-3">
+              Our Operations Foundation
+            </h2>
+            <p class="text-secondary mx-auto fs-6" style="max-width: 600px">
+              Four pillars that guide our customer solutions, terminal safety,
+              and logistics decisions daily.
             </p>
           </div>
           <div class="row g-4">
             <!-- value 1 -->
-            <div class="col-lg-3 col-sm-6 text-center">
-              <div class="p-4 bg-light rounded border border-light h-100">
-                <span class="text-accent fs-2 mb-3 d-block"><i class="fas fa-user-shield"></i></span>
+            <div class="col-lg-3 col-sm-6">
+              <div
+                class="p-4 bg-light rounded-4 border border-light h-100 text-center transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.01) !important;
+                "
+              >
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent text-white rounded-circle fs-2 mb-3 shadow-sm"
+                  style="width: 60px; height: 60px"
+                  ><i class="fas fa-user-shield"></i
+                ></span>
                 <h6 class="fw-bold text-primary mb-2">Safety Above All</h6>
-                <p class="text-secondary fs-8 mb-0">Vetting road vehicles, training operators, and checking containers to eliminate safety risks.</p>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
+                  Vetting road vehicles, training operators, and checking
+                  containers to eliminate safety risks.
+                </p>
               </div>
             </div>
             <!-- value 2 -->
-            <div class="col-lg-3 col-sm-6 text-center">
-              <div class="p-4 bg-light rounded border border-light h-100">
-                <span class="text-accent fs-2 mb-3 d-block"><i class="fas fa-handshake"></i></span>
-                <h6 class="fw-bold text-primary mb-2">Uncompromised Integrity</h6>
-                <p class="text-secondary fs-8 mb-0">Transparent billing practices, precise weight measurements, and compliance duty reporting.</p>
+            <div class="col-lg-3 col-sm-6">
+              <div
+                class="p-4 bg-light rounded-4 border border-light h-100 text-center transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.01) !important;
+                "
+              >
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent text-white rounded-circle fs-2 mb-3 shadow-sm"
+                  style="width: 60px; height: 60px"
+                  ><i class="fas fa-handshake"></i
+                ></span>
+                <h6 class="fw-bold text-primary mb-2">
+                  Uncompromised Integrity
+                </h6>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
+                  Transparent billing practices, precise weight measurements,
+                  and compliance duty reporting.
+                </p>
               </div>
             </div>
             <!-- value 3 -->
-            <div class="col-lg-3 col-sm-6 text-center">
-              <div class="p-4 bg-light rounded border border-light h-100">
-                <span class="text-accent fs-2 mb-3 d-block"><i class="fas fa-globe-americas"></i></span>
+            <div class="col-lg-3 col-sm-6">
+              <div
+                class="p-4 bg-light rounded-4 border border-light h-100 text-center transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.01) !important;
+                "
+              >
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent text-white rounded-circle fs-2 mb-3 shadow-sm"
+                  style="width: 60px; height: 60px"
+                  ><i class="fas fa-globe-americas"></i
+                ></span>
                 <h6 class="fw-bold text-primary mb-2">Carbon Mitigation</h6>
-                <p class="text-secondary fs-8 mb-0">Optimizing container loads, using electric fleet vans, and reducing warehouse packaging materials.</p>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
+                  Optimizing container loads, using electric fleet vans, and
+                  reducing warehouse packaging materials.
+                </p>
               </div>
             </div>
             <!-- value 4 -->
-            <div class="col-lg-3 col-sm-6 text-center">
-              <div class="p-4 bg-light rounded border border-light h-100">
-                <span class="text-accent fs-2 mb-3 d-block"><i class="fas fa-bullseye"></i></span>
+            <div class="col-lg-3 col-sm-6">
+              <div
+                class="p-4 bg-light rounded-4 border border-light h-100 text-center transition hover-grow"
+                style="
+                  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.01) !important;
+                "
+              >
+                <span
+                  class="d-inline-flex align-items-center justify-content-center bg-accent text-white rounded-circle fs-2 mb-3 shadow-sm"
+                  style="width: 60px; height: 60px"
+                  ><i class="fas fa-bullseye"></i
+                ></span>
                 <h6 class="fw-bold text-primary mb-2">Operational Precision</h6>
-                <p class="text-secondary fs-8 mb-0">Employing advanced route telematics to avoid traffic bottlenecks and meet delivery windows.</p>
+                <p class="text-secondary fs-8 mb-0" style="line-height: 1.6">
+                  Employing advanced route telematics to avoid traffic
+                  bottlenecks and meet delivery windows.
+                </p>
               </div>
             </div>
           </div>
@@ -530,17 +879,42 @@
       <!-- Section 6: Join Us / Career Recruitment Banner -->
       <section class="section py-5 bg-light border-bottom border-light">
         <div class="container py-4">
-          <div class="p-4 p-md-5 bg-primary text-white rounded shadow-lg">
-            <div class="row align-items-center g-4">
+          <div
+            class="p-5 text-white rounded-5 shadow-lg border-0 position-relative overflow-hidden"
+            style="
+              background: linear-gradient(
+                135deg,
+                var(--primary-color) 0%,
+                #1e293b 100%
+              );
+            "
+          >
+            <div class="row align-items-center g-4 position-relative z-3">
               <div class="col-lg-8">
-                <span class="badge bg-accent text-white py-1 px-3 mb-2 text-uppercase tracking-wider fs-8">Careers Opportunities</span>
-                <h3 class="fw-bold text-white mb-3">Become a Logistics Innovator</h3>
-                <p class="text-white-50 fs-7 mb-0">
-                  Ready to optimize cargo fleets or coordinate complex custom tariffs? We offer competitive salary scales, employee stock options, comprehensive dental/medical cover, and relocation packages. Explore open positions today.
+                <span
+                  class="badge bg-accent text-white py-2 px-3 mb-3 text-uppercase tracking-wider fs-8"
+                  style="box-shadow: 0 4px 10px rgba(255, 107, 0, 0.25)"
+                  >Careers Opportunities</span
+                >
+                <h3
+                  class="fw-bold text-white display-6 mb-3"
+                  style="font-family: var(--font-heading)"
+                >
+                  Become a Logistics Innovator
+                </h3>
+                <p class="text-white-50 fs-7 mb-0" style="line-height: 1.8">
+                  Ready to optimize cargo fleets or coordinate complex custom
+                  tariffs? We offer competitive salary scales, employee stock
+                  options, comprehensive dental/medical cover, and relocation
+                  packages. Explore open positions today.
                 </p>
               </div>
               <div class="col-lg-4 text-lg-end">
-                <a href="#" class="btn btn-accent px-4 py-3 text-uppercase fw-bold fs-7 tracking-wide hover-grow">Contact Careers Desk <i class="fas fa-envelope-open ms-2"></i></a>
+                <a
+                  href="contact.html"
+                  class="btn btn-accent px-4 py-3 text-uppercase fw-bold fs-7 tracking-wide hover-grow shadow-lg"
+                  >Contact Careers Desk <i class="fas fa-envelope-open ms-2"></i
+                ></a>
               </div>
             </div>
           </div>

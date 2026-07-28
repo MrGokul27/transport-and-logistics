@@ -3,9 +3,9 @@
 
 /* CSS Variables for Premium Design Palette */
 :root {
-  --primary-color: #0b132b; /* Deep Midnight Navy */
-  --secondary-color: #ff6b00; /* Premium Amber Orange */
-  --secondary-hover: #e05300; /* Darker Orange for Active States */
+  --primary-color: #111d33; /* Royal Midnight Blue */
+  --secondary-color: #00a8cc; /* Electric Ocean Teal */
+  --secondary-hover: #0083a0; /* Deep Ocean Teal */
   --text-primary: #1e293b; /* Charcoal Slate for Main Text */
   --text-secondary: #64748b; /* Muted Cool Slate */
   --bg-light: #f8fafc; /* Crisp Cool Grey Background */
@@ -18,24 +18,24 @@
   /* Premium Card Design Token Variables */
   --card-radius: 20px;
   --card-shadow:
-    0 10px 30px -5px rgba(11, 19, 43, 0.05),
-    0 2px 6px -2px rgba(11, 19, 43, 0.02);
+    0 10px 30px -5px rgba(17, 29, 51, 0.05),
+    0 2px 6px -2px rgba(17, 29, 51, 0.02);
   --card-shadow-hover:
-    0 20px 40px -10px rgba(11, 19, 43, 0.12),
-    0 4px 16px -4px rgba(11, 19, 43, 0.04);
-  --card-border: 1px solid rgba(11, 19, 43, 0.06);
+    0 20px 40px -10px rgba(17, 29, 51, 0.12),
+    0 4px 16px -4px rgba(17, 29, 51, 0.04);
+  --card-border: 1px solid rgba(17, 29, 51, 0.06);
 
   /* Override Bootstrap color tokens to brand palette */
-  --bs-primary: #0b132b;
-  --bs-primary-rgb: 11, 19, 43;
-  --bs-secondary: #ff6b00;
-  --bs-secondary-rgb: 255, 107, 0;
-  --bs-link-color: #ff6b00;
-  --bs-link-hover-color: #e05300;
+  --bs-primary: #111d33;
+  --bs-primary-rgb: 17, 29, 51;
+  --bs-secondary: #00a8cc;
+  --bs-secondary-rgb: 0, 168, 204;
+  --bs-link-color: #00a8cc;
+  --bs-link-hover-color: #0083a0;
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Base resets & typography */
@@ -43,7 +43,7 @@ body {
   font-family: var(--font-body);
   color: var(--text-primary);
   background-color: #ffffff;
-  overflow-x: hidden;
+  overflow-x: clip;
   line-height: 1.6;
 }
 
@@ -96,7 +96,7 @@ h6,
 .btn-accent:active {
   background-color: var(--secondary-hover);
   color: #ffffff;
-  box-shadow: 0 8px 24px rgba(255, 107, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 168, 204, 0.3);
 }
 
 .btn-outline-accent {
@@ -111,7 +111,7 @@ h6,
 .btn-outline-accent:hover {
   background-color: var(--secondary-color);
   color: #ffffff;
-  box-shadow: 0 8px 24px rgba(255, 107, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 168, 204, 0.25);
 }
 
 /* Top Mini Header Bar */
@@ -150,7 +150,6 @@ h6,
   background-color: rgba(11, 19, 43, 0.95);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition:
     top 0.35s ease,
     background-color 0.4s ease,
@@ -290,8 +289,8 @@ h6,
 }
 .stat-box:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(11, 19, 43, 0.1);
-  border-color: rgba(255, 107, 0, 0.2);
+  box-shadow: 0 20px 40px rgba(17, 29, 51, 0.1);
+  border-color: rgba(0, 168, 204, 0.2);
 }
 .stat-number {
   font-size: 3rem;
@@ -349,7 +348,7 @@ h6,
 .case-card:hover {
   transform: translateY(-8px) !important;
   box-shadow: var(--card-shadow-hover) !important;
-  border-color: rgba(255, 107, 0, 0.25) !important;
+  border-color: rgba(0, 168, 204, 0.25) !important;
 }
 
 /* Equal alignment for inner items (push content to align perfectly) */
@@ -395,30 +394,71 @@ h6,
 
 /* Specific Services Card Custom Styling */
 .card-service {
-  padding: 3rem 2rem;
+  padding: 3.5rem 2.25rem;
+  background-color: #ffffff !important;
+}
+.card-service .service-number {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.75rem;
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: rgba(11, 19, 43, 0.05);
+  transition: var(--transition-smooth);
+  user-select: none;
+}
+.card-service:hover .service-number {
+  color: rgba(0, 168, 204, 0.15);
+  transform: translateY(-2px) scale(1.05);
 }
 .card-service p {
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.75rem !important;
+  color: var(--text-secondary);
 }
 .card-service .service-icon {
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  border-radius: 50%;
-  background: rgba(255, 107, 0, 0.06);
+  width: 76px;
+  height: 76px;
+  border-radius: 18px;
+  background: rgba(0, 168, 204, 0.06);
   color: var(--secondary-color);
-  font-size: 2rem;
+  font-size: 2.2rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2rem;
   transition: var(--transition-smooth);
 }
 .card-service:hover .service-icon {
   background: var(--secondary-color);
   color: #ffffff;
-  box-shadow: 0 10px 20px rgba(255, 107, 0, 0.25);
-  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 168, 204, 0.3);
+  transform: translateY(-5px) rotate(8deg);
+}
+.card-service .service-link {
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-family: var(--font-heading);
+  text-decoration: none;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: var(--transition-smooth);
+  padding: 0;
+  border: none;
+  background: transparent;
+  margin-top: auto;
+}
+.card-service .service-link i {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  font-size: 0.75rem;
+}
+.card-service .service-link:hover {
+  color: var(--secondary-hover);
+}
+.card-service .service-link:hover i {
+  transform: translateX(6px);
 }
 
 /* Interactive Timeline Styles */
@@ -478,7 +518,7 @@ h6,
   border-color: var(--secondary-color);
   background-color: var(--secondary-color);
   color: #ffffff;
-  box-shadow: 0 0 15px rgba(255, 107, 0, 0.4);
+  box-shadow: 0 0 15px rgba(0, 168, 204, 0.4);
 }
 
 .timeline-step-item.completed .timeline-step-dot {
@@ -497,13 +537,114 @@ h6,
   color: var(--primary-color);
 }
 
-/* Shipping Calculator Widget */
+/* Shipping Calculator Widget Enhancements */
 .calculator-card {
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
-  padding: 2.5rem;
+  border: 1px solid rgba(11, 19, 43, 0.08) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 20px 50px rgba(11, 19, 43, 0.05) !important;
+  padding: 3rem !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Custom Segmented Tab Control */
+.calculator-card .nav-pills {
+  background-color: #f1f5f9;
+  border-radius: 14px;
+  padding: 0.35rem;
+  border-bottom: none !important;
+}
+
+.calculator-card .nav-pills .nav-item {
+  margin: 0;
+}
+
+.calculator-card .nav-pills .nav-link {
+  border-radius: 10px;
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  transition: var(--transition-smooth);
+  border: none;
+  background: transparent;
+  padding: 0.75rem 1rem !important;
+}
+
+.calculator-card .nav-pills .nav-link.active {
+  background-color: #ffffff !important;
+  color: var(--primary-color) !important;
+  box-shadow: 0 4px 12px rgba(11, 19, 43, 0.08) !important;
+}
+
+.calculator-card .nav-pills .nav-link:not(.active):hover {
+  color: var(--primary-color);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Form Controls Inside Calculator */
+.calculator-card label {
+  font-family: var(--font-heading);
+  font-weight: 600 !important;
+  color: var(--primary-color) !important;
+  margin-bottom: 0.4rem;
+}
+
+.calculator-card .form-select,
+.calculator-card .form-control {
+  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
+  background-color: #f8fafc;
+  color: var(--text-primary);
+  font-size: 0.875rem !important;
+  padding: 0.75rem 1rem !important;
+  transition: var(--transition-smooth);
+}
+
+.calculator-card .form-select:focus,
+.calculator-card .form-control:focus {
+  border-color: var(--secondary-color) !important;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 168, 204, 0.15) !important;
+}
+
+/* Custom Tooltip Note Card */
+.calculator-card .demo-note-card {
+  background: rgba(0, 168, 204, 0.04);
+  border: 1px solid rgba(0, 168, 204, 0.12);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-size: 0.825rem;
+  padding: 1rem 1.25rem;
+}
+
+/* Beautiful Input Group for Tracking */
+.calculator-card .tracking-input-group {
+  display: flex;
+  background-color: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 0.35rem;
+  transition: var(--transition-smooth);
+}
+
+.calculator-card .tracking-input-group:focus-within {
+  border-color: var(--secondary-color);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 168, 204, 0.15);
+}
+
+.calculator-card .tracking-input-group .form-control {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding-left: 1rem !important;
+}
+
+.calculator-card .tracking-input-group .btn-accent {
+  border-radius: 10px !important;
+  padding: 0.75rem 2rem !important;
 }
 
 /* Custom testimonial cards */
@@ -519,7 +660,7 @@ h6,
   position: absolute;
   top: -15px;
   right: 30px;
-  color: rgba(255, 107, 0, 0.06);
+  color: rgba(0, 168, 204, 0.06);
   line-height: 1;
 }
 .testimonial-card .rating-stars {
@@ -559,6 +700,18 @@ h6,
   transform: scale(1.08);
 }
 
+/* Blog Sidebar Sticky Styling */
+@media (min-width: 992px) {
+  .blog-sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 110px;
+    align-self: start;
+    z-index: 10;
+  }
+}
+
+
 /* Subpage Breadcrumb Banner */
 .page-banner {
   position: relative;
@@ -596,7 +749,7 @@ h6,
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 168, 204, 0.3);
   z-index: 999;
   opacity: 0;
   visibility: hidden;
@@ -642,14 +795,14 @@ h6,
 /* Accordion button active state — remove Bootstrap blue */
 .accordion-button:not(.collapsed) {
   color: var(--primary-color);
-  background-color: #fff8f4;
-  box-shadow: inset 0 -1px 0 rgba(255, 107, 0, 0.15);
+  background-color: #f0f9ff;
+  box-shadow: inset 0 -1px 0 rgba(0, 168, 204, 0.15);
 }
 .accordion-button:not(.collapsed)::after {
   filter: none;
 }
 .accordion-button:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 107, 0, 0.2);
+  box-shadow: 0 0 0 0.2rem rgba(0, 168, 204, 0.2);
 }
 
 /* Pagination active — remove Bootstrap blue */
@@ -669,7 +822,7 @@ h6,
 .form-control:focus,
 .form-select:focus {
   border-color: var(--secondary-color);
-  box-shadow: 0 0 0 0.2rem rgba(255, 107, 0, 0.2);
+  box-shadow: 0 0 0 0.2rem rgba(0, 168, 204, 0.2);
 }
 
 /* Dropdown active item */
@@ -725,6 +878,10 @@ h6,
   .timeline-step-dot {
     margin: 0 1.5rem 0 0;
   }
+
+  .calculator-card {
+    padding: 1rem !important;
+  }
 }
 
 /* ==========================================================================
@@ -766,7 +923,7 @@ h6,
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 168, 204, 0.3);
   z-index: 2;
 }
 .fleet-specs-list {
@@ -789,7 +946,7 @@ h6,
   height: 400px;
   background: radial-gradient(
     circle at 50% 50%,
-    rgba(255, 107, 0, 0.15) 0%,
+    rgba(0, 168, 204, 0.15) 0%,
     transparent 60%
   );
   display: flex;
@@ -861,13 +1018,13 @@ h6,
 }
 .value-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(11, 19, 43, 0.1);
-  border-color: rgba(255, 107, 0, 0.15);
+  box-shadow: 0 25px 50px rgba(17, 29, 51, 0.1);
+  border-color: rgba(0, 168, 204, 0.15);
 }
 .value-icon-box {
   width: 64px;
   height: 64px;
-  background-color: rgba(255, 107, 0, 0.08);
+  background-color: rgba(0, 168, 204, 0.08);
   color: var(--secondary-color);
   border-radius: 16px;
   display: inline-flex;
@@ -881,7 +1038,7 @@ h6,
   background-color: var(--secondary-color);
   color: #ffffff;
   transform: rotate(360deg) scale(1.05);
-  box-shadow: 0 8px 20px rgba(255, 107, 0, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 168, 204, 0.25);
 }
 
 /* 4. FAQ Accordion Custom Styling */
@@ -902,9 +1059,9 @@ h6,
   background-color: #ffffff;
 }
 .faq-accordion .accordion-button:not(.collapsed) {
-  background-color: rgba(255, 107, 0, 0.04);
+  background-color: rgba(0, 168, 204, 0.04);
   color: var(--secondary-color);
-  border-bottom: 1px solid rgba(255, 107, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 168, 204, 0.1);
 }
 .faq-accordion .accordion-body {
   padding: 1.25rem 1.5rem;
@@ -945,9 +1102,9 @@ h6,
 .case-card:hover .case-card-overlay {
   background: linear-gradient(
     to top,
-    rgba(11, 19, 43, 0.98) 15%,
-    rgba(11, 19, 43, 0.65) 60%,
-    rgba(255, 107, 0, 0.2) 100%
+    rgba(17, 29, 51, 0.98) 15%,
+    rgba(17, 29, 51, 0.65) 60%,
+    rgba(0, 168, 204, 0.2) 100%
   );
 }
 .case-card-content {
@@ -1016,4 +1173,346 @@ h6,
   100% {
     transform: translateX(-50%);
   }
+}
+
+/* Footer Newsletter Input Placeholder Fix */
+.newsletter-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Full-Screen Mobile Navigation Overlay */
+@media (max-width: 1199.98px) {
+  .navbar-collapse.collapsing {
+    position: fixed !important;
+    top: 72px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: calc(100vh - 72px) !important;
+    background-color: rgba(11, 19, 43, 0.98) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    opacity: 0;
+    transition: opacity 0.3s ease !important;
+    z-index: 1000;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .navbar-collapse.show {
+    position: fixed !important;
+    top: 72px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: calc(100vh - 72px) !important;
+    background-color: rgba(11, 19, 43, 0.98) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 1 !important;
+    z-index: 1000;
+    padding: 2rem 1.5rem !important;
+    overflow-y: auto !important;
+  }
+
+  .navbar-collapse .navbar-nav {
+    text-align: center !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    margin-bottom: 2rem !important;
+    align-items: center !important;
+  }
+
+  .navbar-collapse .nav-item {
+    width: 100% !important;
+  }
+
+  .navbar-collapse .nav-link {
+    display: inline-block !important; /* Forces the link box to wrap text only */
+    font-size: 1.25rem !important;
+    padding: 0.25rem 0.75rem !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+
+  .navbar-collapse .nav-link::after {
+    bottom: -4px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 0;
+  }
+
+  .navbar-collapse .nav-link:hover::after,
+  .navbar-collapse .nav-link.active::after {
+    width: 80% !important;
+  }
+
+  .navbar-collapse .d-flex {
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    margin-top: 1rem !important;
+  }
+
+  .navbar-collapse .d-flex a {
+    width: 80% !important;
+    max-width: 280px !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   Contact Page Premium Enhancements
+   ========================================================================== */
+
+/* Operations Hubs Cards */
+.contact-hub-card {
+  background: #ffffff !important;
+  border-radius: var(--card-radius) !important;
+  border: 1px solid rgba(0, 168, 204, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
+  padding: 2.5rem 2rem !important;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth) !important;
+}
+
+.contact-hub-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 40px rgba(17, 29, 51, 0.1) !important;
+  border-color: rgba(0, 168, 204, 0.3) !important;
+}
+
+.contact-hub-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: var(--transition-smooth);
+}
+
+.contact-hub-card:hover::before {
+  transform: scaleX(1);
+}
+
+.contact-hub-card .hub-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(0, 168, 204, 0.1);
+  color: var(--secondary-color);
+  transition: var(--transition-smooth);
+}
+
+.contact-hub-card:hover .hub-badge {
+  background: var(--secondary-color);
+  color: #ffffff;
+}
+
+.contact-hub-card .icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(0, 168, 204, 0.06);
+  color: var(--secondary-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition-smooth);
+}
+
+.contact-hub-card:hover .icon-wrapper {
+  background: var(--secondary-color);
+  color: #ffffff;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(0, 168, 204, 0.3);
+}
+
+/* Crisis Hotline Banner Styles */
+.crisis-banner {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+  border: 1px solid rgba(239, 68, 68, 0.2) !important;
+  box-shadow: 0 15px 40px rgba(239, 68, 68, 0.08) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.crisis-banner::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(239, 68, 68, 0.1) 0%,
+    transparent 70%
+  );
+  z-index: 1;
+}
+
+.crisis-pulse-button {
+  background-color: #ef4444 !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 15px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+/* Departmental Directory Card Styles */
+.dept-directory-card {
+  background: #ffffff !important;
+  border-radius: var(--card-radius) !important;
+  border: 1px solid rgba(17, 29, 51, 0.05) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+  padding: 2.5rem 2rem !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.dept-directory-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 40px rgba(17, 29, 51, 0.08) !important;
+  border-color: rgba(0, 168, 204, 0.2) !important;
+}
+
+.dept-directory-card .dept-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: rgba(17, 29, 51, 0.03);
+  color: var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition-smooth);
+}
+
+.dept-directory-card:hover .dept-icon-wrapper {
+  background: var(--primary-color);
+  color: #ffffff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* Custom form inputs style for contact/callback forms */
+.contact-form-card {
+  background: #ffffff;
+  border-radius: 20px !important;
+  border: 1px solid rgba(17, 29, 51, 0.05) !important;
+  box-shadow: 0 15px 45px rgba(17, 29, 51, 0.04) !important;
+  padding: 3rem !important;
+}
+
+.contact-input-field {
+  border: 1.5px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+  background-color: #f8fafc !important;
+  font-size: 0.875rem !important;
+  padding: 0.75rem 1rem !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.contact-input-field:focus {
+  border-color: var(--secondary-color) !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 4px rgba(0, 168, 204, 0.12) !important;
+}
+
+/* Brochure Download Cards */
+.brochure-download-card {
+  background: #ffffff !important;
+  border-radius: var(--card-radius) !important;
+  border: 1px solid rgba(17, 29, 51, 0.05) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+  padding: 2.5rem 2rem !important;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth) !important;
+}
+
+.brochure-download-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 40px rgba(17, 29, 51, 0.08) !important;
+  border-color: rgba(0, 168, 204, 0.25) !important;
+}
+
+.brochure-download-card .file-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #f1f5f9;
+  color: var(--text-secondary);
+}
+
+.brochure-download-card .doc-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(0, 168, 204, 0.06);
+  color: var(--secondary-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition-smooth);
+}
+
+.brochure-download-card:hover .doc-icon {
+  background: var(--secondary-color);
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Map frame design */
+.map-frame-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(17, 29, 51, 0.04);
+  border: 1px solid rgba(17, 29, 51, 0.05);
 }

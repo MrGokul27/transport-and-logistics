@@ -2,10 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --primary-color: #0b132b; /* Deep Midnight Navy */
-  --secondary-color: #ff6b00; /* Premium Amber Orange */
-  --secondary-hover: #e05300;
-  --bg-dark: #0f172a;
+  --primary-color: #111d33; /* Royal Midnight Blue */
+  --secondary-color: #00a8cc; /* Electric Ocean Teal */
+  --secondary-hover: #0083a0;
+  --bg-dark: #070d19;
   --font-heading: "Outfit", sans-serif;
   --font-body: "Inter", sans-serif;
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -14,7 +14,7 @@
 body.auth-body {
   font-family: var(--font-body);
   background-image:
-    linear-gradient(rgba(11, 19, 43, 0.82), rgba(15, 23, 42, 0.9)),
+    linear-gradient(rgba(17, 29, 51, 0.82), rgba(15, 23, 42, 0.9)),
     url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80");
   background-size: cover;
   background-position: center;
@@ -61,12 +61,12 @@ body.auth-body {
   background: var(--secondary-color);
   border-color: var(--secondary-color);
   transform: translateX(-5px);
-  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 168, 204, 0.3);
 }
 
 /* Glassmorphic Card */
 .auth-card {
-  background: rgba(11, 19, 43, 0.65);
+  background: rgba(17, 29, 51, 0.65);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -167,7 +167,7 @@ body.auth-body {
   outline: none;
   background: rgba(255, 255, 255, 0.1);
   border-color: var(--secondary-color);
-  box-shadow: 0 0 12px rgba(255, 107, 0, 0.35);
+  box-shadow: 0 0 12px rgba(0, 168, 204, 0.35);
 }
 
 .form-control-auth::placeholder {
@@ -243,12 +243,12 @@ select.form-control-auth option {
   letter-spacing: 1px;
   cursor: pointer;
   transition: var(--transition-smooth);
-  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 168, 204, 0.2);
 }
 
 .btn-auth:hover {
   background: var(--secondary-hover);
-  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 168, 204, 0.35);
   transform: translateY(-2px);
 }
 
