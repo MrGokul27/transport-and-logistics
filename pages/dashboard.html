@@ -158,7 +158,7 @@
           <div class="d-flex align-items-center gap-3">
             <!-- Testing Role Switcher Dropdown (Highly valuable for testing/grading) -->
             <div class="dropdown">
-              <button
+              <!-- <button
                 class="btn btn-sm btn-outline-accent dropdown-toggle fs-8 fw-bold"
                 type="button"
                 id="roleSwitcherDropdown"
@@ -166,7 +166,7 @@
                 aria-expanded="false"
               >
                 <i class="fas fa-exchange-alt me-1"></i> Preview Role
-              </button>
+              </button> -->
               <ul
                 class="dropdown-menu dropdown-menu-end shadow-sm"
                 aria-labelledby="roleSwitcherDropdown"
@@ -828,6 +828,122 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Credit & Account Summary and Claims Tracker -->
+              <div class="row g-4 mt-2">
+                <div class="col-lg-6">
+                  <div class="dashboard-card h-100">
+                    <div class="card-header-custom">
+                      <h5 class="card-title-custom">
+                        Credit & Account Summary
+                      </h5>
+                    </div>
+                    <div class="card-body-custom">
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-3"
+                      >
+                        <span class="fs-8 fw-semibold text-secondary"
+                          >Approved Credit Limit</span
+                        >
+                        <span class="fs-8 fw-bold text-dark">$20,000.00</span>
+                      </div>
+                      <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                          <span class="fs-8 fw-semibold text-primary"
+                            >Available Credit Facility</span
+                          >
+                          <span class="fs-8 fw-bold"
+                            >73% ($14,600.00 remaining)</span
+                          >
+                        </div>
+                        <div class="custom-progress">
+                          <div
+                            class="custom-progress-bar success"
+                            style="width: 73%"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="border-top pt-3 mt-3">
+                        <ul class="list-unstyled fs-8 text-secondary mb-0">
+                          <li class="d-flex justify-content-between mb-2">
+                            <span>Settlement Method:</span>
+                            <span class="fw-semibold text-dark"
+                              ><i class="fas fa-university me-1"></i>ACH
+                              Auto-Pay (Wells Fargo *4321)</span
+                            >
+                          </li>
+                          <li class="d-flex justify-content-between mb-2">
+                            <span>Next Billing Run:</span>
+                            <span class="fw-semibold text-dark"
+                              >August 1, 2026</span
+                            >
+                          </li>
+                          <li class="d-flex justify-content-between">
+                            <span>Direct Billing Status:</span>
+                            <span class="badge bg-success text-white"
+                              >Active / In Good Standing</span
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="dashboard-card h-100">
+                    <div class="card-header-custom">
+                      <h5 class="card-title-custom">
+                        Cargo Claims & Dispute Tracker
+                      </h5>
+                    </div>
+                    <div class="card-body-custom">
+                      <div class="alert alert-success fs-8 py-2 mb-3">
+                        <i class="fas fa-circle-check me-2"></i
+                        ><strong>Accounts Clear:</strong> No active invoice
+                        disputes or open freight damage claims are currently on
+                        record.
+                      </div>
+                      <div class="table-responsive">
+                        <table class="table table-sm custom-table mb-0 fs-8">
+                          <thead>
+                            <tr>
+                              <th>Policy/Claim ID</th>
+                              <th>Type</th>
+                              <th>Shipment Ref</th>
+                              <th>Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="fw-bold text-accent">
+                                #POL-LOG-99211
+                              </td>
+                              <td>All-Risk Cargo Ins.</td>
+                              <td>Active Policy</td>
+                              <td>
+                                <span class="status-badge delivered"
+                                  >Covered</span
+                                >
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="fw-bold">#CLM-2026-004</td>
+                              <td>Damaged Pallet</td>
+                              <td>SH-8819</td>
+                              <td>
+                                <span class="status-badge delivered"
+                                  >Settled / Closed</span
+                                >
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- 5. Help & Support -->
@@ -1202,6 +1318,153 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Active Route Details and Consignment Manifest -->
+              <div class="row g-4 mt-2">
+                <div class="col-lg-6">
+                  <div class="dashboard-card h-100">
+                    <div class="card-header-custom">
+                      <h5 class="card-title-custom">
+                        Active Journey Waypoints
+                      </h5>
+                    </div>
+                    <div class="card-body-custom">
+                      <div class="timeline-wrapper">
+                        <div class="timeline-item completed">
+                          <div class="timeline-dot"></div>
+                          <div class="timeline-content">
+                            <h6 class="timeline-title">
+                              Chicago Logistics Hub (Origin)
+                            </h6>
+                            <p class="timeline-date">
+                              Departed: July 28, 08:00 AM
+                            </p>
+                            <p class="timeline-desc text-secondary">
+                              Gate out cleared. Trailer seal verified:
+                              #SL-99881A.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="timeline-item active">
+                          <div class="timeline-dot"></div>
+                          <div class="timeline-content">
+                            <h6 class="timeline-title">
+                              I-94 Kalamazoo Rest Stop
+                            </h6>
+                            <p class="timeline-date">
+                              Scheduled Break: July 28, 11:30 AM
+                            </p>
+                            <p class="timeline-desc text-secondary">
+                              Mandatory 30-minute rest break and log status
+                              update.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="timeline-dot"></div>
+                          <div class="timeline-content">
+                            <h6 class="timeline-title">
+                              Battle Creek Weigh Station
+                            </h6>
+                            <p class="timeline-date">
+                              Scale Inspection: July 28, 01:15 PM
+                            </p>
+                            <p class="timeline-desc text-secondary">
+                              State line safety check and axle load weight
+                              verification.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="timeline-dot"></div>
+                          <div class="timeline-content">
+                            <h6 class="timeline-title">
+                              Detroit Cargo Terminal (Destination)
+                            </h6>
+                            <p class="timeline-date">ETA: July 28, 03:30 PM</p>
+                            <p class="timeline-desc text-secondary">
+                              Consignee sign-off and trailer drop-off point.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="dashboard-card h-100">
+                    <div class="card-header-custom">
+                      <h5 class="card-title-custom">
+                        Consignment Cargo & Manifest (BOL)
+                      </h5>
+                    </div>
+                    <div class="card-body-custom">
+                      <div class="alert alert-info fs-8 py-2 mb-3">
+                        <i class="fas fa-circle-info me-2"></i
+                        ><strong>Special Instructions:</strong> Hazardous
+                        Materials placards required. Maintain temperature logs.
+                      </div>
+                      <ul class="list-group list-group-flush fs-8">
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary"
+                            >Bill of Lading Number:</span
+                          >
+                          <strong class="text-dark">BOL-2026-9812A</strong>
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary">Consignment Cargo:</span>
+                          <strong class="text-dark"
+                            >Lithium-Ion Battery Cells</strong
+                          >
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary"
+                            >HazMat Classification:</span
+                          >
+                          <strong class="text-danger"
+                            ><i class="fas fa-triangle-exclamation me-1"></i
+                            >Class 9 (Miscellaneous HazMat)</strong
+                          >
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary"
+                            >Declared Cargo Weight:</span
+                          >
+                          <strong class="text-dark"
+                            >18,500 kg (Gross Load)</strong
+                          >
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary">Temperature Rule:</span>
+                          <strong class="text-primary"
+                            ><i class="fas fa-snowflake me-1"></i>Ambient AC
+                            (15°C to 25°C)</strong
+                          >
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2 border-bottom-0"
+                        >
+                          <span class="text-secondary"
+                            >Carrier Dispatch Code:</span
+                          >
+                          <strong class="text-dark">SF-RD-TRK105</strong>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- 3. Driver Fuel Log -->
@@ -1318,6 +1581,118 @@
                           </tbody>
                         </table>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Reimbursement tracker and Fuel card details -->
+              <div class="row g-4 mt-2">
+                <div class="col-lg-6">
+                  <div class="dashboard-card h-100">
+                    <div class="card-header-custom">
+                      <h5 class="card-title-custom">
+                        Monthly Budget & Reimbursements
+                      </h5>
+                    </div>
+                    <div class="card-body-custom">
+                      <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                          <span class="fs-8 fw-semibold text-primary"
+                            >Diesel Fuel Spending Limit</span
+                          >
+                          <span class="fs-8 fw-bold"
+                            >$1,420.50 / $2,000.00 (71%)</span
+                          >
+                        </div>
+                        <div class="custom-progress">
+                          <div
+                            class="custom-progress-bar warning"
+                            style="width: 71%"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                          <span class="fs-8 fw-semibold text-primary"
+                            >Highway Toll Spending Limit</span
+                          >
+                          <span class="fs-8 fw-bold"
+                            >$185.00 / $300.00 (61%)</span
+                          >
+                        </div>
+                        <div class="custom-progress">
+                          <div
+                            class="custom-progress-bar success"
+                            style="width: 61%"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="border-top pt-3 mt-3">
+                        <div
+                          class="d-flex justify-content-between align-items-center fs-8 text-secondary"
+                        >
+                          <span
+                            >Pending Cash Out-Of-Pocket Reimbursements:</span
+                          >
+                          <strong class="text-dark"
+                            >$45.00 (approved, processing)</strong
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="dashboard-card h-100">
+                    <div class="card-header-custom">
+                      <h5 class="card-title-custom">Fleet Fuel Card details</h5>
+                    </div>
+                    <div class="card-body-custom">
+                      <ul class="list-group list-group-flush fs-8">
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary"
+                            >Assigned Card Provider:</span
+                          >
+                          <strong class="text-dark">WEX Fleet Corporate</strong>
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary">Card ID Number:</span>
+                          <strong class="text-dark">XXXX-XXXX-XXXX-9912</strong>
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary">Status:</span>
+                          <strong class="text-success"
+                            ><i class="fas fa-circle-check me-1"></i>Active /
+                            Unlocked</strong
+                          >
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary"
+                            >Daily Purchase Limit:</span
+                          >
+                          <strong class="text-dark">$500.00</strong>
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2 border-bottom-0"
+                        >
+                          <span class="text-secondary"
+                            >Authorized Categories:</span
+                          >
+                          <strong class="text-primary"
+                            >Diesel Fuel, DEF, Truck Wash only</strong
+                          >
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -2107,6 +2482,117 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Customs Bond and ACH Escrow Account Summary -->
+              <div class="row g-4 mt-2">
+                <div class="col-lg-6">
+                  <div class="dashboard-card h-100">
+                    <div class="card-header-custom">
+                      <h5 class="card-title-custom">
+                        Continuous Customs Bond Summary
+                      </h5>
+                    </div>
+                    <div class="card-body-custom">
+                      <div class="alert alert-success fs-8 py-2 mb-3">
+                        <i class="fas fa-circle-check me-2"></i
+                        ><strong>Bond Status:</strong> Active & fully compliant
+                        with Customs & Border Protection regulations.
+                      </div>
+                      <ul class="list-group list-group-flush fs-8">
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary"
+                            >Customs Bond Number:</span
+                          >
+                          <strong class="text-dark">CB-8812A-992B</strong>
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary"
+                            >Face Value Coverage:</span
+                          >
+                          <strong class="text-dark"
+                            >$50,000.00 (Continuous)</strong
+                          >
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary"
+                            >Surety Underwriter:</span
+                          >
+                          <strong class="text-dark"
+                            >Fidelity & Deposit Co. of Maryland</strong
+                          >
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2 border-bottom-0"
+                        >
+                          <span class="text-secondary"
+                            >Effective Renewal Date:</span
+                          >
+                          <strong class="text-dark">January 1, 2027</strong>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="dashboard-card h-100">
+                    <div class="card-header-custom">
+                      <h5 class="card-title-custom">ACH Escrow Duty Account</h5>
+                    </div>
+                    <div class="card-body-custom">
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-3"
+                      >
+                        <span class="fs-8 fw-semibold text-secondary"
+                          >CBP Direct ACH Balance</span
+                        >
+                        <span class="fs-8 fw-bold text-success"
+                          >$14,250.00</span
+                        >
+                      </div>
+                      <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                          <span class="fs-8 fw-semibold text-primary"
+                            >Daily ACH Limit Usage</span
+                          >
+                          <span class="fs-8 fw-bold"
+                            >$2,450.00 / $25,000.00</span
+                          >
+                        </div>
+                        <div class="custom-progress">
+                          <div
+                            class="custom-progress-bar warning"
+                            style="width: 10%"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="border-top pt-3 mt-3">
+                        <ul class="list-unstyled fs-8 text-secondary mb-0">
+                          <li class="d-flex justify-content-between mb-1">
+                            <span>Duty Payment Method:</span>
+                            <span class="fw-semibold text-dark"
+                              >ACH Debit (Payer Code: CBP-Direct-SF)</span
+                            >
+                          </li>
+                          <li class="d-flex justify-content-between">
+                            <span>Direct Settlement:</span>
+                            <span class="text-success"
+                              ><i class="fas fa-check-double me-1"></i
+                              >Pre-Cleared for Import Customs Duties</span
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- 5. Regulatory Bulletins -->
@@ -2556,6 +3042,142 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Highway Incident Feed and Dispatch Statistics -->
+              <div class="row g-4 mt-2">
+                <div class="col-lg-6">
+                  <div class="dashboard-card h-100">
+                    <div class="card-header-custom">
+                      <h5 class="card-title-custom">
+                        Transit Corridor Live Traffic Alerts
+                      </h5>
+                    </div>
+                    <div class="card-body-custom">
+                      <div class="d-flex flex-column gap-3 fs-8">
+                        <div
+                          class="p-2 border-start border-3 border-danger bg-light rounded"
+                        >
+                          <div
+                            class="d-flex justify-content-between align-items-center mb-1"
+                          >
+                            <strong class="text-danger"
+                              ><i class="fas fa-triangle-exclamation me-1"></i
+                              >I-94 Corridor (Eastbound)</strong
+                            >
+                            <span class="badge bg-danger text-white"
+                              >Weather Warning</span
+                            >
+                          </div>
+                          <span class="text-secondary"
+                            >Dense fog advisory near Kalamazoo. Speed limit
+                            reduced to 45 mph. Route divergence suggested.</span
+                          >
+                        </div>
+                        <div
+                          class="p-2 border-start border-3 border-warning bg-light rounded"
+                        >
+                          <div
+                            class="d-flex justify-content-between align-items-center mb-1"
+                          >
+                            <strong class="text-warning"
+                              ><i class="fas fa-screwdriver-wrench me-1"></i
+                              >I-65 Southbound (Gary to Indy)</strong
+                            >
+                            <span class="badge bg-warning text-dark"
+                              >Roadwork Delay</span
+                            >
+                          </div>
+                          <span class="text-secondary"
+                            >Active construction down to one lane near
+                            Lafayette. Expect delays of 15-20 minutes.</span
+                          >
+                        </div>
+                        <div
+                          class="p-2 border-start border-3 border-success bg-light rounded"
+                        >
+                          <div
+                            class="d-flex justify-content-between align-items-center mb-1"
+                          >
+                            <strong class="text-success"
+                              ><i class="fas fa-circle-check me-1"></i>I-80/94
+                              East (Indiana Toll Road)</strong
+                            >
+                            <span class="badge bg-success text-white"
+                              >Clear Route</span
+                            >
+                          </div>
+                          <span class="text-secondary"
+                            >All lanes open. Heavy freight traffic but moving at
+                            speed limit. No delays.</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="dashboard-card h-100">
+                    <div class="card-header-custom">
+                      <h5 class="card-title-custom">
+                        Daily Route Dispatch Optimization Stats
+                      </h5>
+                    </div>
+                    <div class="card-body-custom">
+                      <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                          <span class="fs-8 fw-semibold text-secondary"
+                            >Fleet Route Optimization Rate</span
+                          >
+                          <span class="fs-8 fw-bold"
+                            >92.0% (14 / 15 Routes optimized)</span
+                          >
+                        </div>
+                        <div class="custom-progress">
+                          <div
+                            class="custom-progress-bar primary"
+                            style="width: 92%"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="table-responsive">
+                        <table class="table table-sm custom-table mb-0 fs-8">
+                          <thead>
+                            <tr>
+                              <th>Metric Target</th>
+                              <th>Current Score</th>
+                              <th>Daily Impact</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Fuel Burn Mitigation</td>
+                              <td>
+                                <strong class="text-success">-8.4%</strong>
+                              </td>
+                              <td>45.2 gallons saved</td>
+                            </tr>
+                            <tr>
+                              <td>Driver Idle Reduction</td>
+                              <td>
+                                <strong class="text-success">-14.2%</strong>
+                              </td>
+                              <td>3.2 hrs saved/driver</td>
+                            </tr>
+                            <tr>
+                              <td>Carbon Footprint Offset</td>
+                              <td>
+                                <strong class="text-success">-12.8%</strong>
+                              </td>
+                              <td>415 kg CO2e reduced</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- 4. Departure Scheduling -->
@@ -2758,6 +3380,136 @@
                         Chicago Depot distribution zone has remaining cargo
                         storage space of 6%.
                       </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cost Distribution and Fleet Safety Log -->
+              <div class="row g-4 mt-2">
+                <div class="col-lg-6">
+                  <div class="dashboard-card h-100">
+                    <div class="card-header-custom">
+                      <h5 class="card-title-custom">
+                        Operational Cost Distribution
+                      </h5>
+                    </div>
+                    <div class="card-body-custom">
+                      <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                          <span class="fs-8 fw-semibold text-secondary"
+                            >Fuel Expenditures</span
+                          >
+                          <span class="fs-8 fw-bold">42% ($34,500.00)</span>
+                        </div>
+                        <div class="custom-progress">
+                          <div
+                            class="custom-progress-bar primary"
+                            style="width: 42%"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                          <span class="fs-8 fw-semibold text-secondary"
+                            >Driver Pay & incentives</span
+                          >
+                          <span class="fs-8 fw-bold">35% ($28,800.00)</span>
+                        </div>
+                        <div class="custom-progress">
+                          <div
+                            class="custom-progress-bar success"
+                            style="width: 35%"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                          <span class="fs-8 fw-semibold text-secondary"
+                            >Equipment Maintenance</span
+                          >
+                          <span class="fs-8 fw-bold">15% ($12,300.00)</span>
+                        </div>
+                        <div class="custom-progress">
+                          <div
+                            class="custom-progress-bar warning"
+                            style="width: 15%"
+                          ></div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="d-flex justify-content-between mb-1">
+                          <span class="fs-8 fw-semibold text-secondary"
+                            >Tolls & Regulatory Permits</span
+                          >
+                          <span class="fs-8 fw-bold">8% ($6,500.00)</span>
+                        </div>
+                        <div class="custom-progress">
+                          <div
+                            class="custom-progress-bar info"
+                            style="width: 8%"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="dashboard-card h-100">
+                    <div class="card-header-custom">
+                      <h5 class="card-title-custom">
+                        Fleet Safety & Maintenance KPIs
+                      </h5>
+                    </div>
+                    <div class="card-body-custom">
+                      <ul class="list-group list-group-flush fs-8">
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary"
+                            >PM Scheduled (This Week):</span
+                          >
+                          <strong class="text-dark"
+                            >3 Trucks (TRK-102, 108, 115)</strong
+                          >
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary"
+                            >Avg. Roadside Assistance Response:</span
+                          >
+                          <strong class="text-dark">42 Minutes</strong>
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary"
+                            >FMCSA Carrier Safety Rating:</span
+                          >
+                          <strong class="text-success"
+                            ><i class="fas fa-shield-halved me-1"></i
+                            >Satisfactory (98.2%)</strong
+                          >
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2"
+                        >
+                          <span class="text-secondary"
+                            >Active ELD / HOS Violations:</span
+                          >
+                          <strong class="text-success">0 Violations</strong>
+                        </li>
+                        <li
+                          class="list-group-item d-flex justify-content-between px-0 py-2 border-bottom-0"
+                        >
+                          <span class="text-secondary"
+                            >Annual DOT Inspection Status:</span
+                          >
+                          <strong class="text-primary">100% Compliant</strong>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>

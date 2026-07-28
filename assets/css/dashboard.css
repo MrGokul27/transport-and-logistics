@@ -97,6 +97,8 @@ body.dashboard-body {
   transition: margin-left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
 }
 
 /* Top Navbar */
