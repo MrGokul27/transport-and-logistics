@@ -9,343 +9,566 @@
     />
     <title>404 Lost in Transit - Stackly Logistics</title>
 
-    <!-- Bootstrap 5 CSS CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- FontAwesome Icons CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
-    <!-- Animate.css -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/styles.css" />
 
-    <!-- Unique CSS for 404 Premium Design -->
     <style>
-      .error-section {
+      * {
+        box-sizing: border-box;
+      }
+
+      .error-page {
         background-color: var(--bg-dark);
-        color: #ffffff;
         min-height: 100vh;
         display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
         position: relative;
         overflow: hidden;
       }
 
-      /* Futuristic background grid */
-      .error-section::before {
+      /* Animated grid background */
+      .error-page::before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        inset: 0;
         background-image:
-          linear-gradient(rgba(255, 107, 0, 0.03) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 107, 0, 0.03) 1px, transparent 1px);
-        background-size: 40px 40px;
+          linear-gradient(rgba(255, 107, 0, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 107, 0, 0.04) 1px, transparent 1px);
+        background-size: 50px 50px;
+        animation: grid-drift 20s linear infinite;
         pointer-events: none;
       }
-
-      /* Radial light glow behind illustration */
-      .glow-orb {
-        position: absolute;
-        width: 400px;
-        height: 400px;
-        background: radial-gradient(
-          circle,
-          rgba(255, 107, 0, 0.12) 0%,
-          rgba(11, 19, 43, 0) 70%
-        );
-        top: 50%;
-        left: 75%;
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-        z-index: 0;
-      }
-
-      .error-container {
-        position: relative;
-        z-index: 1;
-      }
-
-      .glass-card {
-        background: rgba(30, 41, 59, 0.6);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 20px;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-      }
-
-      .error-code {
-        font-family: var(--font-heading);
-        font-size: 7.5rem;
-        font-weight: 800;
-        line-height: 0.9;
-        background: linear-gradient(
-          135deg,
-          var(--secondary-color) 0%,
-          #ff9e59 100%
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-shadow: 0 10px 30px rgba(255, 107, 0, 0.2);
-        letter-spacing: -2px;
-      }
-
-      .error-badge {
-        background-color: rgba(255, 107, 0, 0.1);
-        border: 1px solid var(--secondary-color);
-        color: var(--secondary-color);
-        padding: 0.35rem 0.85rem;
-        border-radius: 50px;
-        font-family: var(--font-heading);
-        font-weight: 600;
-        font-size: 0.8rem;
-        letter-spacing: 1px;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .illustration-wrapper {
-        position: relative;
-        border-radius: 16px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-      }
-
-      .illustration-wrapper::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        box-shadow: inset 0 0 40px rgba(11, 19, 43, 0.8);
-        pointer-events: none;
-      }
-
-      .pulse-radar {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background: rgba(255, 107, 0, 0.2);
-        transform: translate(-50%, -50%);
-        animation: radar-pulse 3s infinite ease-out;
-        pointer-events: none;
-      }
-
-      @keyframes radar-pulse {
+      @keyframes grid-drift {
         0% {
-          width: 0px;
-          height: 0px;
-          opacity: 0.8;
+          background-position: 0 0;
         }
         100% {
-          width: 150px;
-          height: 150px;
+          background-position: 50px 50px;
+        }
+      }
+
+      /* Floating particles */
+      .particles {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+      }
+      .particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: var(--secondary-color);
+        opacity: 0;
+        animation: float-up var(--dur, 8s) var(--delay, 0s) infinite ease-in;
+      }
+      @keyframes float-up {
+        0% {
+          transform: translateY(100vh) scale(0);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.6;
+        }
+        90% {
+          opacity: 0.3;
+        }
+        100% {
+          transform: translateY(-10vh) scale(1.5);
           opacity: 0;
         }
       }
 
-      /* Interactive Cargo Search Styling */
-      .cargo-search-box {
-        background: rgba(11, 19, 43, 0.8);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+      /* Ambient glow */
+      .glow-center {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 107, 0, 0.08) 0%,
+          transparent 65%
+        );
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+
+      /* ── 404 Giant Number ── */
+      .error-number {
+        font-family: var(--font-heading);
+        font-size: clamp(7rem, 20vw, 14rem);
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -6px;
+        background: linear-gradient(
+          135deg,
+          #ff6b00 0%,
+          #ffb347 50%,
+          #ff6b00 100%
+        );
+        background-size: 200% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shimmer 3s linear infinite;
+        position: relative;
+        z-index: 2;
+        filter: drop-shadow(0 0 40px rgba(255, 107, 0, 0.35));
+      }
+      @keyframes shimmer {
+        0% {
+          background-position: 0% center;
+        }
+        100% {
+          background-position: 200% center;
+        }
+      }
+
+      /* Truck road animation */
+      .road-scene {
+        position: relative;
+        width: 100%;
+        max-width: 560px;
+        margin: -1rem auto 0;
+        z-index: 2;
+      }
+      .road {
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.08) 20%,
+          rgba(255, 255, 255, 0.12) 50%,
+          rgba(255, 255, 255, 0.08) 80%,
+          transparent 100%
+        );
+        border-radius: 3px;
+        position: relative;
+        overflow: hidden;
+      }
+      .road::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -60%;
+        width: 60%;
+        height: 2px;
+        background: repeating-linear-gradient(
+          90deg,
+          var(--secondary-color) 0px,
+          var(--secondary-color) 20px,
+          transparent 20px,
+          transparent 40px
+        );
+        transform: translateY(-50%);
+        animation: road-dash 1.5s linear infinite;
+      }
+      @keyframes road-dash {
+        0% {
+          left: -60%;
+        }
+        100% {
+          left: 110%;
+        }
+      }
+      .truck-wrapper {
+        position: absolute;
+        bottom: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: truck-bounce 0.4s ease-in-out infinite alternate;
+      }
+      @keyframes truck-bounce {
+        0% {
+          transform: translateX(-50%) translateY(0);
+        }
+        100% {
+          transform: translateX(-50%) translateY(-3px);
+        }
+      }
+      .truck-icon {
+        font-size: 2.8rem;
+        color: var(--secondary-color);
+        filter: drop-shadow(0 4px 12px rgba(255, 107, 0, 0.5));
+      }
+      .truck-exhaust {
+        position: absolute;
+        top: -8px;
+        left: -14px;
+        display: flex;
+        gap: 4px;
+      }
+      .puff {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        animation: puff-rise 1.2s ease-out infinite;
+      }
+      .puff:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+      .puff:nth-child(3) {
+        animation-delay: 0.8s;
+      }
+      @keyframes puff-rise {
+        0% {
+          transform: translateY(0) scale(1);
+          opacity: 0.5;
+        }
+        100% {
+          transform: translateY(-20px) scale(2);
+          opacity: 0;
+        }
+      }
+
+      /* ── Content Card ── */
+      .error-card {
+        background: rgba(15, 23, 42, 0.75);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 107, 0, 0.15);
+        border-radius: 24px;
+        padding: 2.5rem 3rem;
+        max-width: 560px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.04),
+          0 30px 60px rgba(0, 0, 0, 0.5),
+          0 0 80px rgba(255, 107, 0, 0.06);
+      }
+
+      /* Top accent line */
+      .error-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 10%;
+        width: 80%;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--secondary-color),
+          transparent
+        );
+        border-radius: 2px;
+      }
+
+      .status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 107, 0, 0.1);
+        border: 1px solid rgba(255, 107, 0, 0.3);
+        color: var(--secondary-color);
+        padding: 0.4rem 1rem;
+        border-radius: 50px;
+        font-family: var(--font-heading);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 1.25rem;
+      }
+      .status-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--secondary-color);
+        animation: blink 1.2s ease-in-out infinite;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.2;
+        }
+      }
+
+      .error-title {
+        font-family: var(--font-heading);
+        font-size: clamp(1.4rem, 4vw, 1.9rem);
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 0.75rem;
+        line-height: 1.25;
+      }
+      .error-title span {
+        color: var(--secondary-color);
+      }
+
+      .error-desc {
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 0.9rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+      }
+
+      /* Divider */
+      .error-divider {
+        width: 40px;
+        height: 3px;
+        background: linear-gradient(90deg, var(--secondary-color), #ffb347);
+        border-radius: 2px;
+        margin: 0 auto 0.75rem;
+      }
+
+      /* Quick links row */
+      .quick-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+      .quick-link-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.72rem;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        transition: var(--transition-smooth);
+      }
+      .quick-link-item .ql-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.35);
+        transition: var(--transition-smooth);
+      }
+      .quick-link-item:hover {
+        color: #ffffff;
+      }
+      .quick-link-item:hover .ql-icon {
+        background: rgba(255, 107, 0, 0.12);
+        border-color: rgba(255, 107, 0, 0.35);
+        color: var(--secondary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(255, 107, 0, 0.15);
+      }
+
+      /* CTA Buttons */
+      .btn-go-back {
+        background: linear-gradient(135deg, #ff6b00, #e05300);
+        color: #ffffff;
+        border: none;
         border-radius: 10px;
-        padding: 1.2rem;
+        padding: 0.85rem 2rem;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        transition: var(--transition-smooth);
+        box-shadow: 0 8px 24px rgba(255, 107, 0, 0.35);
+        cursor: pointer;
       }
-      .cargo-search-input {
+      .btn-go-back:hover {
+        background: linear-gradient(135deg, #e05300, #c44a00);
+        color: #ffffff;
+        transform: translateY(-3px);
+        box-shadow: 0 14px 32px rgba(255, 107, 0, 0.45);
+      }
+      .btn-go-back i {
+        transition: transform 0.3s ease;
+      }
+      .btn-go-back:hover i {
+        transform: translateX(-4px);
+      }
+
+      .btn-home-outline {
+        background: transparent;
+        color: rgba(255, 255, 255, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        padding: 0.85rem 2rem;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        transition: var(--transition-smooth);
+      }
+      .btn-home-outline:hover {
+        color: #ffffff;
+        border-color: rgba(255, 255, 255, 0.3);
         background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        color: #ffffff;
-        border-radius: 6px;
+        transform: translateY(-3px);
       }
-      .cargo-search-input:focus {
-        background: rgba(255, 255, 255, 0.08);
-        border-color: var(--secondary-color);
-        color: #ffffff;
-        box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.25);
+
+      .action-row {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* Error code watermark behind card */
+      .error-watermark {
+        position: absolute;
+        font-family: var(--font-heading);
+        font-size: clamp(10rem, 28vw, 22rem);
+        font-weight: 900;
+        color: rgba(255, 107, 0, 0.03);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        user-select: none;
+        white-space: nowrap;
+        z-index: 0;
+        letter-spacing: -10px;
+      }
+
+      @media (max-width: 576px) {
+        .error-card {
+          padding: 2rem 1.5rem;
+        }
+        .quick-links {
+          gap: 1rem;
+        }
       }
     </style>
   </head>
-  <body class="bg-light">
-    <section class="error-section">
-      <!-- Ambient Glow -->
-      <div class="glow-orb"></div>
+  <body>
+    <section class="error-page">
+      <!-- Watermark -->
+      <div class="error-watermark">404</div>
 
-      <div class="container error-container">
-        <div class="row align-items-center g-5">
-          <!-- Text Content Side -->
-          <div
-            class="col-lg-6 order-2 order-lg-1 animate__animated animate__fadeInLeft"
-          >
-            <div class="glass-card p-4 p-md-5">
-              <div class="mb-3">
-                <span class="error-badge">
-                  <i class="fas fa-satellite-dish fa-spin"></i> SYSTEM NOTICE:
-                  WAYPOINT ERROR
-                </span>
-              </div>
-              <h1 class="error-code mb-2">404</h1>
-              <h2 class="fw-bold mb-3" style="font-family: var(--font-heading)">
-                Shipment Lost in Transit
-              </h2>
-              <p class="text-white-50 fs-7 mb-4">
-                The route coordinates you specified do not resolve to any active
-                page or cargo bay in our system. The resource might have been
-                re-routed, decommissioned, or is temporarily offline.
-              </p>
+      <!-- Ambient glow -->
+      <div class="glow-center"></div>
 
-              <!-- Interactive Localizer Widget -->
-              <div class="cargo-search-box mb-4">
-                <h6 class="fs-8 text-uppercase tracking-wider text-accent mb-2">
-                  <i class="fas fa-radar me-1"></i> Scan Manifest Database
-                </h6>
-                <form id="lostCargoForm" class="d-flex gap-2">
-                  <input
-                    type="text"
-                    id="lostCargoInput"
-                    class="form-control cargo-search-input py-2 text-white fs-7"
-                    placeholder="Enter waypoint or keywords..."
-                    required
-                  />
-                  <button
-                    type="submit"
-                    class="btn btn-accent px-3 py-2 text-nowrap fs-7 fw-bold"
-                  >
-                    <i class="fas fa-search me-1"></i> Scan
-                  </button>
-                </form>
-                <div id="lostCargoStatus" class="fs-8 mt-2 text-white-50"></div>
-              </div>
+      <!-- Floating particles -->
+      <div class="particles">
+        <div class="particle" style="left: 8%; --dur: 9s; --delay: 0s"></div>
+        <div
+          class="particle"
+          style="left: 18%; --dur: 12s; --delay: 1.5s"
+        ></div>
+        <div class="particle" style="left: 30%; --dur: 8s; --delay: 3s"></div>
+        <div
+          class="particle"
+          style="left: 45%; --dur: 11s; --delay: 0.8s"
+        ></div>
+        <div
+          class="particle"
+          style="left: 60%; --dur: 10s; --delay: 2.2s"
+        ></div>
+        <div class="particle" style="left: 72%; --dur: 7s; --delay: 1s"></div>
+        <div class="particle" style="left: 85%; --dur: 13s; --delay: 4s"></div>
+        <div class="particle" style="left: 93%; --dur: 9s; --delay: 0.3s"></div>
+      </div>
 
-              <!-- Navigation Controls -->
-              <div class="d-flex flex-wrap gap-3">
-                <a
-                  href="../index.html"
-                  class="btn btn-accent px-4 py-3 text-uppercase fs-7 fw-bold tracking-wide hover-grow"
-                >
-                  <i class="fas fa-home me-2"></i> Return to Hub
-                </a>
-                <a
-                  href="services.html"
-                  class="btn btn-outline-light border-2 px-4 py-3 text-uppercase fs-7 fw-bold tracking-wide hover-grow"
-                >
-                  <i class="fas fa-cubes me-2"></i> Cargo Services
-                </a>
-                <a
-                  href="contact.html"
-                  class="btn btn-link text-white-50 text-decoration-none hover-text-white fs-7 py-3 px-1 transition"
-                >
-                  Contact Dispatch <i class="fas fa-arrow-right ms-1"></i>
-                </a>
-              </div>
+      <!-- Giant 404 -->
+      <div class="error-number animate__animated animate__fadeInDown">404</div>
+
+      <!-- Truck road scene -->
+      <div
+        class="road-scene animate__animated animate__fadeIn"
+        style="animation-delay: 0.3s"
+      >
+        <div class="road">
+          <div class="truck-wrapper">
+            <div class="truck-exhaust">
+              <div class="puff"></div>
+              <div class="puff"></div>
+              <div class="puff"></div>
             </div>
+            <i class="fas fa-truck truck-icon"></i>
           </div>
+        </div>
+      </div>
 
-          <!-- Image/Illustration Side -->
-          <div
-            class="col-lg-6 order-1 order-lg-2 animate__animated animate__fadeInRight"
-          >
-            <div class="illustration-wrapper position-relative">
-              <img
-                src="../assets/images/lost_cargo_404.jpg"
-                alt="Lost in Transit Shipping Container illustration"
-                class="img-fluid w-100"
-                style="object-fit: cover; aspect-ratio: 16/10; opacity: 0.9"
-              />
-              <!-- Pulse Radar effect overlay -->
-              <div class="pulse-radar"></div>
-            </div>
-          </div>
+      <!-- Main card -->
+      <div
+        class="error-card animate__animated animate__fadeInUp mt-4"
+        style="animation-delay: 0.2s"
+      >
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          Route Not Found
+        </div>
+
+        <h1 class="error-title">Shipment <span>Lost</span> in Transit</h1>
+
+        <div class="error-divider"></div>
+
+        <p class="error-desc">
+          The route coordinates you entered don't resolve to any active cargo
+          bay in our system. The page may have been re-routed, decommissioned,
+          or is temporarily offline.
+        </p>
+
+        <!-- Action buttons -->
+        <div class="action-row">
+          <button onclick="history.back()" class="btn-go-back">
+            <i class="fas fa-arrow-left"></i> Go Back
+          </button>
+          <a href="../index.html" class="btn-home-outline">
+            <i class="fas fa-house"></i> Return to Hub
+          </a>
+        </div>
+
+        <!-- Quick navigation icons -->
+        <div class="quick-links mt-4">
+          <a href="../index.html" class="quick-link-item">
+            <span class="ql-icon"><i class="fas fa-house"></i></span>
+            Home
+          </a>
+          <a href="services.html" class="quick-link-item">
+            <span class="ql-icon"><i class="fas fa-boxes-stacked"></i></span>
+            Services
+          </a>
+          <a href="tracking.html" class="quick-link-item">
+            <span class="ql-icon"><i class="fas fa-location-dot"></i></span>
+            Tracking
+          </a>
+          <a href="contact.html" class="quick-link-item">
+            <span class="ql-icon"><i class="fas fa-headset"></i></span>
+            Support
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Bootstrap 5 JS CDN with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom Scripts -->
-    <script src="../assets/js/script.js"></script>
-
-    <!-- Interactive Script for 404 Localizer -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const form = document.getElementById("lostCargoForm");
-        const status = document.getElementById("lostCargoStatus");
-        if (form && status) {
-          form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            const inputVal = document
-              .getElementById("lostCargoInput")
-              .value.trim()
-              .toLowerCase();
-            status.innerHTML = `<span class="text-accent"><i class="fas fa-sync-alt fa-spin me-1"></i> Initializing radar ping for "${inputVal}"...</span>`;
-
-            setTimeout(() => {
-              // Direct redirects based on queries
-              if (
-                inputVal.includes("about") ||
-                inputVal.includes("team") ||
-                inputVal.includes("leader")
-              ) {
-                status.innerHTML = `<span class="text-success"><i class="fas fa-check-circle me-1"></i> Match found. Re-routing to About page...</span>`;
-                setTimeout(() => (window.location.href = "about.html"), 1500);
-              } else if (
-                inputVal.includes("service") ||
-                inputVal.includes("ship") ||
-                inputVal.includes("cargo") ||
-                inputVal.includes("plane") ||
-                inputVal.includes("truck")
-              ) {
-                status.innerHTML = `<span class="text-success"><i class="fas fa-check-circle me-1"></i> Match found. Re-routing to Services page...</span>`;
-                setTimeout(
-                  () => (window.location.href = "services.html"),
-                  1500,
-                );
-              } else if (
-                inputVal.includes("contact") ||
-                inputVal.includes("phone") ||
-                inputVal.includes("help") ||
-                inputVal.includes("email")
-              ) {
-                status.innerHTML = `<span class="text-success"><i class="fas fa-check-circle me-1"></i> Match found. Re-routing to Contact page...</span>`;
-                setTimeout(() => (window.location.href = "contact.html"), 1500);
-              } else if (
-                inputVal.includes("home") ||
-                inputVal.includes("main") ||
-                inputVal.includes("stackly")
-              ) {
-                status.innerHTML = `<span class="text-success"><i class="fas fa-check-circle me-1"></i> Re-routing to primary Home terminal...</span>`;
-                setTimeout(
-                  () => (window.location.href = "../index.html"),
-                  1500,
-                );
-              } else {
-                status.innerHTML = `<span class="text-warning"><i class="fas fa-exclamation-triangle me-1"></i> Waypoint "${inputVal}" not found. Scanning alternate sectors. Re-routing to Home page...</span>`;
-                setTimeout(
-                  () => (window.location.href = "../index.html"),
-                  3000,
-                );
-              }
-            }, 1800);
-          });
-        }
-      });
-    </script>
   </body>
 </html>
