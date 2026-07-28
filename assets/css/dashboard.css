@@ -3,7 +3,12 @@
   --sidebar-width: 280px;
   --sidebar-bg: #111d33; /* Midnight Navy */
   --sidebar-hover-bg: rgba(255, 255, 255, 0.08);
-  --sidebar-active-bg: rgba(0, 168, 204, 0.15); /* Accent Ocean Teal transparent */
+  --sidebar-active-bg: rgba(
+    0,
+    168,
+    204,
+    0.15
+  ); /* Accent Ocean Teal transparent */
   --header-height: 70px;
 }
 
@@ -155,7 +160,9 @@ body.dashboard-body {
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 10px 25px -5px rgba(17, 29, 51, 0.03);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -420,15 +427,15 @@ body.dashboard-body {
   #sidebar-wrapper {
     transform: translateX(-100%);
   }
-  
+
   #page-content-wrapper {
     padding-left: 0;
   }
-  
+
   body.sidebar-open #sidebar-wrapper {
     transform: translateX(0);
   }
-  
+
   body.sidebar-open .sidebar-overlay {
     display: block;
   }
@@ -451,7 +458,9 @@ body.dashboard-body {
   background-clip: padding-box;
   border: 1px solid #cbd5e1;
   border-radius: 8px;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 
 .form-control-dashboard:focus {

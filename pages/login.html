@@ -136,6 +136,9 @@
       </div>
     </div>
 
+    <!-- Custom Scripts -->
+    <script src="../assets/js/script.js"></script>
+
     <!-- Script Block for Login Validation and Strength check -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -270,7 +273,10 @@
           // Success - Simulation and storage
           localStorage.setItem("userEmail", emailInput.value);
           localStorage.setItem("userRole", roleSelect.value);
-          localStorage.setItem("userRoleText", roleSelect.options[roleSelect.selectedIndex].text);
+          localStorage.setItem(
+            "userRoleText",
+            roleSelect.options[roleSelect.selectedIndex].text,
+          );
 
           alert(
             `Successfully signed in as ${roleSelect.options[roleSelect.selectedIndex].text}!`,

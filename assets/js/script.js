@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // 0. Preloader Initialization
+  setupPreloader();
+
   // 1. Load Common Header and Footer Components
   loadComponent("header-placeholder", "pages/components/header.html", () => {
     highlightActiveLink();
@@ -507,12 +510,13 @@ function setupEmptyLinkRedirects() {
     // Intercept if href is empty, '#', or 'javascript:void(0)'/similar
     const isEmpty = href === null || href === "" || href.trim() === "";
     const isHash = href === "#";
-    const isJsVoid = href && (href.startsWith("javascript:") || href.startsWith("void(0)"));
+    const isJsVoid =
+      href && (href.startsWith("javascript:") || href.startsWith("void(0)"));
 
     if (isEmpty || isHash || isJsVoid) {
       // Allow Bootstrap collapse/toggle triggers to function without redirect
       if (
-        anchor.hasAttribute("data-bs-toggle") || 
+        anchor.hasAttribute("data-bs-toggle") ||
         anchor.hasAttribute("data-bs-target") ||
         anchor.classList.contains("dropdown-toggle") ||
         anchor.closest(".carousel-control-prev") ||
@@ -526,4 +530,117 @@ function setupEmptyLinkRedirects() {
       window.location.href = root + "pages/404.html";
     }
   });
+}
+
+/**
+ * Manages the homepage preloader sequence over approximately 2 seconds.
+ * Transitioning progress bar width, active node classes, and status text.
+ */
+function setupPreloader() {
+  const preloader = document.getElementById("preloader");
+  if (!preloader) return;
+
+  const progress = preloader.querySelector(".preloader-route-progress");
+  const percentage = preloader.querySelector(".preloader-percentage");
+  const statusText = preloader.querySelector(".preloader-status-text");
+
+  const nodes = {
+    land: preloader.querySelector(".node-land"),
+    sea: preloader.querySelector(".node-sea"),
+    air: preloader.querySelector(".node-air"),
+  };
+
+  const steps = [
+    {
+      progress: 30,
+      text: "Securing regional land transport...",
+      activeNode: "land",
+      completedNodes: [],
+    },
+    {
+      progress: 65,
+      text: "Coordinating global sea routes...",
+      activeNode: "sea",
+      completedNodes: ["land"],
+    },
+    {
+      progress: 90,
+      text: "Expediting air cargo connections...",
+      activeNode: "air",
+      completedNodes: ["land", "sea"],
+    },
+    {
+      progress: 100,
+      text: "Cargo operations cleared. Dispatched!",
+      activeNode: null,
+      completedNodes: ["land", "sea", "air"],
+    },
+  ];
+
+  let currentStep = 0;
+  const stepDuration = 400; // Duration of each phase in ms
+  const totalDuration = 1600;
+  const intervalTime = 20; // Update counter smoothly every 20ms
+
+  let currentPercent = 0;
+  let targetPercent = 0;
+
+  // Counter animation interval
+  const percentInterval = setInterval(() => {
+    if (currentPercent < targetPercent) {
+      currentPercent++;
+      if (percentage) percentage.textContent = `${currentPercent}%`;
+    }
+  }, intervalTime);
+
+  // Transition handler
+  const runSequence = () => {
+    if (currentStep >= steps.length) {
+      clearInterval(percentInterval);
+
+      // Sequence finished - perform fade out
+      setTimeout(() => {
+        preloader.classList.add("fade-out");
+        document.body.classList.remove("preloader-active");
+      }, 300);
+      return;
+    }
+
+    const step = steps[currentStep];
+
+    // Update progress bar
+    if (progress) progress.style.width = `${step.progress}%`;
+    targetPercent = step.progress;
+
+    // Update status text
+    if (statusText) {
+      statusText.style.opacity = 0;
+      setTimeout(() => {
+        statusText.textContent = step.text;
+        statusText.style.opacity = 1;
+      }, 150);
+    }
+
+    // Update node states
+    Object.keys(nodes).forEach((key) => {
+      const node = nodes[key];
+      if (!node) return;
+
+      if (key === step.activeNode) {
+        node.classList.add("active");
+        node.classList.remove("completed");
+      } else if (step.completedNodes.includes(key)) {
+        node.classList.remove("active");
+        node.classList.add("completed");
+      } else {
+        node.classList.remove("active", "completed");
+      }
+    });
+
+    currentStep++;
+    setTimeout(runSequence, stepDuration);
+  };
+
+  // Start sequence
+  runSequence();
 }

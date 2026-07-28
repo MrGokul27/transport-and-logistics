@@ -143,7 +143,7 @@ h6,
 /* Glassmorphic Navbar Custom Styling */
 .navbar {
   position: fixed;
-  top: 42px; /* sits just below the top-bar */
+  top: 41px; /* sits just below the top-bar, overlapped by 1px to prevent sub-pixel white line gap */
   left: 0;
   width: 100%;
   z-index: 1030;
@@ -711,8 +711,10 @@ h6,
   }
 }
 
-
 /* Subpage Breadcrumb Banner */
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #fff;
+}
 .page-banner {
   position: relative;
   background-size: cover;
@@ -1515,4 +1517,269 @@ h6,
   overflow: hidden;
   box-shadow: 0 15px 45px rgba(17, 29, 51, 0.04);
   border: 1px solid rgba(17, 29, 51, 0.05);
+}
+
+/* ==========================================================================
+   Home Page Preloader Styles
+   ========================================================================== */
+body.preloader-active {
+  overflow: hidden !important;
+  height: 100vh;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #111d33 0%, #080f1a 100%);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, visibility;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(0, 168, 204, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+  opacity: 0.75;
+}
+
+.preloader-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 460px;
+  padding: 3rem 2rem;
+  background: rgba(17, 29, 51, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  text-align: center;
+  transform: scale(1);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#preloader.fade-out .preloader-content {
+  transform: scale(0.95);
+}
+
+.preloader-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preloader-logo {
+  height: 52px;
+  width: auto;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: preloader-fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.preloader-subtitle {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: preloader-fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s
+    forwards;
+}
+
+/* Route Timeline Animation */
+.preloader-route {
+  position: relative;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  margin: 3.5rem 0;
+}
+
+.preloader-route-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--secondary-color) 0%, #00d2ff 100%);
+  box-shadow: 0 0 15px rgba(0, 168, 204, 0.6);
+  border-radius: 2px;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.preloader-node {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #111d33;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.85rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.preloader-node.node-land {
+  left: 0%;
+}
+.preloader-node.node-sea {
+  left: 50%;
+}
+.preloader-node.node-air {
+  left: 100%;
+}
+
+.preloader-node.active {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  background: rgba(0, 168, 204, 0.12);
+  box-shadow: 0 0 20px rgba(0, 168, 204, 0.4);
+}
+
+.preloader-node.completed {
+  border-color: #00d2ff;
+  color: #0f172a;
+  background: #00d2ff;
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+}
+
+.preloader-node i {
+  transition: transform 0.4s ease;
+}
+
+.preloader-node.active i {
+  animation: preloader-pulse 1.2s infinite ease-in-out;
+}
+
+/* Micro-animations for active states */
+.preloader-node.active.node-land i {
+  animation: truck-bounce 1s infinite linear;
+}
+
+.preloader-node.active.node-sea i {
+  animation: ship-sway 1.8s infinite ease-in-out;
+}
+
+.preloader-node.active.node-air i {
+  animation: plane-hover 1.4s infinite ease-in-out;
+}
+
+@keyframes preloader-fade-in-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes preloader-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes truck-bounce {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-2px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(0) scale(1.02);
+  }
+  75% {
+    transform: translateY(1px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes ship-sway {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(-4deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes plane-hover {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(1px, -2px) rotate(3deg);
+  }
+  66% {
+    transform: translate(-1px, 1px) rotate(-1deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.preloader-status-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0 0.25rem;
+}
+
+.preloader-status-text {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.preloader-percentage {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  min-width: 45px;
+  text-align: right;
 }
