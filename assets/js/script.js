@@ -498,6 +498,7 @@ function setupStatsCounters() {
  */
 function setupEmptyLinkRedirects() {
   document.addEventListener("click", (e) => {
+    if (e.defaultPrevented) return;
     const anchor = e.target.closest("a");
     if (!anchor) return;
 
@@ -514,13 +515,17 @@ function setupEmptyLinkRedirects() {
       href && (href.startsWith("javascript:") || href.startsWith("void(0)"));
 
     if (isEmpty || isHash || isJsVoid) {
-      // Allow Bootstrap collapse/toggle triggers to function without redirect
+      // Allow Bootstrap collapse/toggle triggers, custom actions, and panel switchers to function without redirect
       if (
         anchor.hasAttribute("data-bs-toggle") ||
         anchor.hasAttribute("data-bs-target") ||
         anchor.classList.contains("dropdown-toggle") ||
         anchor.closest(".carousel-control-prev") ||
-        anchor.closest(".carousel-control-next")
+        anchor.closest(".carousel-control-next") ||
+        anchor.hasAttribute("data-panel") ||
+        anchor.hasAttribute("onclick") ||
+        anchor.classList.contains("nav-link") ||
+        anchor.closest(".sidebar-nav")
       ) {
         return;
       }

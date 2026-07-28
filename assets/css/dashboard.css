@@ -21,7 +21,7 @@ body.dashboard-body {
 
 /* Sidebar Wrapper */
 #sidebar-wrapper {
-  min-height: 100vh;
+  height: 100vh;
   width: var(--sidebar-width);
   background-color: var(--sidebar-bg);
   position: fixed;
@@ -92,10 +92,9 @@ body.dashboard-body {
 
 /* Main Content Page Wrapper */
 #page-content-wrapper {
-  width: 100%;
-  padding-left: var(--sidebar-width);
+  margin-left: var(--sidebar-width);
   min-height: 100vh;
-  transition: padding-left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: margin-left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
 }
@@ -105,7 +104,7 @@ body.dashboard-body {
   height: var(--header-height);
   background-color: #ffffff;
   border-bottom: 1px solid #e2e8f0;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   z-index: 999;
   position: sticky;
   top: 0;
@@ -252,6 +251,24 @@ body.dashboard-body {
 .custom-table {
   width: 100%;
   margin-bottom: 0;
+}
+
+/* Responsive Table Adjustments */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 767.98px) {
+  .custom-table {
+    min-width: 600px;
+  }
+  .custom-table th,
+  .custom-table td {
+    padding: 0.75rem 0.5rem !important;
+    font-size: 0.75rem !important;
+  }
 }
 
 .custom-table th {
@@ -429,7 +446,7 @@ body.dashboard-body {
   }
 
   #page-content-wrapper {
-    padding-left: 0;
+    margin-left: 0 !important;
   }
 
   body.sidebar-open #sidebar-wrapper {
@@ -441,7 +458,34 @@ body.dashboard-body {
   }
 
   .dashboard-navbar {
-    padding: 0 1rem;
+    padding: 0 1rem !important;
+  }
+
+  .container-fluid {
+    padding: 1rem !important;
+  }
+}
+
+/* Desktop sidebar collapse */
+@media (min-width: 992px) {
+  body.sidebar-collapsed #sidebar-wrapper {
+    transform: translateX(-100%);
+  }
+  body.sidebar-collapsed #page-content-wrapper {
+    margin-left: 0;
+  }
+}
+
+/* Very small screens adjustments */
+@media (max-width: 575.98px) {
+  #navbar-role-display {
+    display: none;
+  }
+  .role-badge {
+    padding: 0.4rem;
+  }
+  .svg-map-container {
+    height: 240px !important;
   }
 }
 
