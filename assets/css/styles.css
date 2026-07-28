@@ -15,6 +15,16 @@
   --font-heading: "Outfit", sans-serif;
   --font-body: "Inter", sans-serif;
 
+  /* Premium Card Design Token Variables */
+  --card-radius: 20px;
+  --card-shadow:
+    0 10px 30px -5px rgba(11, 19, 43, 0.05),
+    0 2px 6px -2px rgba(11, 19, 43, 0.02);
+  --card-shadow-hover:
+    0 20px 40px -10px rgba(11, 19, 43, 0.12),
+    0 4px 16px -4px rgba(11, 19, 43, 0.04);
+  --card-border: 1px solid rgba(11, 19, 43, 0.06);
+
   /* Override Bootstrap color tokens to brand palette */
   --bs-primary: #0b132b;
   --bs-primary-rgb: 11, 19, 43;
@@ -38,7 +48,7 @@ body {
 }
 
 main {
-  padding-top: 72px; /* space for fixed navbar on mobile */
+  padding-top: 114px; /* top-bar (42px) + navbar (~72px) */
 }
 
 h1,
@@ -108,6 +118,19 @@ h6,
 .top-bar {
   font-family: var(--font-heading);
   height: 42px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1031;
+  transition:
+    top 0.35s ease,
+    opacity 0.35s ease;
+}
+.top-bar.hidden {
+  top: -42px;
+  opacity: 0;
+  pointer-events: none;
 }
 .top-info span {
   display: inline-flex;
@@ -119,8 +142,8 @@ h6,
 
 /* Glassmorphic Navbar Custom Styling */
 .navbar {
-  position: absolute;
-  top: 42px; /* starts below top bar */
+  position: fixed;
+  top: 42px; /* sits just below the top-bar */
   left: 0;
   width: 100%;
   z-index: 1030;
@@ -129,7 +152,7 @@ h6,
   -webkit-backdrop-filter: blur(12px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition:
-    top 0.3s ease,
+    top 0.35s ease,
     background-color 0.4s ease,
     padding 0.4s ease,
     box-shadow 0.4s ease;
@@ -139,14 +162,15 @@ h6,
 
 @media (max-width: 991.98px) {
   .navbar {
-    position: fixed;
-    top: 0; /* no top-bar on mobile */
+    top: 0;
+  }
+  main {
+    padding-top: 72px;
   }
 }
 
 .navbar.scrolled {
-  position: fixed;
-  top: 0; /* slide up to 0 when scrolled */
+  top: 0;
   background-color: rgba(11, 19, 43, 0.98);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   padding-top: 0.6rem;
@@ -285,20 +309,65 @@ h6,
   -webkit-text-fill-color: transparent;
 }
 
-/* Services Cards Section */
-.card-service {
-  border: 1px solid rgba(11, 19, 43, 0.05);
-  border-radius: 16px;
-  background: #ffffff;
-  padding: 3rem 2rem;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.02);
-  transition: var(--transition-smooth);
+/* Custom & Bootstrap Cards Standardized Styles */
+.card,
+.card-service,
+.fleet-card,
+.value-card,
+.blog-card,
+.testimonial-card,
+.case-card,
+.calculator-card {
   height: 100%;
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
+  border-radius: var(--card-radius) !important;
+  border: var(--card-border) !important;
+  box-shadow: var(--card-shadow) !important;
+  transition: var(--transition-smooth) !important;
   z-index: 1;
 }
-.card-service::after {
+
+/* Background Color Override for Premium Quality */
+.card.bg-light,
+.card.bg-white,
+.card-service,
+.value-card,
+.blog-card,
+.testimonial-card {
+  background-color: #ffffff !important;
+}
+
+/* Hover effects for interactive elements */
+.card.hover-grow:hover,
+.card-service:hover,
+.fleet-card:hover,
+.value-card:hover,
+.blog-card:hover,
+.case-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: var(--card-shadow-hover) !important;
+  border-color: rgba(255, 107, 0, 0.25) !important;
+}
+
+/* Equal alignment for inner items (push content to align perfectly) */
+.card-service p,
+.fleet-card p,
+.value-card p,
+.blog-card p,
+.card p,
+.card ul.list-unstyled {
+  flex-grow: 1;
+}
+
+/* Elegant bottom accent line that expands on hover */
+.card::after,
+.card-service::after,
+.fleet-card::after,
+.value-card::after,
+.blog-card::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -307,20 +376,29 @@ h6,
   height: 4px;
   background: linear-gradient(
     90deg,
-    var(--primary-color),
-    var(--secondary-color)
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
   );
   transform: scaleX(0);
   transition: var(--transition-smooth);
   transform-origin: left;
+  z-index: 2;
 }
-.card-service:hover::after {
+
+.card:hover::after,
+.card-service:hover::after,
+.fleet-card:hover::after,
+.value-card:hover::after,
+.blog-card:hover::after {
   transform: scaleX(1);
 }
-.card-service:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 22px 45px rgba(11, 19, 43, 0.1);
-  border-color: rgba(255, 107, 0, 0.15);
+
+/* Specific Services Card Custom Styling */
+.card-service {
+  padding: 3rem 2rem;
+}
+.card-service p {
+  margin-bottom: 1.5rem !important;
 }
 .card-service .service-icon {
   width: 70px;
@@ -432,16 +510,7 @@ h6,
 .testimonial-card {
   background-color: #ffffff;
   padding: 3rem 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(11, 19, 43, 0.04);
-  border: 1px solid rgba(11, 19, 43, 0.05);
-  position: relative;
-  transition: var(--transition-smooth);
   margin: 10px;
-}
-.testimonial-card:hover {
-  box-shadow: 0 20px 45px rgba(11, 19, 43, 0.08);
-  border-color: rgba(255, 107, 0, 0.15);
 }
 .testimonial-card::before {
   content: "\201C";
@@ -471,18 +540,13 @@ h6,
 }
 
 /* Blog Cards */
-.blog-card {
-  border: 1px solid rgba(11, 19, 43, 0.05);
-  border-radius: 16px;
-  overflow: hidden;
-  background: #ffffff;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.02);
-  transition: var(--transition-smooth);
+.blog-card > .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
-.blog-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 22px 45px rgba(11, 19, 43, 0.08);
-  border-color: rgba(255, 107, 0, 0.15);
+.blog-card p {
+  margin-bottom: 0 !important;
 }
 .blog-img-wrapper {
   position: relative;
@@ -668,18 +732,13 @@ h6,
    ========================================================================== */
 
 /* 1. Fleet Section Styling */
-.fleet-card {
-  background: #ffffff;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.02);
-  border: 1px solid rgba(11, 19, 43, 0.05);
-  transition: var(--transition-smooth);
+.fleet-card > div:not(.fleet-img-wrapper) {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
-.fleet-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(11, 19, 43, 0.1);
-  border-color: rgba(255, 107, 0, 0.2);
+.fleet-card p {
+  margin-bottom: 1rem !important;
 }
 .fleet-img-wrapper {
   position: relative;
@@ -776,6 +835,10 @@ h6,
   transition: var(--transition-smooth);
   position: relative;
   overflow: hidden;
+  align-items: center;
+}
+.value-card p {
+  margin-bottom: 0 !important;
 }
 .value-card::before {
   content: "";

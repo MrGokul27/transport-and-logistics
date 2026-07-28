@@ -135,18 +135,21 @@ function highlightActiveLink() {
  */
 function setupNavbarScroll() {
   const navbar = document.getElementById("mainNavbar");
+  const topBar = document.querySelector(".top-bar");
   if (!navbar) return;
 
   const handleScroll = () => {
-    if (window.scrollY > 40) {
+    if (window.scrollY > 42) {
       navbar.classList.add("scrolled");
+      if (topBar) topBar.classList.add("hidden");
     } else {
       navbar.classList.remove("scrolled");
+      if (topBar) topBar.classList.remove("hidden");
     }
   };
 
   window.addEventListener("scroll", handleScroll);
-  handleScroll(); // Run once on initialization
+  handleScroll();
 }
 
 /**
