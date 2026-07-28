@@ -626,7 +626,7 @@
                   "
                 >
                   <h6 class="fw-bold text-primary mb-3">Search Newsroom</h6>
-                  <form>
+                  <form id="blogSearchForm">
                     <div class="input-group">
                       <input
                         type="text"
@@ -815,16 +815,17 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const form = document.getElementById("blogSubscribeForm");
-        const status = document.getElementById("blogSubscribeStatus");
-        if (form && status) {
+        if (form) {
           form.addEventListener("submit", (e) => {
             e.preventDefault();
-            status.innerHTML = `<span class="text-success"><i class="fas fa-check-circle me-1"></i> Subscribed successfully! A verification link has been sent.</span>`;
-            form.reset();
-            setTimeout(() => {
-              status.textContent =
-                "We protect your contact details. Unsubscribe anytime.";
-            }, 5000);
+            window.location.href = "404.html";
+          });
+        }
+        const searchForm = document.getElementById("blogSearchForm");
+        if (searchForm) {
+          searchForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            window.location.href = "404.html";
           });
         }
       });

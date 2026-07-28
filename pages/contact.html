@@ -122,7 +122,7 @@
                 <a
                   href="#"
                   class="btn btn-sm btn-outline-accent w-100 py-2 fs-8 text-uppercase fw-bold mt-auto"
-                  ><i class="fas fa-phone-alt me-2"></i> +1 (800) 555-0199</a
+                  ><i class="fas fa-phone-alt me-2"></i> +91 (800) 555-0199</a
                 >
               </div>
             </div>
@@ -140,7 +140,7 @@
                 <a
                   href="#"
                   class="btn btn-sm btn-outline-accent w-100 py-2 fs-8 text-uppercase fw-bold mt-auto"
-                  ><i class="fas fa-phone-alt me-2"></i> +1 (800) 555-0199</a
+                  ><i class="fas fa-phone-alt me-2"></i> +91 (800) 555-0199</a
                 >
               </div>
             </div>
@@ -158,7 +158,7 @@
                 <a
                   href="#"
                   class="btn btn-sm btn-outline-accent w-100 py-2 fs-8 text-uppercase fw-bold mt-auto"
-                  ><i class="fas fa-phone-alt me-2"></i> +1 (800) 555-0199</a
+                  ><i class="fas fa-phone-alt me-2"></i> +91 (800) 555-0199</a
                 >
               </div>
             </div>
@@ -176,7 +176,7 @@
                 <a
                   href="#"
                   class="btn btn-sm btn-outline-accent w-100 py-2 fs-8 text-uppercase fw-bold mt-auto"
-                  ><i class="fas fa-phone-alt me-2"></i> +1 (800) 555-0199</a
+                  ><i class="fas fa-phone-alt me-2"></i> +91 (800) 555-0199</a
                 >
               </div>
             </div>
@@ -206,13 +206,18 @@
                 <form id="contactForm">
                   <div class="row g-3">
                     <div class="col-md-6">
-                      <label class="form-label text-primary fw-semibold fs-7"
-                        >Full Name</label
+                      <label
+                        class="form-label text-primary fw-semibold fs-7"
+                        for="cargoUsername"
+                        >Username</label
                       >
                       <input
                         type="text"
+                        id="cargoUsername"
+                        name="username"
                         class="form-control contact-input-field shadow-none fs-7 py-2"
-                        placeholder="Full Name"
+                        placeholder="Username"
+                        maxlength="16"
                         required
                       />
                     </div>
@@ -316,7 +321,7 @@
                   ><i
                     class="fas fa-phone-alt me-2 animate__animated animate__shakeX animate__infinite"
                   ></i>
-                  Call +1 (800) 555-0199</a
+                  Call +91 (800) 555-0199</a
                 >
               </div>
             </div>
@@ -487,11 +492,14 @@
                 <form id="callbackForm">
                   <div class="row g-3">
                     <div class="col-sm-6">
-                      <label class="form-label text-primary fw-semibold fs-8"
+                      <label
+                        class="form-label text-primary fw-semibold fs-8"
+                        for="callbackDate"
                         >Preferred Date</label
                       >
                       <input
                         type="date"
+                        id="callbackDate"
                         class="form-control contact-input-field shadow-none fs-7 py-2"
                         required
                       />
@@ -516,13 +524,17 @@
                       </select>
                     </div>
                     <div class="col-12">
-                      <label class="form-label text-primary fw-semibold fs-8"
+                      <label
+                        class="form-label text-primary fw-semibold fs-8"
+                        for="callbackPhone"
                         >Direct Phone Number</label
                       >
                       <input
                         type="tel"
+                        id="callbackPhone"
+                        maxlength="10"
                         class="form-control contact-input-field shadow-none fs-7 py-2"
-                        placeholder="e.g. +1 (555) 0199"
+                        placeholder="e.g. +91 9876543210"
                         required
                       />
                     </div>
@@ -840,15 +852,40 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const form = document.getElementById("contactForm");
-        const status = document.getElementById("contactFormStatus");
-        if (form && status) {
+        if (form) {
           form.addEventListener("submit", (e) => {
             e.preventDefault();
-            status.innerHTML = `<div class="alert alert-success fs-7 py-2 mt-2"><i class="fas fa-check-circle me-1"></i> Inquiry submitted successfully! Operations desk has received it.</div>`;
-            form.reset();
-            setTimeout(() => {
-              status.innerHTML = "";
-            }, 5000);
+            window.location.href = "404.html";
+          });
+        }
+        const callbackForm = document.getElementById("callbackForm");
+        if (callbackForm) {
+          callbackForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            window.location.href = "404.html";
+          });
+        }
+
+        // Username character filter: prevent numbers or special characters from being typed
+        const usernameInput = document.getElementById("cargoUsername");
+        if (usernameInput) {
+          usernameInput.addEventListener("input", (e) => {
+            e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+          });
+        }
+
+        // Hide past dates for Preferred Date field
+        const dateInput = document.getElementById("callbackDate");
+        if (dateInput) {
+          const today = new Date().toISOString().split("T")[0];
+          dateInput.min = today;
+        }
+
+        // Direct Phone Number validator: only digits, max 10 chars
+        const phoneInput = document.getElementById("callbackPhone");
+        if (phoneInput) {
+          phoneInput.addEventListener("input", (e) => {
+            e.target.value = e.target.value.replace(/[^0-9]/g, "");
           });
         }
       });
