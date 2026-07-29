@@ -36,6 +36,15 @@ function loadComponent(elementId, componentPath, callback) {
   const placeholder = document.getElementById(elementId);
   if (!placeholder) return;
 
+  // Fallback for file:// CORS issues - return early to prevent browser native fetch console errors
+  if (window.location.protocol === "file:") {
+    placeholder.innerHTML = `<div class="alert alert-warning text-center m-3 fs-7 py-2">
+                    <strong>Local Preview Note:</strong> Loading components dynamically requires a web server (like VS Code Live Server). 
+                    Please run this project on a local server to preview header and footer components.
+                </div>`;
+    return;
+  }
+
   const root = getRootPath();
   const fullPath = root + componentPath;
 
@@ -55,13 +64,6 @@ function loadComponent(elementId, componentPath, callback) {
     })
     .catch((err) => {
       console.error("Component loading failed:", err);
-      // Fallback for file:// CORS issues
-      if (window.location.protocol === "file:") {
-        placeholder.innerHTML = `<div class="alert alert-warning text-center m-3 fs-7 py-2">
-                    <strong>Local Preview Note:</strong> Loading components dynamically requires a web server (like VS Code Live Server). 
-                    Please run this project on a local server to preview header and footer components.
-                </div>`;
-      }
     });
 }
 

@@ -8,6 +8,12 @@
       content="Stackly Newsroom - Read latest insights, updates, and analyses from global logistics coordinators."
     />
     <title>Blog - Stackly Logistics</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/webp"
+      href="../assets/images/logoStackly.webp"
+    />
 
     <!-- Bootstrap 5 CSS CDN -->
     <link
@@ -627,9 +633,14 @@
                 >
                   <h6 class="fw-bold text-primary mb-3">Search Newsroom</h6>
                   <form id="blogSearchForm">
+                    <label for="blogSearch" class="visually-hidden"
+                      >Search Newsroom</label
+                    >
                     <div class="input-group">
                       <input
                         type="text"
+                        id="blogSearch"
+                        name="blogSearch"
                         class="form-control bg-white border-light shadow-none fs-7 py-2"
                         placeholder="Keywords..."
                       />
@@ -779,8 +790,13 @@
                   class="d-flex flex-column flex-sm-row gap-2"
                   id="blogSubscribeForm"
                 >
+                  <label for="blogSubscribeEmail" class="visually-hidden"
+                    >Business Email</label
+                  >
                   <input
                     type="email"
+                    id="blogSubscribeEmail"
+                    name="blogSubscribeEmail"
                     class="form-control bg-white text-dark shadow-none border-0 py-3 rounded-3"
                     placeholder="Enter your business email"
                     required

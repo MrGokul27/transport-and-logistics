@@ -8,6 +8,8 @@
       content="Stackly - Premium Transport & Logistics solutions. Responsive, elegant, and efficient global cargo shipping, warehousing, and tracking services."
     />
     <title>Stackly - Global Transport & Logistics Solutions</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="assets/images/logoStackly.webp" />
 
     <!-- Bootstrap 5 CSS CDN -->
     <link
@@ -261,9 +263,13 @@
             </p>
             <form id="trackerForm">
               <div class="d-flex flex-column gap-3">
+                <label for="trackingInput" class="visually-hidden"
+                  >Tracking ID</label
+                >
                 <input
                   type="text"
                   id="trackingInput"
+                  name="trackingInput"
                   class="form-control py-3 px-4 shadow-none border-0 rounded bg-white bg-opacity-90 text-dark font-semibold"
                   placeholder="Enter Code (e.g. TRK-70809, TRK-45612)"
                   required
@@ -299,9 +305,13 @@
             <form id="trackerFormMobile">
               <div class="row g-2">
                 <div class="col-12">
+                  <label for="trackingInputMobile" class="visually-hidden"
+                    >Tracking ID Mobile</label
+                  >
                   <input
                     type="text"
                     id="trackingInputMobile"
+                    name="trackingInputMobile"
                     class="form-control py-3 px-4 shadow-none border-0 rounded bg-white bg-opacity-95 text-dark"
                     placeholder="Enter Tracking Code (e.g. TRK-70809, TRK-45612)"
                     required
@@ -1038,8 +1048,14 @@
                     <form id="quoteCalculatorForm">
                       <div class="row g-3">
                         <div class="col-md-6 col-lg-3">
-                          <label class="form-label fs-7">Origin Office</label>
-                          <select class="form-select fs-7" id="calcOrigin">
+                          <label class="form-label fs-7" for="calcOrigin"
+                            >Origin Office</label
+                          >
+                          <select
+                            class="form-select fs-7"
+                            id="calcOrigin"
+                            name="calcOrigin"
+                          >
                             <option value="us" selected>New York, USA</option>
                             <option value="uk">London, UK</option>
                             <option value="eu">Rotterdam, Netherlands</option>
@@ -1047,10 +1063,14 @@
                           </select>
                         </div>
                         <div class="col-md-6 col-lg-3">
-                          <label class="form-label fs-7"
+                          <label class="form-label fs-7" for="calcDest"
                             >Destination Port</label
                           >
-                          <select class="form-select fs-7" id="calcDest">
+                          <select
+                            class="form-select fs-7"
+                            id="calcDest"
+                            name="calcDest"
+                          >
                             <option value="us">New York, USA</option>
                             <option value="uk" selected>London, UK</option>
                             <option value="eu">Rotterdam, Netherlands</option>
@@ -1058,8 +1078,14 @@
                           </select>
                         </div>
                         <div class="col-md-6 col-lg-3">
-                          <label class="form-label fs-7">Transit Route</label>
-                          <select class="form-select fs-7" id="calcService">
+                          <label class="form-label fs-7" for="calcService"
+                            >Transit Route</label
+                          >
+                          <select
+                            class="form-select fs-7"
+                            id="calcService"
+                            name="calcService"
+                          >
                             <option value="road" selected>
                               Road Transportation
                             </option>
@@ -1069,13 +1095,14 @@
                           </select>
                         </div>
                         <div class="col-md-6 col-lg-3">
-                          <label class="form-label fs-7"
+                          <label class="form-label fs-7" for="calcWeight"
                             >Cargo Weight (kg)</label
                           >
                           <input
                             type="number"
                             class="form-control fs-7"
                             id="calcWeight"
+                            name="calcWeight"
                             placeholder="Mass in kg"
                             value="45"
                             required
@@ -1084,33 +1111,42 @@
 
                         <!-- Dimensions -->
                         <div class="col-md-4">
-                          <label class="form-label fs-7">Length (cm)</label>
+                          <label class="form-label fs-7" for="calcLength"
+                            >Length (cm)</label
+                          >
                           <input
                             type="number"
                             class="form-control fs-7"
                             id="calcLength"
+                            name="calcLength"
                             placeholder="Length"
                             value="50"
                             required
                           />
                         </div>
                         <div class="col-md-4">
-                          <label class="form-label fs-7">Width (cm)</label>
+                          <label class="form-label fs-7" for="calcWidth"
+                            >Width (cm)</label
+                          >
                           <input
                             type="number"
                             class="form-control fs-7"
                             id="calcWidth"
+                            name="calcWidth"
                             placeholder="Width"
                             value="40"
                             required
                           />
                         </div>
                         <div class="col-md-4">
-                          <label class="form-label fs-7">Height (cm)</label>
+                          <label class="form-label fs-7" for="calcHeight"
+                            >Height (cm)</label
+                          >
                           <input
                             type="number"
                             class="form-control fs-7"
                             id="calcHeight"
+                            name="calcHeight"
                             placeholder="Height"
                             value="30"
                             required
@@ -1155,11 +1191,17 @@
                     </div>
                     <!-- Search Input -->
                     <form id="standaloneTrackerForm">
+                      <label
+                        for="standaloneTrackingInput"
+                        class="visually-hidden"
+                        >Enter Tracking Code</label
+                      >
                       <div class="tracking-input-group">
                         <input
                           type="text"
                           class="form-control fs-7"
                           id="standaloneTrackingInput"
+                          name="standaloneTrackingInput"
                           placeholder="Enter Tracking Code..."
                           required
                         />

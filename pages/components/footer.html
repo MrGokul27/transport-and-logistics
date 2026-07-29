@@ -8,7 +8,7 @@
       <div class="col-lg-4 col-md-6">
         <div class="footer-about me-lg-4">
           <div class="d-flex align-items-center mb-3">
-            <a href="../../index.html">
+            <a href="index.html">
               <img
                 src="assets/images/logoStackly.webp"
                 alt="Stackly Logo"
@@ -195,9 +195,14 @@
           transport rates.
         </p>
         <form class="newsletter-form" id="newsletterForm">
+          <label for="newsletterEmail" class="visually-hidden"
+            >Your Email Address</label
+          >
           <div class="input-group">
             <input
               type="email"
+              id="newsletterEmail"
+              name="newsletterEmail"
               class="form-control bg-dark border-secondary text-white shadow-none fs-7 py-2"
               placeholder="Your Email Address"
               required

@@ -8,6 +8,12 @@
       content="Our Logistics Services - High-capacity cargo transport via Sea, Air, Land, Warehousing and Customs Compliance."
     />
     <title>Services - Stackly Logistics</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/webp"
+      href="../assets/images/logoStackly.webp"
+    />
 
     <!-- Bootstrap 5 CSS CDN -->
     <link
@@ -265,12 +271,15 @@
                 <form id="quoteCalculatorForm">
                   <div class="row g-3">
                     <div class="col-md-6 col-lg-3">
-                      <label class="form-label text-primary fw-semibold fs-7"
+                      <label
+                        class="form-label text-primary fw-semibold fs-7"
+                        for="calcOrigin"
                         >Origin Office</label
                       >
                       <select
                         class="form-select bg-light border-light shadow-none fs-7 py-2"
                         id="calcOrigin"
+                        name="calcOrigin"
                       >
                         <option value="us" selected>New York, USA</option>
                         <option value="uk">London, UK</option>
@@ -279,12 +288,15 @@
                       </select>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                      <label class="form-label text-primary fw-semibold fs-7"
+                      <label
+                        class="form-label text-primary fw-semibold fs-7"
+                        for="calcDest"
                         >Destination Port</label
                       >
                       <select
                         class="form-select bg-light border-light shadow-none fs-7 py-2"
                         id="calcDest"
+                        name="calcDest"
                       >
                         <option value="us">New York, USA</option>
                         <option value="uk" selected>London, UK</option>
@@ -293,12 +305,15 @@
                       </select>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                      <label class="form-label text-primary fw-semibold fs-7"
+                      <label
+                        class="form-label text-primary fw-semibold fs-7"
+                        for="calcService"
                         >Transit Route</label
                       >
                       <select
                         class="form-select bg-light border-light shadow-none fs-7 py-2"
                         id="calcService"
+                        name="calcService"
                       >
                         <option value="road" selected>
                           Road Transportation
@@ -309,13 +324,16 @@
                       </select>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                      <label class="form-label text-primary fw-semibold fs-7"
+                      <label
+                        class="form-label text-primary fw-semibold fs-7"
+                        for="calcWeight"
                         >Cargo Weight (kg)</label
                       >
                       <input
                         type="number"
                         class="form-control bg-light border-light shadow-none fs-7 py-2"
                         id="calcWeight"
+                        name="calcWeight"
                         placeholder="Mass in kg"
                         value="45"
                         required
@@ -324,39 +342,48 @@
 
                     <!-- Dimensions -->
                     <div class="col-md-4">
-                      <label class="form-label text-primary fw-semibold fs-7"
+                      <label
+                        class="form-label text-primary fw-semibold fs-7"
+                        for="calcLength"
                         >Length (cm)</label
                       >
                       <input
                         type="number"
                         class="form-control bg-light border-light shadow-none fs-7 py-2"
                         id="calcLength"
+                        name="calcLength"
                         placeholder="Length"
                         value="50"
                         required
                       />
                     </div>
                     <div class="col-md-4">
-                      <label class="form-label text-primary fw-semibold fs-7"
+                      <label
+                        class="form-label text-primary fw-semibold fs-7"
+                        for="calcWidth"
                         >Width (cm)</label
                       >
                       <input
                         type="number"
                         class="form-control bg-light border-light shadow-none fs-7 py-2"
                         id="calcWidth"
+                        name="calcWidth"
                         placeholder="Width"
                         value="40"
                         required
                       />
                     </div>
                     <div class="col-md-4">
-                      <label class="form-label text-primary fw-semibold fs-7"
+                      <label
+                        class="form-label text-primary fw-semibold fs-7"
+                        for="calcHeight"
                         >Height (cm)</label
                       >
                       <input
                         type="number"
                         class="form-control bg-light border-light shadow-none fs-7 py-2"
                         id="calcHeight"
+                        name="calcHeight"
                         placeholder="Height"
                         value="30"
                         required

@@ -8,6 +8,12 @@
       content="Manage your cargo shipments, fleets, customs declarations, and schedules inside the Stackly Logistics Portal."
     />
     <title>Logistics Portal Dashboard - Stackly Logistics</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/webp"
+      href="../assets/images/logoStackly.webp"
+    />
 
     <!-- Bootstrap 5 CSS CDN -->
     <link
@@ -464,10 +470,15 @@
                       >
                         <div class="row g-3 mb-3">
                           <div class="col-md-6">
-                            <label class="form-label-dashboard"
+                            <label class="form-label-dashboard" for="bookOrigin"
                               >Origin Point</label
                             >
-                            <select class="form-control-dashboard" required>
+                            <select
+                              class="form-control-dashboard"
+                              id="bookOrigin"
+                              name="origin"
+                              required
+                            >
                               <option value="">Select origin terminal</option>
                               <option>Shanghai Port (CNSHA)</option>
                               <option>Hamburg Terminal (DEHAM)</option>
@@ -476,10 +487,15 @@
                             </select>
                           </div>
                           <div class="col-md-6">
-                            <label class="form-label-dashboard"
+                            <label class="form-label-dashboard" for="bookDest"
                               >Destination Point</label
                             >
-                            <select class="form-control-dashboard" required>
+                            <select
+                              class="form-control-dashboard"
+                              id="bookDest"
+                              name="destination"
+                              required
+                            >
                               <option value="">
                                 Select destination terminal
                               </option>
@@ -493,10 +509,15 @@
 
                         <div class="row g-3 mb-3">
                           <div class="col-md-4">
-                            <label class="form-label-dashboard"
+                            <label class="form-label-dashboard" for="bookClass"
                               >Cargo Class / Type</label
                             >
-                            <select class="form-control-dashboard" required>
+                            <select
+                              class="form-control-dashboard"
+                              id="bookClass"
+                              name="cargoClass"
+                              required
+                            >
                               <option>Dry Container (FCL)</option>
                               <option>Less than Container (LCL)</option>
                               <option>Refrigerated (Reefer)</option>
@@ -504,21 +525,29 @@
                             </select>
                           </div>
                           <div class="col-md-4">
-                            <label class="form-label-dashboard"
+                            <label class="form-label-dashboard" for="bookWeight"
                               >Total Cargo Weight (kg)</label
                             >
                             <input
                               type="number"
                               class="form-control-dashboard"
+                              id="bookWeight"
+                              name="cargoWeight"
                               placeholder="e.g. 1500"
                               required
                             />
                           </div>
                           <div class="col-md-4">
-                            <label class="form-label-dashboard"
+                            <label
+                              class="form-label-dashboard"
+                              for="bookPriority"
                               >Logistics Priority</label
                             >
-                            <select class="form-control-dashboard">
+                            <select
+                              class="form-control-dashboard"
+                              id="bookPriority"
+                              name="logisticsPriority"
+                            >
                               <option>Standard Economy</option>
                               <option>Expedited Delivery</option>
                               <option>Critical Express</option>
@@ -527,11 +556,13 @@
                         </div>
 
                         <div class="mb-4">
-                          <label class="form-label-dashboard"
+                          <label class="form-label-dashboard" for="bookNotes"
                             >Special Consignment Instructions / HS Codes</label
                           >
                           <textarea
                             class="form-control-dashboard"
+                            id="bookNotes"
+                            name="specialInstructions"
                             rows="4"
                             placeholder="Enter fragile handling requirements, customs compliance details, or dangerous goods descriptions..."
                           ></textarea>
@@ -962,10 +993,17 @@
                         onsubmit="handleSupportSubmit(event)"
                       >
                         <div class="mb-3">
-                          <label class="form-label-dashboard"
+                          <label
+                            class="form-label-dashboard"
+                            for="supportCargoRef"
                             >Select Cargo Reference</label
                           >
-                          <select class="form-control-dashboard" required>
+                          <select
+                            class="form-control-dashboard"
+                            id="supportCargoRef"
+                            name="cargoRef"
+                            required
+                          >
                             <option>SH-9076 (Tokyo -> LAX)</option>
                             <option>SH-9051 (Shanghai -> Rotterdam)</option>
                             <option>SH-9042 (Hamburg -> New York)</option>
@@ -973,22 +1011,30 @@
                           </select>
                         </div>
                         <div class="mb-3">
-                          <label class="form-label-dashboard"
+                          <label
+                            class="form-label-dashboard"
+                            for="supportSubject"
                             >Inquiry Subject</label
                           >
                           <input
                             type="text"
                             class="form-control-dashboard"
+                            id="supportSubject"
+                            name="subject"
                             placeholder="e.g. Customs document correction"
                             required
                           />
                         </div>
                         <div class="mb-3">
-                          <label class="form-label-dashboard"
+                          <label
+                            class="form-label-dashboard"
+                            for="supportExplain"
                             >Explain the Issue</label
                           >
                           <textarea
                             class="form-control-dashboard"
+                            id="supportExplain"
+                            name="explanation"
                             rows="4"
                             required
                           ></textarea>
@@ -1483,10 +1529,17 @@
                         onsubmit="handleDriverExpense(event)"
                       >
                         <div class="mb-3">
-                          <label class="form-label-dashboard"
+                          <label
+                            class="form-label-dashboard"
+                            for="expenseCategory"
                             >Expense Category</label
                           >
-                          <select class="form-control-dashboard" required>
+                          <select
+                            class="form-control-dashboard"
+                            id="expenseCategory"
+                            name="expenseCategory"
+                            required
+                          >
                             <option>Diesel Fuel Refuel</option>
                             <option>Highway Toll Payment</option>
                             <option>Emergency Truck Repair</option>
@@ -1495,36 +1548,48 @@
                         </div>
                         <div class="row g-3 mb-3">
                           <div class="col-md-6">
-                            <label class="form-label-dashboard"
+                            <label
+                              class="form-label-dashboard"
+                              for="expenseAmount"
                               >Amount Paid ($)</label
                             >
                             <input
                               type="number"
                               step="0.01"
                               class="form-control-dashboard"
+                              id="expenseAmount"
+                              name="expenseAmount"
                               placeholder="e.g. 150.50"
                               required
                             />
                           </div>
                           <div class="col-md-6">
-                            <label class="form-label-dashboard"
+                            <label
+                              class="form-label-dashboard"
+                              for="fuelQuantity"
                               >Fuel Quantity (Gallons, if fuel)</label
                             >
                             <input
                               type="number"
                               step="0.1"
                               class="form-control-dashboard"
+                              id="fuelQuantity"
+                              name="fuelQuantity"
                               placeholder="e.g. 45"
                             />
                           </div>
                         </div>
                         <div class="mb-3">
-                          <label class="form-label-dashboard"
+                          <label
+                            class="form-label-dashboard"
+                            for="vendorLocation"
                             >Vendor Name & Location</label
                           >
                           <input
                             type="text"
                             class="form-control-dashboard"
+                            id="vendorLocation"
+                            name="vendorLocation"
                             placeholder="e.g. Loves Travel Stop #452, Battle Creek"
                             required
                           />
@@ -1726,6 +1791,7 @@
                                 class="form-check-input"
                                 type="checkbox"
                                 id="checkBrakes"
+                                name="checkBrakes"
                                 required
                               />
                               <label
@@ -1739,6 +1805,7 @@
                                 class="form-check-input"
                                 type="checkbox"
                                 id="checkTires"
+                                name="checkTires"
                                 required
                               />
                               <label
@@ -1752,6 +1819,7 @@
                                 class="form-check-input"
                                 type="checkbox"
                                 id="checkLights"
+                                name="checkLights"
                                 required
                               />
                               <label
@@ -1767,6 +1835,7 @@
                                 class="form-check-input"
                                 type="checkbox"
                                 id="checkFifthWheel"
+                                name="checkFifthWheel"
                                 required
                               />
                               <label
@@ -1780,6 +1849,7 @@
                                 class="form-check-input"
                                 type="checkbox"
                                 id="checkFluids"
+                                name="checkFluids"
                                 required
                               />
                               <label
@@ -1793,6 +1863,7 @@
                                 class="form-check-input"
                                 type="checkbox"
                                 id="checkReflectors"
+                                name="checkReflectors"
                                 required
                               />
                               <label
@@ -2360,12 +2431,13 @@
                         onsubmit="calculateTariff(event)"
                       >
                         <div class="mb-3">
-                          <label class="form-label-dashboard"
+                          <label class="form-label-dashboard" for="calcOrigin"
                             >Country of Origin</label
                           >
                           <select
                             class="form-control-dashboard"
                             id="calcOrigin"
+                            name="calcOrigin"
                             required
                           >
                             <option value="China">
@@ -2383,24 +2455,27 @@
                           </select>
                         </div>
                         <div class="mb-3">
-                          <label class="form-label-dashboard"
+                          <label class="form-label-dashboard" for="calcValue"
                             >Cargo Commercial Value ($)</label
                           >
                           <input
                             type="number"
                             class="form-control-dashboard"
                             id="calcValue"
+                            name="calcValue"
                             placeholder="e.g. 50000"
                             required
                           />
                         </div>
                         <div class="mb-3">
-                          <label class="form-label-dashboard"
+                          <label class="form-label-dashboard" for="calcHSCode"
                             >Harmonized System (HS) Code Group</label
                           >
                           <input
                             type="text"
                             class="form-control-dashboard"
+                            id="calcHSCode"
+                            name="calcHSCode"
                             placeholder="e.g. 8542.31.00"
                             required
                           />
@@ -2840,20 +2915,34 @@
                       >
                         <div class="row g-3 mb-3">
                           <div class="col-md-6">
-                            <label class="form-label-dashboard"
+                            <label
+                              class="form-label-dashboard"
+                              for="opsSelectTruck"
                               >Select Available Truck</label
                             >
-                            <select class="form-control-dashboard" required>
+                            <select
+                              class="form-control-dashboard"
+                              id="opsSelectTruck"
+                              name="assignedTruck"
+                              required
+                            >
                               <option>TRK-109 (Volvo VNL)</option>
                               <option>TRK-115 (Kenworth T680)</option>
                               <option>TRK-122 (Freightliner Cascadia)</option>
                             </select>
                           </div>
                           <div class="col-md-6">
-                            <label class="form-label-dashboard"
+                            <label
+                              class="form-label-dashboard"
+                              for="opsSelectDriver"
                               >Select Available Driver</label
                             >
-                            <select class="form-control-dashboard" required>
+                            <select
+                              class="form-control-dashboard"
+                              id="opsSelectDriver"
+                              name="assignedDriver"
+                              required
+                            >
                               <option>Sarah Connor</option>
                               <option>James Carter</option>
                               <option>Emily Peterson</option>
@@ -2863,21 +2952,32 @@
 
                         <div class="row g-3 mb-3">
                           <div class="col-md-6">
-                            <label class="form-label-dashboard"
+                            <label
+                              class="form-label-dashboard"
+                              for="opsOriginDepot"
                               >Origin Depot</label
                             >
                             <input
                               type="text"
                               class="form-control-dashboard"
+                              id="opsOriginDepot"
+                              name="originDepot"
                               value="Chicago Central Depot"
                               readonly
                             />
                           </div>
                           <div class="col-md-6">
-                            <label class="form-label-dashboard"
+                            <label
+                              class="form-label-dashboard"
+                              for="opsDestTerminal"
                               >Destination Terminal</label
                             >
-                            <select class="form-control-dashboard" required>
+                            <select
+                              class="form-control-dashboard"
+                              id="opsDestTerminal"
+                              name="destTerminal"
+                              required
+                            >
                               <option>Detroit Terminal</option>
                               <option>Indianapolis Hub</option>
                               <option>Cleveland Terminal</option>
@@ -2886,12 +2986,16 @@
                         </div>
 
                         <div class="mb-3">
-                          <label class="form-label-dashboard"
+                          <label
+                            class="form-label-dashboard"
+                            for="opsCargoManifest"
                             >Assigned Cargo & Manifest reference</label
                           >
                           <input
                             type="text"
                             class="form-control-dashboard"
+                            id="opsCargoManifest"
+                            name="cargoManifest"
                             placeholder="e.g. Industrial auto parts, ref #MNF-90082"
                             required
                           />
@@ -2957,23 +3061,26 @@
                         onsubmit="runRouteOptimizer(event)"
                       >
                         <div class="mb-3">
-                          <label class="form-label-dashboard"
+                          <label class="form-label-dashboard" for="optDepart"
                             >Departing Point</label
                           >
                           <input
                             type="text"
                             class="form-control-dashboard"
+                            id="optDepart"
+                            name="optDepart"
                             value="Chicago Logistics Hub"
                             readonly
                           />
                         </div>
                         <div class="mb-3">
-                          <label class="form-label-dashboard"
+                          <label class="form-label-dashboard" for="optDest"
                             >Delivery Endpoint</label
                           >
                           <select
                             class="form-control-dashboard"
                             id="optDest"
+                            name="optDest"
                             required
                           >
                             <option value="Detroit">
