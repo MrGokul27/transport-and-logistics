@@ -1280,10 +1280,12 @@ h6,
   border-radius: var(--card-radius) !important;
   border: 1px solid rgba(0, 168, 204, 0.08) !important;
   box-shadow: 0 10px 30px rgba(11, 19, 43, 0.03) !important;
-  padding: 2.5rem 2rem !important;
+  padding: 0 !important;
   position: relative;
   overflow: hidden;
   transition: var(--transition-smooth) !important;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-hub-card:hover {
@@ -1307,10 +1309,37 @@ h6,
   transform: scaleX(0);
   transform-origin: center;
   transition: var(--transition-smooth);
+  z-index: 4;
 }
 
 .contact-hub-card:hover::before {
   transform: scaleX(1);
+}
+
+.hub-card-image-wrapper {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hub-card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-hub-card:hover .hub-card-image-wrapper img {
+  transform: scale(1.1);
+}
+
+.hub-card-content {
+  padding: 2rem 1.5rem 2.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .contact-hub-card .hub-badge {
@@ -1323,9 +1352,11 @@ h6,
   letter-spacing: 1px;
   padding: 4px 10px;
   border-radius: 20px;
-  background: rgba(0, 168, 204, 0.1);
+  background: rgba(0, 168, 204, 0.15);
+  backdrop-filter: blur(4px);
   color: var(--secondary-color);
   transition: var(--transition-smooth);
+  z-index: 3;
 }
 
 .contact-hub-card:hover .hub-badge {
@@ -1337,21 +1368,27 @@ h6,
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: rgba(0, 168, 204, 0.06);
+  background: #ffffff !important;
   color: var(--secondary-color);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  margin-top: -50px;
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 4px solid #ffffff;
   transition: var(--transition-smooth);
 }
 
 .contact-hub-card:hover .icon-wrapper {
-  background: var(--secondary-color);
+  background: var(--secondary-color) !important;
   color: #ffffff;
   transform: scale(1.1) rotate(5deg);
   box-shadow: 0 8px 20px rgba(0, 168, 204, 0.3);
+  border-color: var(--secondary-color);
 }
 
 /* Crisis Hotline Banner Styles */
@@ -1435,6 +1472,17 @@ h6,
   background: var(--primary-color);
   color: #ffffff;
   transform: translateY(-4px) scale(1.05);
+}
+
+.hover-zoom-img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.hover-zoom-img:hover {
+  transform: scale(1.04);
 }
 
 /* Custom form inputs style for contact/callback forms */
